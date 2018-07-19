@@ -9,5 +9,13 @@
 ### 실행 방법  
 
 1. git clone https://github.com/veggieavocado/avocado-front-beta.git .  
-2. 로컬 테스팅은: npm install --> npm start  
-3. 서버 배포는: docker build -t va/frontbeta:1.0 . --> docker run -d -p 8080:8080 --name frontbeta va/frontbeta:1.0
+2. 로컬 테스팅은:  
+```
+npm install
+npm start
+```
+3. 서버 배포는:  
+```
+docker build -t va/frontbeta:1.0 .
+docker run -d -p 8080:8080 --name frontbeta va/frontbeta:1.0
+```
