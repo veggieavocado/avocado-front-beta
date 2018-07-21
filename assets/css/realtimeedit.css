@@ -1,0 +1,84 @@
+/* This is a css for realtimeedit.html */
+
+/* Content-1 CSS starts here */
+.content-1 {
+  display: flex;
+  flex-direction: row;
+  width: vw;
+  height: 90rem;
+
+}
+  .content-1 > .template-preview {
+    width:45%;
+  }
+  .template-preview > .template-border {
+    position: relative;
+  }
+
+  .template-border > .manage-zoom {
+    left: 1rem;
+    top: 0.3rem;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    font-size: 25px;
+  }
+    .manage-zoom > .zoom-plus {
+      margin: 0 0.5rem;
+      cursor: pointer;
+    }
+
+    .template-element.first {
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .template-element > li {
+      padding-left: 1.5em;
+      text-indent:-1.5em;
+    }
+
+    .template-element > .key-skill {
+      font-weight: bold;
+    }
+
+    .content-1 > .google-docs  {
+      width:55%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* background-color: var(--light-gray); */
+    }
+
+    .google-docs > iframe {
+      width: 100%;
+      height: 95%;
+    }
+/* Content-1 CSS ends here */
+
+/* Content-2 CSS starts here */
+.content-2 {
+  height: 6rem;
+}
+
+  .content-2 > .manage-btn {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+    .manage-btn > .avocado-btn {
+      display: flex;
+      margin: 0 4rem;
+      width: 13rem;
+      height: 3rem;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+
+/* Content-2 CSS ends here */

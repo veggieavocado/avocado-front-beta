@@ -1,0 +1,120 @@
+input {
+  width: 100%;
+  height: 2.5rem;
+  border: solid 1px var(--gray);
+  border-radius: 5px;
+}
+
+/* Content-1 CSS starts here */
+.content-1 {
+  height: 35rem;
+  display: flex;
+
+}
+
+.content-1 > .create-content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.content-1 > .template-preview {
+  width: 30%;
+}
+
+  .create-form {
+    margin-top: 2rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: gray; */
+  }
+
+    .create-form > .name-area {
+      display: flex;
+      justify-content: space-between;
+    }
+
+      .name-area > .name-input {
+        width: 48%;
+      }
+
+    .number-area {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .number-area > .number-input {
+      width: 48%;
+    }
+
+    .email-area {
+      width: 48%;
+    }
+
+  .address-area,
+  .number-area,
+  .email-area {
+    margin-top: 1rem;
+  }
+
+
+.content-1 > .template-preview {
+  width: 30%;
+  justify-content: flex-end;
+  background-color: red;
+}
+
+.content-2 {
+  height: 100%;
+}
+
+.content-2 > .button-sec {
+  display: flex;
+  justify-content: center;
+}
+  .button-sec > .button-sec-one {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .button-sec-one > .sec-one-wrapper {
+    height: 2rem;
+    width: 70%;
+  }
+
+  .sec-one-wrapper > button {
+    padding: 1rem 2rem;
+    color: var(--gray);
+    font-weight: bold;
+    border: solid 1.5px var(--gray);
+    border-radius: var(--btn-radius);
+    background-color: white;
+    cursor: pointer;
+  }
+
+  .button-sec > .button-sec-two {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .button-sec-two > .sec-two-wrapper {
+    height: 2rem;
+    width: 70%;
+  }
+
+  .sec-two-wrapper > button {
+    padding: 1rem 2rem;
+    color: var(--btn-green);
+    font-weight: bold;
+    border: solid 1.5px var(--btn-green);
+    border-radius: var(--btn-radius);
+    background-color: white;
+    cursor: pointer;
+  }
+
+/* Content-1 CSS ends here */
