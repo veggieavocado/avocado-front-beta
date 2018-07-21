@@ -1,56 +1,156 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/pptselect.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>베지아보카도 템플릿</title>
+    <link rel="icon" href="img/avocado.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="common/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="common/pptselect.css" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Jua|Nanum+Gothic|Gothic+A1|Ubuntu" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   </head>
+
   <body>
-    <div class="ppt-select-title">
-      <h2>원하는 PPT 카테고리를 선택하세요</h2>
+
+    <div class="navbar">
+      <div class="navbar-logo"><a href="/home">VeggieAvocado</a></div>
+      <div class="navbar-action">
+        <div class="action-btn template">
+          <div class="action-btn-text">
+            잡템플릿
+          </div>
+          <!-- <ul class="template-dropdown">
+            <li class="list-first"><a href="/editdoc.html">이력서</a></li>
+            <li>커버레터</li>
+            <li class="list-last">모의면접</li>
+          </ul> -->
+        </div>
+        <div class="action-btn matching">
+          <div class="action-btn-text">
+            잡매칭
+          </div>
+          <!-- <ul class="template-dropdown">
+            <li class="list-first">회사/직무</li>
+            <li class="list-last">1:1 잡매칭</li>
+          </ul> -->
+        </div>
+        <div class="action-btn sop">
+          <div class="action-btn-text">
+            SOP/컨설팅
+          </div>
+          <!-- <ul class="template-dropdown">
+            <li class="list-first">대학원리스트</li>
+            <li>SOP첨삭</li>
+            <li class="list-last">합격자소서</li>
+          </ul> -->
+        </div>
+      </div>
+      <div class="navbar-login">
+        <button class="login-btn"><a href="/login">로그인/회원가입</a></button>
+      </div>
     </div>
+
+    <div class="ppt-select-title">
+      <h1><b>PRESENTATION</b></h1><br>
+      <p><strong>상황별 자신에게 맞는 프레젠테이션 템플릿을 선택하여 사용하세요</strong></p>
+    </div>
+
     <div class="title-container">
+
       <div class="ppt-select-box">
-        <div class="item">
+
+        <div class='card-wrapper'>
+          <div class='card-info'>
+            <div class="tmp-stats">템플릿 8</div>
+            <div class="tmp-stats">문장 640</div>
+            <div class="tmp-stats">단어 수 2459&#9662;</div>
+          </div>
           <div class="card">
-            <img src="img_avatar.png" alt="Avatar" style="width:100%">
-            <div class="container">
-              <h4><b>John Doe</b></h4>
-              <p>Architect & Engineer</p>
+            <div class="card-img one"></div>
+            <div class="container-head">
+              <br><h3><b>Card Title</b></h3><br>
             </div>
-          </div>
-
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-text">
-            템플릿 2
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-text">
-            템플릿 3
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-text">
-            템플릿 4
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-text">
-            템플릿 5
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-text">
-            템플릿 6
+            <!-- <div class="container-content">
+              <p>This is a simple card. I am good at containing small bits of information.</p><br>
+            </div> -->
           </div>
         </div>
 
+        <div class='card-wrapper'>
+          <div class='card-info'>
+            <div class="tmp-stats">템플릿 3</div>
+            <div class="tmp-stats">문장 645</div>
+            <div class="tmp-stats">단어 수 1493&#9662;</div>
+          </div>
+          <div class="card">
+            <div class="card-img two"></div>
+            <div class="container-head">
+              <br><h3><b>Card Title</b></h3><br></div>
+          </div>
+        </div>
+
+        <div class='card-wrapper'>
+          <div class='card-info'>
+            <div class="tmp-stats">템플릿 5</div>
+            <div class="tmp-stats">문장 986</div>
+            <div class="tmp-stats">단어 수 2031 &#9662;</div>
+          </div>
+          <div class="card">
+            <div class="card-img three"></div>
+            <div class="container-head">
+              <br><h3><b>Card Title</b></h3><br></div>
+          </div>
+        </div>
 
       </div>
+
+      <div class="ppt-select-box">
+        <div class='card-wrapper'>
+          <div class='card-info'>
+            <div class="tmp-stats">템플릿 2</div>
+            <div class="tmp-stats">문장 345</div>
+            <div class="tmp-stats">단어 수 1028&#9662;</div>
+          </div>
+          <div class="card">
+            <div class="card-img four"></div>
+            <div class="container-head">
+              <br><h3><b>Card Title</b></h3><br></div>
+          </div>
+        </div>
+
+        <div class='card-wrapper'>
+          <div class='card-info'>
+            <div class="tmp-stats">템플릿 7</div>
+            <div class="tmp-stats">문장 687</div>
+            <div class="tmp-stats">단어 수 1587&#9662;</div>
+          </div>
+          <div class="card">
+            <div class="card-img five"></div>
+            <div class="container-head">
+              <br><h3><b>Card Title</b></h3><br></div>
+          </div>
+        </div>
+
+        <div class='card-wrapper'>
+          <div class='card-info'>
+            <div class="tmp-stats">템플릿 5</div>
+            <div class="tmp-stats">문장 455</div>
+            <div class="tmp-stats">단어 수 1338&#9662;</div>
+          </div>
+          <div class="card">
+            <div class="card-img six"></div>
+            <div class="container-head">
+              <br><h3><b>Card Title</b></h3><br></div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </body>
 </html>

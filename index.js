@@ -8,7 +8,7 @@ const app = express(); // 앱 시작
 app.set('views', __dirname + '/templates'); // HTML 파일 연결
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
-app.use(express.static('assets')); // CSS 파일 연결
+app.use(express.static(__dirname + '/assets')); // CSS 파일 연결
 
 // 앱을 포트와 호스트와 연결하여 작동 시작하기
 app.listen(PORT, HOST);
@@ -42,4 +42,14 @@ app.get('/login', (req, res) => {
 // 회원가입 페이지: https://www.veggieavocado.com/register/
 app.get('/register', (req, res) => {
   res.render('register.html')
+});
+
+// 템플릿뷰 페이지:  https://www.veggieavocado.com/template/ppt/
+app.get('/template/ppt', (req, res) => {
+  res.render('templateview.html')
+});
+
+// ppt선택 페이지: https://www.veggieavocado.com/pptselect/
+app.get('/pptselect', (req, res) => {
+  res.render('pptselect.html')
 });
