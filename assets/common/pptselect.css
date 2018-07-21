@@ -142,7 +142,70 @@ a.hover {
       color: orange;
     }
 
+    /*Mobile Styles*/
+    @media only screen and (max-width: 400px) {
 
-    @media {
+      .ppt-select-title-wrapper {
+        display: flex;
+        justify-content: center;
+
+      }
+
+      .ppt-select-title {
+        width: 80%;
+      }
+
+
+      .ppt-select-box {
+        display: flex;
+        flex-direction: column;
+        height: 45rem;
+        width: 100%;
+        margin-bottom: none;
+      }
+        .card-wrapper {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .card-wrapper > :last-of-type {
+          margin-bottom: 30px;
+        }
+
+    }
+
+    /* Tables Styles */
+    @media only screen and (min-width: 401px) and (max-width: 960px) {
+
+      .ppt-select-title-wrapper {
+        display: flex;
+        justify-content: center;
+
+      }
+
+      .ppt-select-title {
+        width: 80%;
+      }
+
+
+      .ppt-select-box {
+        display: flex;
+        flex-direction: column;
+        height: 70rem;
+        width: 100%;
+        margin-bottom: none;
+      }
+        .card-wrapper {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .card-wrapper > :last-of-type {
+          margin-bottom: 30px;
+        }
 
     }
