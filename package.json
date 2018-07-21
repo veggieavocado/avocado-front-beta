@@ -1,11 +1,11 @@
 {
   "name": "minimum-frontend",
   "version": "1.0.0",
-  "description": "프론트엔드 코드를 쉽게 확인하기 위한 간단한 express ",
+  "description": "프론트엔드 코드를 쉽게 확인하기 위한 간단한 express",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./index.js"
+    "start": "node ./index.js",
+    "serve": "nodemon ./index.js"
   },
   "author": "peepee",
   "license": "MIT",
@@ -13,7 +13,12 @@
     "yarn": "^1.7.0"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
     "ejs": "^2.6.1",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "nodemon": "^1.18.3"
   }
 }
