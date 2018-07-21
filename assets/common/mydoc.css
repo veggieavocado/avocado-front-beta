@@ -1,81 +1,67 @@
 /* Content-1 CSS starts here */
-  .content-1 {
-    margin-top: 3rem;
-    background-color: pink;
-    display: flex;
-    align-items: center;
-    height: 5rem;
-  }
-  .content-1 > .sorting-box {
-    width: 100%;
-    display: flex;
-  }
-  .sorting-box > .btn-sort {
-    width: 100%;
-    margin-left: 15rem;
-  }
-
-    .btn-sort > button {
-      padding: 0.5rem;
-      background-color: pink;
-      border-radius: 0;
-    }
-
-  .sorting-box > .btn-search {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 15rem;
-  }
-    .btn-search > button {
-      padding: 0.5rem;
-      background-color: pink;
-      border-radius: 0;
-    }
-/* Content-1 CSS ends here */
-
-
-
-
-/* Content-2 CSS starts here */
-.content-2 {
-  height: 40rem;
-  background-color: #ff8499;
-  display: flex;
-  justify-content: center;
-}
-.content-2 > .mydocs-box {
-  width: 70%;
-  height: 20rem;
-  background-color: red;
+.content-1 {
+  height: 60rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5rem;
-  border: solid black 2px;
-  border-radius: 10px;
+  position: relative;
 }
-  .content-2 > .mydocs-box > .mydocs-btn {
+
+.content-1 > .table {
+  position: relative;
+  margin-top: 7rem;
+}
+  .table > .table-name{
     width: 100%;
-    height:100%;
-    display: flex;
-    align-items: center;
-    border: solid black 1px;
-    padding: 3rem 8rem;
+    position: absolute;
+    font-size: 1.5rem;
+    top: -4rem;
+    left: 0;
+    border-bottom: 1px solid var(--gray);
   }
-    .mydocs-btn {
-      margin: 0 3rem;
-    }
-
-
-
-
-
-/* Content-2 CSS ends here */
-
-
+  .put-btn,
+  .delete-btn {
+    border: solid 1px #BDBDBD;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+    padding: 0.2rem;
+    margin: 0 0.2rem;
+  }
+  /* responsive web design start */
+  .media-table {
+    width: 70%;
+    border: 1px solid var(--dark-gray);
+    border-radius: 15px;
+  }
+  .media-table > .media-table-row {
+    position: relative;
+    padding: 0.7rem;
+    border-bottom: 1px solid var(--dark-gray);
+  }
+  .media-table-row > .media-table-manipulation {
+    position: absolute;
+    bottom: 0.7rem;
+    right: 0.7rem;
+  }
+  .media-table-row:last-child {
+    border-bottom: 0px solid var(--dark-gray);
+  }
+  /* responsive web design end */
 
 .footer {
   height: 10rem;
   background-color: #a5a5a5;
+}
+
+
+
+/*Mobile Styles*/
+@media only screen and (max-width: 400px) {
+
+}
+
+/* Tables Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
 }

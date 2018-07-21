@@ -5,10 +5,11 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
       <title>베지아보카도</title>
-      <link rel="icon" href="./assets/img/avocado.ico" type="image/x-icon" />
+      <link rel="icon" href="img/avocado.ico" type="image/x-icon" />
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-      <link rel="stylesheet" href="./assets/css/style.css" type="text/css" media="all">
-      <link rel="stylesheet" href="./assets/css/mydoc.css" type="text/css" media="all">
+      <link rel="stylesheet" href="common/style.css" type="text/css" media="all">
+      <link rel="stylesheet" href="common/mydoc.css" type="text/css" media="all">
+      <link rel="stylesheet" href="common/table.css" type="text/css" media="all">
       <link href="https://fonts.googleapis.com/css?family=Jua|Nanum+Gothic" rel="stylesheet">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
@@ -22,7 +23,7 @@
       <div class="body">
 
         <div class="navbar">
-          <div class="navbar-logo"><a href="./home.html">VeggieAvocado</a></div>
+          <div class="navbar-logo"><a href="/home">VeggieAvocado</a></div>
           <div class="navbar-action">
             <div class="action-btn template">
               <div class="action-btn-text">
@@ -55,59 +56,136 @@
             </div>
           </div>
           <div class="navbar-login">
-            <button class="login-btn"><a href="./login.html">로그인/회원가입</a></button>
+            <div class="account-btn">
+              <!-- <img src="http://mblogthumb2.phinf.naver.net/20150427_261/ninevincent_1430122791768m7oO1_JPEG/kakao_1.jpg?type=w2" class="account-img"> -->
+              Philp Park
+              <ul class="account-dropdown">
+                <li class="list-first">내 문서관리</li>
+                <li>최근작성문서 3</li>
+                <li>최근작성문서 2</li>
+                <li class="list-last">최근작성문서 1</li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div class="content-1">
-          <div class="sorting-box">
-            <div class="btn-sort">
-              <button>정렬</button>
+          <div class="table">
+            <div class="table-name">
+              PPT
             </div>
-            <div class="btn-search">
-              <button>검색</button>
+            <div class="table-content">
+              <div class="table-header">
+                <div class="table-col table-col-30">id</div>
+                <div class="table-col table-col-30">제목</div>
+                <div class="table-col table-col-40">작성일</div>
+                <div class="table-col table-col-40">수정일</div>
+                <div class="table-col table-col-40"></div>
+              </div>
+              <div class="table-data">
+                <div class="table-data-row">
+                  <div class="table-col table-col-30">01</div>
+                  <div class="table-col table-col-30">speak&nbsp;like&nbsp;ted</div>
+                  <div class="table-col table-col-40">2018-07-21&nbsp;21:00</div>
+                  <div class="table-col table-col-40">2018-07-21&nbsp;23:00</div>
+                  <div class="table-col table-col-40">
+                    <button class="put-btn" type="button" name="button">edit</button>
+                    <button class="delete-btn" type="button" name="button">delete</button>
+                  </div>
+                </div>
+                <div class="table-data-row">
+                  <div class="table-col table-col-30">02</div>
+                  <div class="table-col table-col-30">영어&nbsp;PPT</div>
+                  <div class="table-col table-col-40">2018-08-08&nbsp;21:00</div>
+                  <div class="table-col table-col-40">2018-08-11&nbsp;23:00</div>
+                  <div class="table-col table-col-40">
+                    <button class="put-btn" type="button" name="button">edit</button>
+                    <button class="delete-btn" type="button" name="button">delete</button>
+                  </div>
+                </div>
+                <div class="table-data-row">
+                  <div class="table-col table-col-30">03</div>
+                  <div class="table-col table-col-30">Business&nbsp;PPT</div>
+                  <div class="table-col table-col-40">2018-08-18&nbsp;21:00</div>
+                  <div class="table-col table-col-40">2018-08-19&nbsp;23:00</div>
+                  <div class="table-col table-col-40">
+                    <button class="put-btn" type="button" name="button">edit</button>
+                    <button class="delete-btn" type="button" name="button">delete</button>
+                  </div>
+                </div>
+              </div>
             </div>
 
-          </div>
-          </div>
-
-          <div class="content-2">
-            <div class="mydocs-box">
-              <div class="mydocs-btn one">
-                <div class="mydocs-btn number"> Number </div>
-                <div class="mydocs-btn introduction"> 이름</div>
-                <div class="mydocs-btn submit"> 작성자</div>
-                <div class="mydocs-btn settings"> 작성일</div>
-                <div class="mydocs-btn enter"> 수정일</div>
+            <div class="paginator">
+              <div class="paginator-btns">
+                <div class="arrow-btn"><i class="fas fa-angle-double-left"></i></div>
+                <div class="arrow-btn"><i class="fas fa-angle-left"></i></div>
+                <div class="page-btn">1</div>
+                <div class="page-btn">2</div>
+                <div class="active page-btn">3</div>
+                <div class="page-btn">4</div>
+                <div class="page-btn">5</div>
+                <div class="arrow-btn"><i class="fas fa-angle-right"></i></div>
+                <div class="arrow-btn"><i class="fas fa-angle-double-right"></i></div>
               </div>
-              <div class="mydocs-btn two">
-                <div class="mydocs-btn number"></div>
-                <div class="mydocs-btn introduction"></div>
-                <div class="mydocs-btn submit"></div>
-                <div class="mydocs-btn settings"></div>
-                <div class="mydocs-btn enter"></div>
-              </div>
-              <div class="mydocs-btn three">
-                <div class="mydocs-btn number"></div>
-                <div class="mydocs-btn introduction"></div>
-                <div class="mydocs-btn submit"></div>
-                <div class="mydocs-btn settings"></div>
-                <div class="mydocs-btn enter"></div>
-              </div>
-              </div>
+            </div>
           </div>
 
+          <!-- responsive web design -->
+          <div class="media-table">
+            <div class="media-table-row">
+              <div class="media-table-subject">speak&nbsp;like&nbsp;ted</div>
+              <div class="media-table-created">2018-07-21&nbsp;21:00</div>
+              <div class="media-table-updated">2018-07-21&nbsp;23:00</div>
+              <div class="media-table-manipulation">
+                <button class="put-btn" type="button" name="button">edit</button>
+                <button class="delete-btn" type="button" name="button">delete</button>
+              </div>
+            </div>
+            <div class="media-table-row">
+              <div class="media-table-subject">Business&nbsp;PPT</div>
+              <div class="media-table-created">2018-07-21&nbsp;21:00</div>
+              <div class="media-table-updated">2018-07-21&nbsp;23:00</div>
+              <div class="media-table-manipulation">
+                <button class="put-btn" type="button" name="button">edit</button>
+                <button class="delete-btn" type="button" name="button">delete</button>
+              </div>
+            </div>
+            <div class="media-table-row">
+              <div class="media-table-subject">영어&nbsp;PPT</div>
+              <div class="media-table-created">2018-07-21&nbsp;21:00</div>
+              <div class="media-table-updated">2018-07-21&nbsp;23:00</div>
+              <div class="media-table-manipulation">
+                <button class="put-btn" type="button" name="button">edit</button>
+                <button class="delete-btn" type="button" name="button">delete</button>
+              </div>
+            </div>
           </div>
-        </div>
-
-
-
-        <div class="content-3">
 
         </div>
 
         <div class="footer">
-
+          <div class="footer-menu">
+            <div class="menu-btns">
+              <div class="footer-btn">문의하기</div>
+              <div class="footer-btn">서비스소개</div>
+              <div class="footer-btn">개인정보처리방침</div>
+              <div class="footer-btn">이용약관</div>
+            </div>
+            <div class="menu-sns">
+              <div class="sns-btn naver-btn"></div>
+              <div class="sns-btn brunch-btn"></div>
+              <div class="sns-btn github-btn"></div>
+            </div>
+          </div>
+          <div class="comp-info">
+            <div class="logo">VeggieAvocado</div>
+            <div class="info">
+              <p>주소</p>
+              <p>대표자: 우혜민, 사업자등록번호, 전화, 이메일</p>
+              <p>2018 VEGGIE AVOCADO Co. Ltd. All Rights Preserved.</p>
+            </div>
+          </div>
         </div>
 
       </div>
