@@ -8,7 +8,7 @@
     <link rel="icon" href="img/avocado.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="common/style.css" type="text/css" media="all">
-    <link rel="stylesheet" href="common/introduction.css" type="text/css" media="all">
+    <link rel="stylesheet" href="common/customer.css" type="text/css" media="all">
     <link href="https://fonts.googleapis.com/css?family=Jua|Nanum+Gothic|Gothic+A1|Ubuntu" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -23,56 +23,36 @@
       <div class="home"><a href="/home">Home</a></div>
     </div>
 
+    <div class="customer-title">
+      <h1><b>Customer</b></h1><br>
+      <p><strong>사용중 불편한 점이 있다면 알려주세요</strong></p>
+    </div>
+
     <div class="content-1">
-      <div class="content-img one"></div>
-      <div class="content-txt one">
-        <p>영문 텍스트 분석</p>
+      <div class="text-wrapper">
+        <div class="txt email">
+          <p>이메일</p>
+          <form class="customer" action="index.html" method="post">
+            <input type="text" name="title" value="">
+          </form>
+        </div>
+        <div class="txt title">
+          <p>제목</p>
+          <form class="customer" action="index.html" method="post">
+            <input type="text" name="title" value="">
+          </form>
+        </div>
+        <div class="txt content">
+          <p>내용</p>
+          <textarea name="name" rows="8" cols="80"></textarea>
+        </div>
+        <div class="submit-btn">
+          <button type="button" name="button">전송하기</button>
+        </div>
       </div>
-      <div class="content-txt two">
-        <p>영어, 꼭 필요하지만 어렵습니다.<br>
-          내가 필요한 부분만 쏙쏙 골라<br>
-          빠르게 사용할 수 있을까요?<br>
-        </p>
-      </div>
+
     </div>
 
-    <div class="content-2">
-      <div class="content-img two"></div>
-      <div class="content-txt one">
-        <p>비즈니스 이메일</p>
-      </div>
-      <div class="content-txt two">
-        <p>영문 비즈니스 이메일을<br>
-          쉽고, 빠르게 작성할 수 있도록<br>
-          최상의 솔루션 제공
-        </p>
-      </div>
-    </div>
 
-    <div class="content-3">
-      <div class="content-img three"></div>
-      <div class="content-txt one">
-        <p>프레젠테이션</p>
-      </div>
-      <div class="content-txt two">
-        <p>영어 프레젠테이션이<br>
-          어렵게 느껴진다면<br>
-          스크립트를 사용해보세요
-        </p>
-      </div>
-    </div>
 
-    <div class="content-4">
-      <div class="content-img four"></div>
-      <div class="content-txt one">
-        <p>레쥬메</p>
-      </div>
-      <div class="content-txt two">
-        <p>영어 레쥬메,<br>
-          어떻게 쓸지 모르겠다구요?<br>
-          Resume Builder와 함께하세요
-        </p>
-      </div>
-    </div>
-
-</body>
+  </body>

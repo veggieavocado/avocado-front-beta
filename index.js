@@ -63,3 +63,8 @@ app.get('/mydoc', (req, res) => {
 app.get('/introduction', (req, res) => {
   res.render('introduction.html')
 });
+
+//문의 페이지: https://www.veggieavocado.com/customer/
+app.get('/customer', (req, res) => {
+  res.render('customer.html')
+});
