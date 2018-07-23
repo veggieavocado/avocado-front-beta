@@ -1,5 +1,4 @@
 const axios = require('axios');
-const fetch = require('fetch').fetchUrl;
 
 const userURL = 'http://45.77.179.168:3000/api/v1/accounts/user/';
 const profileURL = 'http://45.77.179.168:3000/api/v1/accounts/profile/';
@@ -29,19 +28,13 @@ const registerUser = async (username, email, password, address, phone) => {
 
   if (userResponse.status === 201) {
     const jwtToken = await axios.post(jwtURL, jwtData);
-    const { token } = jwtToken.data.token;
-    const headers = {
-      'Content-Type': 'application/json',
+    const token = jwtToken.data.token;
+    console.log(token);
+    const headerData = {
       Authorization: `JWT ${token}`,
     };
-    fetch(`${profileURL + username}`.concat('/'), {
-      method: 'PUT',
-      body: profileData,
-      headers,
-    })
-      .then((response) => {
-        console.log(response);
-      });
+    const profileResponse = await axios.put(`${profileURL + username}`.concat('/'), profileData, { headers: headerData });
+    console.log(profileResponse);
   } else {
     console.log('유저 저장 실패');
   }
