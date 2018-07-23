@@ -44,12 +44,17 @@ app.get('/register', (req, res) => {
   res.render('register.html')
 });
 
-// 템플릿뷰 페이지:  https://www.veggieavocado.com/template/ppt/
-app.get('/template/ppt', (req, res) => {
+// 템플릿뷰 페이지:  https://www.veggieavocado.com/template
+app.get('/template', (req, res) => {
   res.render('templateview.html')
 });
 
 // ppt선택 페이지: https://www.veggieavocado.com/pptselect/
 app.get('/pptselect', (req, res) => {
   res.render('pptselect.html')
+});
+
+// ppt선택 페이지: https://www.veggieavocado.com/pptselect/
+app.get('/mydoc', (req, res) => {
+  res.render('mydoc.html')
 });

@@ -12,13 +12,13 @@
 
 /* Content-1 CSS starts here */
 .content-1 {
-  height: 19rem;
+  height: 23rem;
   position: relative;
 }
 
   .content-1 > .content-img {
     height: inherit;
-    background-image: url(../img/avocado-bg.jpg);
+    background-image: url(../img/home.jpg);
     background-position: center;
     background-size: cover;
   }
@@ -62,7 +62,7 @@
 
 /* Content-2 CSS starts here */
 .content-2 {
-  height: 4.5rem;
+  height: 3.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,8 +82,9 @@
     .content-container > .popular-act {
       height: 2rem;
       margin: 0 1rem;
+      margin-top: 0.7rem;
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1em;
       cursor: pointer;
     }
 
@@ -174,105 +175,158 @@
       margin-left: 10px;
     }
 
+/* Content-3 CSS ends here */
+
+/* Content-4 CSS starts here */
+
     .content-4-wrapper {
       width: 100%;
       background-color: #F6F7F7;
     }
-  .content-4 {
-    width: 70%;
-    margin: auto;
-  }
 
-    .content-4 > .recommend-txt {
+    .content-4 {
+      width: 70%;
+      margin: auto;
+      /* background-color: red; */
+    }
+
+    .content-4 > .textanalysis-txt {
       height: 4rem;
       display: flex;
       align-items: flex-end;
       font-weight: bold;
     }
 
-    .content-4 > .recommend-box {
-      height: 25rem;
+    .content-4 > textarea {
+      margin-top: 2rem;
       width: 100%;
-      /* background-color: var(--main-purple); */
+    }
+
+    .content-4 > .txt-btn{
+      margin: 2rem 0 5rem 0;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
+      background-color: #F6F7F7;
     }
 
-    .recommend-imgbox {
-      height: 22rem;
-      width: 24%;
-      border: solid 1px var(--gray);
+    .content-4 > button {
+      width: 2rem;
+      height: 2rem;
     }
 
-    .recommend-imgbox-img {
-      height: 80%;
-      width: auto;
-      background-position: center;
-      background-size: cover;
-      border-bottom: solid 1px var(--gray);
+    .content-5 {
+      height: 3rem;
     }
 
-    .recommend-imgbox-img.first {
-      background-image: url(../img/harvard_1.png);
-    }
+/* Content-4 CSS ends here */
 
-    .recommend-imgbox-img.second {
-      background-image: url(../img/princeton_1.png);
-    }
-    .recommend-imgbox-img.third {
-      background-image: url(../img/penn_1.png);
-    }
+/*Mobile Styles*/
+@media only screen and (max-width: 900px) {
 
-    .recommend-imgbox-img.fourth {
-      background-image: url(../img/yale.jpg);
-    }
-
-.content-5-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items:center;
-}
-
-.content-5 {
-  height: 20rem;
-  width: 70%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-}
-  .content-5 > .partner-text {
-    height: 30%;
+  .navbar {
+    height: auto;
     display: flex;
-    justify-content: center;
-    align-items:flex-end;
-    font-weight: bold;
+    flex-direction: column;
+
   }
 
-  .partner-box-wrapper {
-    height: 70%;
+  .navbar > .navbar-logo {
+    position: relative;
+    left: -40%;
+    top: 0%;
+    margin: 0.5rem 0;
+  }
+
+  .navbar > .navbar-action {
+    width: 90%;
+    margin: 0.5rem 0;
+
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-login {
+    position: absolute;
+    right: 5%;
+    top: 10%;
   }
 
 
-  .partner-box-wrapper > .partner-box {
-    height: 10rem;
-    width: 39%;
+  .navbar-login > .wide-button {
+    display: none;
   }
 
-  .partner-img.first {
-    background-image: url(../img/next.JPG);
-    background-position: center;
-    background-size: cover;
+  .navbar-login > .narrow-button {
+    display: block;
+  }
+
+  .content-1{
+    height: 15rem;
+  }
+
+  .content-txt {
+    width: 90%;
+    font-size: 0.8em;
+  }
+
+
+
+  .content-2 {
+    display: none;
+  }
+
+/* Content-3 CSS starts here */
+
+  /* .content-3 {
+    background-color: red;
     width: 100%;
-    height: 100%;
   }
-  .partner-img.second {
-    background-image: url(../img/kyunghee.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-  }
+
+  .content-3 > .veggie {
+    background-color: blue;
+
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+  } */
+
 /* Content-3 CSS ends here */
+
+  .content-4 {
+    width: 80%;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-btns > .footer-btn {
+    width: inherit;
+    font-size: 0.8em;
+  }
+
+
+  .footer > .comp-info {
+    width: 100%;
+  }
+
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+
+
+}

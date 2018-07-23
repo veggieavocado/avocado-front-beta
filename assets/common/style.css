@@ -47,6 +47,8 @@ a:hover {
   background-color: white;
   height: var(--navbar-height);
   display: flex;
+  border-bottom: solid 1.5px var(--light-gray);
+  box-shadow: 2px 2px 3px 2px var(--very-light-gray);
 }
 
 /* Navbar-logo CSS starts here */
@@ -72,14 +74,20 @@ a:hover {
     /* background-color: var(--main-red); */
   }
 
+  .navbar-login > .narrow-button {
+    display: none;
+  }
+
     .navbar-action > .action-btn {
-      width: 7rem;
+      width: 9rem;
       margin: 0 1rem;
       cursor: pointer;
       position: relative;
       background-color:white;
       text-align: center;
       font-size: 18px;
+      color: var(--pretty-black);
+
       /* background-color: var(--main-purple); */
     }
 
