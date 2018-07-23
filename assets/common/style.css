@@ -72,14 +72,20 @@ a:hover {
     /* background-color: var(--main-red); */
   }
 
+  .navbar-login > .narrow-button {
+    display: none;
+  }
+
     .navbar-action > .action-btn {
-      width: 7rem;
+      width: 9rem;
       margin: 0 1rem;
       cursor: pointer;
       position: relative;
       background-color:white;
       text-align: center;
       font-size: 18px;
+      color: var(--pretty-black);
+
       /* background-color: var(--main-purple); */
     }
 
