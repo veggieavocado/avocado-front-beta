@@ -1,1 +1,2 @@
 css branch initialized
+2018/7/23 peepee: js 브렌치 만들고 할리가 만든 페이지에 자바스크립트 파일 넣을 준비
