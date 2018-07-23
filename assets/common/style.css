@@ -363,3 +363,45 @@ a:hover {
       margin-bottom: 2rem;
     }
 /* Footer CSS ends here */
+
+
+/*Mobile Styles*/
+@media only screen and (max-width: 900px) {
+
+  .navbar {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .navbar > .navbar-logo {
+    position: relative;
+    left: -40%;
+    top: 0%;
+    margin: 0.5rem 0;
+  }
+
+  .navbar > .navbar-action {
+    width: 90%;
+    margin: 0.5rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-login {
+    position: absolute;
+    right: 5%;
+    top: 10%;
+  }
+
+
+  .navbar-login > .wide-button {
+    display: none;
+  }
+
+  .navbar-login > .narrow-button {
+    display: block;
+  }
