@@ -6,7 +6,7 @@ module.exports = {
   devtool: 'source-map', // create source map so you can easily debug minified js files
 
   entry: {
-    exampleTest: ['babel-polyfill', `${__dirname}/src/exampleTest.js`], // 모카로 테스팅 하는 방법 예시
+    register: ['babel-polyfill', `${__dirname}/src/register.js`], // 모카로 테스팅 하는 방법 예시
   },
 
   output: {
@@ -41,6 +41,11 @@ module.exports = {
         ],
       },
     ],
+  },
+
+  node: {
+    dns: 'mock',
+    net: 'mock',
   },
 
   plugins: [
