@@ -53,3 +53,8 @@ app.get('/template', (req, res) => {
 app.get('/pptselect', (req, res) => {
   res.render('pptselect.html')
 });
+
+// ppt선택 페이지: https://www.veggieavocado.com/pptselect/
+app.get('/mydoc', (req, res) => {
+  res.render('mydoc.html')
+});
