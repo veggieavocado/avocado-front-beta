@@ -54,3 +54,34 @@
       color: #221e99;
     }
 /* Content-1 CSS ends here */
+
+
+
+/*Mobile Styles*/
+@media only screen and (max-width: 900px) {
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-btns > .footer-btn {
+    width: inherit;
+    font-size: 0.8em;
+  }
+
+
+  .footer > .comp-info {
+    width: 100%;
+  }

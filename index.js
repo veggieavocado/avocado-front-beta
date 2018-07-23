@@ -58,3 +58,8 @@ app.get('/pptselect', (req, res) => {
 app.get('/mydoc', (req, res) => {
   res.render('mydoc.html')
 });
+
+//소개 페이지: https://www.veggieavocado.com/introduction/
+app.get('/introduction', (req, res) => {
+  res.render('introduction.html')
+});

@@ -1,0 +1,91 @@
+/* 공통설정 */
+.content-img.one {
+  background-image: url(../img/typewriter.jpg);
+}
+
+.content-img.two {
+  background-image: url(../img/computer.jpg);
+}
+
+.content-img.three {
+  background-image: url(../img/cafe.jpg);
+}
+
+.content-img.four {
+  background-image: url(../img/people.jpg);
+}
+
+.content-img {
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.content-txt.one > p {
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.content-txt.two > p {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* nav-introdcution starts here */
+
+.nav-introduction {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-introduction {
+   width: 100%;
+   margin: 5px;
+   padding: 5px 20px 0px 10px;
+   font-size: 1.3em;
+   font-weight: bold;
+   margin-bottom: 1rem;
+  }
+
+/* content-1 css starts here */
+
+.content-1 > .content-img.one {
+  height: 13rem;
+}
+
+.content-2 > .content-img.two{
+  height: 13rem;
+}
+
+.content-3 > .content-img.three{
+  height: 13rem;
+}
+
+.content-4 > .content-img.four{
+  height: 13rem;
+}
+
+
+
+/*Mobile Styles*/
+@media only screen and (min-width: 900px) {
+
+  .content-1 > .content-img.one {
+    height: 20rem;
+  }
+
+  .content-2 > .content-img.two{
+    height: 20rem;
+  }
+
+  .content-3 > .content-img.three{
+    height: 20rem;
+  }
+
+  .content-4 > .content-img.four{
+    height: 20rem;
+  }
+}
