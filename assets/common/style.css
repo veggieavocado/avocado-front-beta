@@ -140,7 +140,7 @@ a:hover {
     justify-content: flex-end;
   }
 
-    .navbar-login > .login-btn {
+    .login-btn {
       margin-right: 1rem;
       border: solid 1.5px var(--black);
       border-radius: var(--btn-radius);

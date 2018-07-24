@@ -1,0 +1,93 @@
+/* 공통설정 */
+input {
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+}
+
+.txt > p {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+.customer-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    margin-bottom: 5px;
+    /* background-color: var(--light-gray); */
+    color: var(--pretty-black);
+  }
+
+  .nav-introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1.5px var(--light-gray);
+    box-shadow: 2px 2px 3px 2px var(--very-light-gray);
+  }
+
+  .nav-introduction {
+     width: 100%;
+     padding: 5px 20px 10px 10px;
+     font-size: 1.3em;
+     font-weight: bold;
+     margin-bottom: 2rem;
+    }
+
+    .nav-introduction > .navbar-logo {
+      margin-top: 10px;
+      margin-left: 10px;
+      font-family: var(--logo-font), sans-serif;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: var(--main-green);
+    }
+
+  /* content-1 css starts here */
+
+
+.content-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-1 > .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+}
+
+.submit-btn  {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.submit-btn > button {
+      color: white;
+      font-weight: bold;
+      border: solid 1.5px var(--btn-green);
+      border-radius: var(--btn-radius);
+      background-color: var(--btn-green);
+      cursor: pointer;
+
+      padding: 10px 10px 10px 10px;
+}
+
+
+/*Desktop Styles*/
+@media only screen and (min-width: 900px) {
+  .content-1 > .text-wrapper {
+    width: 50%;
+  }
+
+}

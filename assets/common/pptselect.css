@@ -125,9 +125,7 @@ a.hover {
       background-image: url(../img/singapore.jpg);
     }
 
-    .container-head,
-    .container-content
-     {
+    .container-head  {
        position: absolute;
        left: 50%;
        top: 50%;

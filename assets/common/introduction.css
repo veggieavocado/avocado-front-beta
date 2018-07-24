@@ -1,0 +1,116 @@
+/* 공통설정 */
+.content-img.one {
+  background-image: url(../img/typewriter.jpg);
+}
+
+.content-img.two {
+  background-image: url(../img/computer.jpg);
+}
+
+.content-img.three {
+  background-image: url(../img/cafe.jpg);
+}
+
+.content-img.four {
+  background-image: url(../img/people.jpg);
+}
+
+.content-img {
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.content-txt.one > p {
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.content-txt.two > p {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* nav-introdcution starts here */
+
+.nav-introduction {
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1.5px var(--light-gray);
+  box-shadow: 2px 2px 3px 2px var(--very-light-gray);
+}
+
+.nav-introduction {
+   width: 100%;
+   padding: 5px 20px 10px 10px;
+   font-size: 1.3em;
+   font-weight: bold;
+   margin-bottom: 2rem;
+  }
+
+  .nav-introduction > .navbar-logo {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: var(--logo-font), sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--main-green);
+  }
+
+  .nav-introduction > .home {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+/* content-1 css starts here */
+
+.content-1 {
+  margin-top: 4rem;
+}
+
+.content-1 > .content-img.one {
+  height: 13rem;
+}
+
+.content-2 > .content-img.two{
+  height: 13rem;
+}
+
+.content-3 > .content-img.three{
+  height: 13rem;
+}
+
+.content-4 > .content-img.four{
+  height: 13rem;
+}
+
+
+
+/*Desktop Styles*/
+@media only screen and (min-width: 900px) {
+
+  .content-1 > .content-img.one {
+    height: 20rem;
+  }
+
+  .content-2 > .content-img.two{
+    height: 20rem;
+  }
+
+  .content-3 > .content-img.three{
+    height: 20rem;
+  }
+
+  .content-4 > .content-img.four{
+    height: 20rem;
+  }
+}
