@@ -50,9 +50,20 @@ app.get('/template', (req, res) => {
   res.render('templateview.html');
 });
 
+// 템플릿뷰 페이지:  https://www.veggieavocado.com/maketemplate
+// 템플릿에 데이터 보여주기 테스트용
+app.get('/maketemplate', (req, res) => {
+  res.render('maketemplate.html');
+});
+
 // ppt선택 페이지: https://www.veggieavocado.com/pptselect/
 app.get('/pptselect', (req, res) => {
   res.render('pptselect.html');
+});
+
+//이메일선택 페이지: https://www.veggieavocado.com/emailselect/
+app.get('/emailselect', (req, res) => {
+  res.render('emailselect.html')
 });
 
 // ppt선택 페이지: https://www.veggieavocado.com/pptselect/

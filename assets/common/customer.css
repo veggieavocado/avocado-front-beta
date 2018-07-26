@@ -70,6 +70,7 @@ textarea {
     display: flex;
     justify-content: flex-end;
     margin-top: 1rem;
+    margin-bottom: 5rem;
 }
 
 .submit-btn > button {
@@ -80,7 +81,7 @@ textarea {
       background-color: var(--btn-green);
       cursor: pointer;
 
-      padding: 10px 10px 10px 10px;
+      padding: 8px;
 }
 
 
