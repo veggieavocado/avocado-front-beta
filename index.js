@@ -61,6 +61,11 @@ app.get('/pptselect', (req, res) => {
   res.render('pptselect.html');
 });
 
+//이메일선택 페이지: https://www.veggieavocado.com/emailselect/
+app.get('/emailselect', (req, res) => {
+  res.render('emailselect.html')
+});
+
 // ppt선택 페이지: https://www.veggieavocado.com/pptselect/
 app.get('/mydoc', (req, res) => {
   res.render('mydoc.html');
