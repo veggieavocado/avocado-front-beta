@@ -3,7 +3,8 @@
     "extends": "airbnb-base",
     "globals": {
       "document": true,
-      "console": true
+      "console": true,
+      "window": true
     },
     "rules": {
       "no-console": 0,

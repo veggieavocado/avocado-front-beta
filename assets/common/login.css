@@ -37,8 +37,18 @@
       width: 20rem;
     }
 
+    .login-input > .login-section-extra {
+      margin-top: 1rem;
+    }
+
     .login-input > .avocado-btn {
       padding: 0.3rem;
+    }
+
+    .login-input > .password-alert {
+      margin-top: -1rem;
+      color: var(--main-red);
+      font-weight: bold;
     }
 
   .content-1 > .register-sec {
@@ -85,3 +95,5 @@
   .footer > .comp-info {
     width: 100%;
   }
+
+}
