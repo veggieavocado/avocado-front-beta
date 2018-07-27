@@ -24,7 +24,16 @@
           <div class="menu-icon">
             <div class="item"><a href="/pptselect"><img src="img/back.png"/></a></div>
             <div class="item"><img src="img/download.png"/></div>
-            <div class="item"><img src="img/plus.png"/></div>
+              <div class="dropdown">
+                <button class="dropbtn">
+                  <img src="img/plus.png" width="25" height="25" alt="submit"/>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div>
           </div>
         </div>
 
@@ -36,7 +45,11 @@
               </form>
             </div>
             <div class="contents">
-              <div contenteditable="true" placeholder="내용을 입력하세요"></div>
+              <div contenteditable="true" placeholder="내용을 입력하세요">
+                <span>I am honoured to be with you today at your commencement from one of the finest universities in the world.</span>
+                <span>I never graduated from college.</span>
+                <span>Truth be told, this is the closest I've ever gotten to a college graduation.</span>
+              </div>
               <!-- http://naminsik.com/blog/3165 -->
             </div>
           </div>
@@ -50,18 +63,58 @@
               원하는 표현으로 바꿔보세요
             </div>
             <ul class="assist-list">
-              <li><a href='#'>Good morning/afternoon/evening.</a></li>
-              <li>Hello, ladies and gentlemen.</li>
-              <li>very nice to be with you.</li>
-              <li>how is everyone doing here today?</li>
-              <li>I'm glad to be here with you today</li>
-              <li>it's my/a pleasure to present this presentation.</li>
+
+              <li class="collapsible">Good morning.<br>
+                <small>안녕하세요</small>
+              </li>
+              <div class="content one">
+                <p>afternoon evening</p>
+              </div>
+
+              <li>Hello, ladies and gentlemen.<br>
+                <small>신사 숙녀 여러분 안녕하세요</small>
+              </li>
+              <li>very nice to be with you.<br>
+                <small>여러분과 함께 하게 되어 기쁩니다</small>
+              </li>
+              <li>how is everyone doing here today?<br>
+                <small>모두 안녕들 하세요?</small>
+              </li>
+              <li>I'm glad to be here with you today.<br>
+                <small>오늘 여러분과 이 자리에 함께 하게 되어 기쁩니다</small>
+              </li>
+              <li>it's my/a pleasure to present this presentation.<br>
+                <small>이 프레젠테이션을 발표하게 되어 기쁩니다</small>
+              </li>
+              <li>I am delighted to be here. Thank you for the invitation.<br>
+                <small>이 자리에 서게 되어 기쁩니다. 초대해 주셔서 감사합니다</small>
+              </li>
+              <li>how have you been?<br>
+                <small>잘 지내셨어요?</small>
+              </li>
+              <li>it's my/an honor to be here with you.<br>
+                <small>여러분과 이 자리에 함께 하게 되어 영광입니다</small>
+              </li>
             </ul>
           </div>
         </div>
 
       </div>
+<script type="text/javascript">
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
+for (i = 0; i < coll.length; i++) {
+coll[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var content = this.nextElementSibling;
+  if (content.style.display === "block") {
+    content.style.display = "none";
+  } else {
+    content.style.display = "block";
+  }
+});
+}
+</script>
     </body>
-
   </html>
