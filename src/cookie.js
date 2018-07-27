@@ -1,5 +1,7 @@
 const setCookie = (key, value) => {
-  document.cookie = `${key}=${value}`;
+  console.log(key);
+  console.log(value);
+  document.cookie += `${key}=${value}`;
 };
 
 const getCookie = (key) => {
