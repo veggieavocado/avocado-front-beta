@@ -120,6 +120,10 @@
       width: 100%;
     }
 
+    textarea::-webkit-input-placeholder {
+      color: black;
+      }
+
     .content-4 > .txt-btn{
       margin: 2rem 0rem;
       display: flex;
