@@ -37,7 +37,7 @@ const registerUser = async (username, email, password, address, phone) => {
     };
     await axios.put(`${profileURL + username}`.concat('/'), profileData, { headers: headerData });
   } else {
-    const registerAlert = document.getElementsByClassName('password-alert')[0];
+    // const registerAlert = document.getElementsByClassName('password-alert')[0];
     console.log('유저 저장 실패');
   }
 };
