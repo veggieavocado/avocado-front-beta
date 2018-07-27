@@ -12585,6 +12585,39 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./src/cookie.js":
+/*!***********************!*\
+  !*** ./src/cookie.js ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+const setCookie = (key, value) => {
+  document.cookie = `${key}=${value}`;
+};
+
+const getCookie = key => {
+  const name = `${key}=`;
+  const ca = document.cookie.split(';');
+  for (let i = 0; i < ca.length; i += 1) {
+    let c = ca[i];
+    while (c.charAt(0) === ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) === 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return '';
+};
+
+module.exports = {
+  setCookie,
+  getCookie
+};
+
+/***/ }),
+
 /***/ "./src/register.js":
 /*!*************************!*\
   !*** ./src/register.js ***!
@@ -12593,14 +12626,14 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 const axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+const { setCookie, getCookie } = __webpack_require__(/*! ./cookie.js */ "./src/cookie.js");
 
 const userURL = 'http://45.77.179.168:3000/api/v1/accounts/user/';
 const profileURL = 'http://45.77.179.168:3000/api/v1/accounts/profile/';
 const jwtURL = 'http://45.77.179.168:3000/api/v1/accounts/api-token-auth/';
 
+// register.html의 폼에서 입력받은 값을 API POST용청을 보내어 회원가입시켜준다
 const registerUser = async (username, email, password, address, phone) => {
-  // 유저 생성
-  console.log(address, phone);
   const userData = {
     username,
     email,
@@ -12618,18 +12651,20 @@ const registerUser = async (username, email, password, address, phone) => {
   };
 
   const userResponse = await axios.post(userURL, userData);
-  console.log(userResponse);
 
   if (userResponse.status === 201) {
-    const jwtToken = await axios.post(jwtURL, jwtData);
+    const jwtToken = await axios.post(jwtURL, jwtData); // API 서버에 요청을 다시 보내기 위해 JWT 토큰 발급
     const token = jwtToken.data.token;
-    console.log(token);
+    // 위에서 받은 토큰을 브라우저 쿠키에 저장한다
+    document.cookie = setCookie('VA-TOKEN', token);
+    // 쿠키를 가져와서 토큰을 사용한다
+    const vaToken = getCookie('VA-TOKEN');
     const headerData = {
-      Authorization: `JWT ${token}`
+      Authorization: `JWT ${vaToken}`
     };
-    const profileResponse = await axios.put(`${profileURL + username}`.concat('/'), profileData, { headers: headerData });
-    console.log(profileResponse);
+    await axios.put(`${profileURL + username}`.concat('/'), profileData, { headers: headerData });
   } else {
+    // const registerAlert = document.getElementsByClassName('password-alert')[0];
     console.log('유저 저장 실패');
   }
 };
@@ -12648,6 +12683,8 @@ document.addEventListener('click', async e => {
       passwordAlert.innerText = '비밀번호가 일치하지 않습니다.';
     } else {
       await registerUser(username, email, password, address, phone);
+      // 회원가입이 되었다면 로그인창으로 보낸다
+      window.location.href = '/login';
     }
     console.log(username, email, password, passwordCheck, address, phone);
   }

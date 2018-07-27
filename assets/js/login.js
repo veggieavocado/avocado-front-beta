@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -12585,57 +12585,100 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./src/ppt.js":
-/*!********************!*\
-  !*** ./src/ppt.js ***!
-  \********************/
+/***/ "./src/cookie.js":
+/*!***********************!*\
+  !*** ./src/cookie.js ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+const setCookie = (key, value) => {
+  document.cookie = `${key}=${value}`;
+};
+
+const getCookie = key => {
+  const name = `${key}=`;
+  const ca = document.cookie.split(';');
+  for (let i = 0; i < ca.length; i += 1) {
+    let c = ca[i];
+    while (c.charAt(0) === ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) === 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return '';
+};
+
+module.exports = {
+  setCookie,
+  getCookie
+};
+
+/***/ }),
+
+/***/ "./src/login.js":
+/*!**********************!*\
+  !*** ./src/login.js ***!
+  \**********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 const axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+const { setCookie } = __webpack_require__(/*! ./cookie.js */ "./src/cookie.js");
 
-const tagName = '인사하기';
-const sentenceURL = `http://45.77.179.168:8000/api/v1/services/sentence/?role=${tagName}`;
+const jwtURL = 'http://45.77.179.168:3000/api/v1/accounts/api-token-auth/';
 
-const showSentences = async () => {
-  let assistListHTML = '';
-  const response = await axios.get(sentenceURL);
-  for (sentenceJSON of response.data.results) {
-    console.log(sentenceJSON.sentence);
-    const sentenceTxt = sentenceJSON.sentence;
-    const listItem = `<li>${sentenceTxt}</li>`;
-    console.log(listItem);
-    assistListHTML += listItem;
-    console.log(assistListHTML);
+const loginUser = async () => {
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('pw').value;
+  // JWT data makes
+  const jwtData = {
+    username,
+    password
+  };
+  const jwtToken = await axios.post(jwtURL, jwtData).catch(() => {
+    const loginAlert = document.getElementById('login-alert');
+    loginAlert.innerText = '아이디/비밀번호를 다시 확인해주세요.';
+  }); // API 서버에 요청을 다시 보내기 위해 JWT 토큰 발급
+  // 만약 에러가 리턴되면 에러 메세지를 모여준다
+  if (jwtToken.status === 200) {
+    const token = jwtToken.data.token;
+    document.cookie = setCookie('VA-TOKEN', token);
+    window.location.href = '/pptselect';
   }
-  return assistListHTML;
 };
 
-// /// document related event listeners here /////
-document.addEventListener('DOMContentLoaded', async () => {
-  const assistNameElmt = document.getElementsByClassName('assist-name')[0];
-  assistNameElmt.innerHTML = `<h1>${tagName}</h1>`;
+document.addEventListener('click', async e => {
+  if (e.target.id === 'login-btn') {
+    await loginUser();
+  }
+});
 
-  const assistListElmt = document.getElementsByClassName('assist-list')[0];
+const pwInput = document.getElementById('pw');
 
-  const newHTML = await showSentences();
-  assistListElmt.innerHTML = newHTML;
+pwInput.addEventListener('keyup', async e => {
+  e.preventDefault();
+  if (e.keyCode === 13) {
+    await loginUser();
+  }
 });
 
 /***/ }),
 
-/***/ 1:
-/*!*****************************************!*\
-  !*** multi babel-polyfill ./src/ppt.js ***!
-  \*****************************************/
+/***/ 2:
+/*!*******************************************!*\
+  !*** multi babel-polyfill ./src/login.js ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! babel-polyfill */"./node_modules/babel-polyfill/lib/index.js");
-module.exports = __webpack_require__(/*! C:\Users\LeeMH\Desktop\VA\va_font_beta/src/ppt.js */"./src/ppt.js");
+module.exports = __webpack_require__(/*! C:\Users\LeeMH\Desktop\VA\va_font_beta/src/login.js */"./src/login.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=ppt.map
+//# sourceMappingURL=login.map
