@@ -6,6 +6,7 @@ module.exports = {
   devtool: 'source-map', // create source map so you can easily debug minified js files
 
   entry: {
+    home: ['babel-polyfill', `${__dirname}/src/home.js`],
     register: ['babel-polyfill', `${__dirname}/src/register.js`], // 모카로 테스팅 하는 방법 예시
     ppt: ['babel-polyfill', `${__dirname}/src/ppt.js`],
     login: ['babel-polyfill', `${__dirname}/src/login.js`],

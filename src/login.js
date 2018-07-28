@@ -6,6 +6,7 @@ const jwtURL = 'http://45.77.179.168:3000/api/v1/accounts/api-token-auth/';
 const loginUser = async () => {
   const username = document.getElementById('username').value;
   const password = document.getElementById('pw').value;
+  document.cookie = `VA-USER=${username}`;
   // JWT data makes
   const jwtData = {
     username,
@@ -20,7 +21,7 @@ const loginUser = async () => {
   if (jwtToken.status === 200) {
     const token = jwtToken.data.token;
     document.cookie = setCookie('VA-TOKEN', token);
-    window.location.href = '/pptselect';
+    window.location.href = '/home';
   }
 };
 
