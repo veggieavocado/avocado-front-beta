@@ -8,7 +8,7 @@ module.exports = {
   entry: {
     home: ['babel-polyfill', `${__dirname}/src/home.js`],
     register: ['babel-polyfill', `${__dirname}/src/register.js`], // 모카로 테스팅 하는 방법 예시
-    ppt: ['babel-polyfill', `${__dirname}/src/ppt.js`],
+    pptselect: ['babel-polyfill', `${__dirname}/src/pptselect.js`],
     login: ['babel-polyfill', `${__dirname}/src/login.js`],
   },
 
