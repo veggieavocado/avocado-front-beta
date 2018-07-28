@@ -12595,8 +12595,7 @@ module.exports = g;
 const axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
 // URL 정의 장소
-// const pptCategoriesURL = 'http://45.77.179.168:3000/api/v1/services/ppt_categories/';
-const pptCategoriesURL = 'http://127.0.0.1:8000/api/v1/services/ppt_categories/';
+const pptCategoriesURL = 'http://45.77.179.168:3000/api/v1/services/ppt_categories/';
 
 const formatString = (stringValue, replacementsArray) => {
   let formatted = stringValue;
