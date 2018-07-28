@@ -9,7 +9,8 @@
     "rules": {
       "no-console": 0,
       "linebreak-style": 0,
-      "prefer-destructuring": 0
+      "prefer-destructuring": 0,
+      "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"]
     },
     "env": {
       "mocha": true

@@ -1,4 +1,4 @@
-const { setCookie, getCookie } = require('./cookie.js');
+const { getCookie } = require('./cookie.js');
 
 console.log(document.cookie);
 const token = getCookie('VA-TOKEN');

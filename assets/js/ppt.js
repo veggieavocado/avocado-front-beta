@@ -12600,7 +12600,7 @@ const sentenceURL = `http://45.77.179.168:8000/api/v1/services/sentence/?role=${
 const showSentences = async () => {
   let assistListHTML = '';
   const response = await axios.get(sentenceURL);
-  for (sentenceJSON of response.data.results) {
+  for (const sentenceJSON of response.data.results) {
     console.log(sentenceJSON.sentence);
     const sentenceTxt = sentenceJSON.sentence;
     const listItem = `<li>${sentenceTxt}</li>`;
@@ -12632,7 +12632,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! babel-polyfill */"./node_modules/babel-polyfill/lib/index.js");
-module.exports = __webpack_require__(/*! /Users/abc/Desktop/PROJECTS/docker/minimum-frontend/src/ppt.js */"./src/ppt.js");
+module.exports = __webpack_require__(/*! C:\Users\LeeMH\Desktop\VA\va_front_beta/src/ppt.js */"./src/ppt.js");
 
 
 /***/ })

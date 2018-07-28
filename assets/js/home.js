@@ -10732,7 +10732,7 @@ module.exports = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-const { setCookie, getCookie } = __webpack_require__(/*! ./cookie.js */ "./src/cookie.js");
+const { getCookie } = __webpack_require__(/*! ./cookie.js */ "./src/cookie.js");
 
 console.log(document.cookie);
 const token = getCookie('VA-TOKEN');
@@ -10769,7 +10769,7 @@ if (token) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! babel-polyfill */"./node_modules/babel-polyfill/lib/index.js");
-module.exports = __webpack_require__(/*! /Users/abc/Desktop/PROJECTS/docker/minimum-frontend/src/home.js */"./src/home.js");
+module.exports = __webpack_require__(/*! C:\Users\LeeMH\Desktop\VA\va_front_beta/src/home.js */"./src/home.js");
 
 
 /***/ })

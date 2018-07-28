@@ -61,9 +61,9 @@ app.get('/pptselect', (req, res) => {
   res.render('pptselect.html');
 });
 
-//이메일선택 페이지: https://www.veggieavocado.com/emailselect/
+// 이메일선택 페이지: https://www.veggieavocado.com/emailselect/
 app.get('/emailselect', (req, res) => {
-  res.render('emailselect.html')
+  res.render('emailselect.html');
 });
 
 // ppt선택 페이지: https://www.veggieavocado.com/pptselect/
@@ -71,12 +71,12 @@ app.get('/mydoc', (req, res) => {
   res.render('mydoc.html');
 });
 
-//소개 페이지: https://www.veggieavocado.com/introduction/
+// 소개 페이지: https://www.veggieavocado.com/introduction/
 app.get('/introduction', (req, res) => {
-  res.render('introduction.html')
+  res.render('introduction.html');
 });
 
-//문의 페이지: https://www.veggieavocado.com/customer/
+// 문의 페이지: https://www.veggieavocado.com/customer/
 app.get('/customer', (req, res) => {
-  res.render('customer.html')
+  res.render('customer.html');
 });

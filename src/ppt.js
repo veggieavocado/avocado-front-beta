@@ -1,4 +1,16 @@
 const axios = require('axios');
+// category page: /pptselect
+let cardHTML= ``;
+
+let cardWrapHTML = `<div class="ppt-select-box"></div>`;
+
+
+const categoryURL = '';
+const getCategories = async () => {
+  const response = await.get(categoryURL);
+}
+
+// template page: /template
 
 const tagName = '인사하기';
 const sentenceURL = `http://45.77.179.168:8000/api/v1/services/sentence/?role=${tagName}`;
@@ -6,7 +18,7 @@ const sentenceURL = `http://45.77.179.168:8000/api/v1/services/sentence/?role=${
 const showSentences = async () => {
   let assistListHTML = '';
   const response = await axios.get(sentenceURL);
-  for (sentenceJSON of response.data.results) {
+  for (const sentenceJSON of response.data.results) {
     console.log(sentenceJSON.sentence);
     const sentenceTxt = sentenceJSON.sentence;
     const listItem = `<li>${sentenceTxt}</li>`;
