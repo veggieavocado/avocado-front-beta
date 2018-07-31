@@ -98,7 +98,7 @@
 
     .content-4-wrapper {
       width: 100%;
-      height: 25rem;
+      height: 27rem;
       background-color: #F6F7F7;
     }
 
@@ -125,7 +125,7 @@
       }
 
     .content-4 > .txt-btn{
-      margin: 2rem 0rem;
+      /* margin: 2rem 0rem; */
       display: flex;
       justify-content: flex-end;
       background-color: #F6F7F7;
@@ -135,12 +135,22 @@
       padding: 8px;
     }
 
+    .text-analysis-alert {
+      margin-top: 1rem;
+      color: var(--main-red);
+      text-align: center;
+    }
+
 /* Content-4 CSS ends here */
 
-
-.chart-area {
-  width: 50rem;
-  height: 50rem;
+ /* Highcharts 차트 렌더링 컨테이너 디자인 */
+#container {
+  min-width: 310px;
+  height: 400px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  display: none;
 }
 
 /*Mobile Styles*/
