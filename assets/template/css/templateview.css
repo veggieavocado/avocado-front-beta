@@ -24,34 +24,6 @@
     background: grey;
 }
 
-/*Collapse style format -  Style the button that is used to open and close the collapsible content */
-.collapsible {
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsible:hover {
-  background-color: white;
-}
-
-/* Style the collapsible content. Note: hidden by default */
-.content.one {
-  width: 95%;
-  margin-left: -0.8rem;
-  padding: 0px 10px;
-  display: none;
-  overflow: hidden;
-  background-color: white;
-  border: solid 1px #f1f1f1;
-}
-
 body {
   height: auto;
   width: auto;
@@ -239,56 +211,131 @@ body {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
-    /*Mobile Styles*/
-    @media only screen and (max-width: 800px) {
+/*Collapse style format -  Style the button that is used to open and close the collapsible content */
+.collapsible {
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
 
-      .container-wrapper {
-        display: flex;
-        flex-direction: column;
-        /* background-color: purple; */
-      }
+}
 
-      .menu-container {
-        position: absolute;
-        height: 5rem;
-        width: 100%;
-        /* background-color: blue; */
-        margin-top: 1rem;
-      }
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: white;
+}
 
-      .menu-icon {
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 1rem;
-      }
+/* Style the collapsible content. Note: hidden by default */
+.content.one {
+  width: 95%;
+  margin-left: -0.8rem;
+  padding: 0px 10px;
+  display: none;
+  overflow: hidden;
+  background-color: white;
+  border: solid 1px #f1f1f1;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+}
 
-      .template-container {
-        position: absolute;
-        top: 5rem;
+  .content.one > .abc-sentence {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+  }
 
-        /* background-color: red; */
-        height: 20rem;
-        width: 100%;
-        overflow-y: scroll;
-        border-bottom: 1px solid grey;
-      }
-
-      .assist-container {
-        /* background-color: pink; */
-        position: absolute;
-        top: 25rem;
-        width: 100%;
-        height: 20rem;
-        overflow-y: scroll;
-      }
-
-      .assist-name,
-      .assist-description {
-        display: none;
-      }
-/*
-      .assist-list {
-        width: 50%;
-      } */
-
+    .abc-sentence > .change-word {
+      color: #BDBDBD;
+      border: solid 3px #BDBDBD;
+      border-radius: 3px;
+      cursor: pointer;
     }
+
+    .abc-sentence > .change-word:hover {
+      color: #9C9C9C;
+      border: solid 3px #9C9C9C;
+    }
+
+.abc-word-options {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  .abc-word-options > .word-example-tag {
+    border: solid 2px #2BDE73;
+    color: #2BDE73;
+    font-weight: bold;
+    border-radius: 60px;
+    margin: 0 0.2rem;
+    margin-bottom: 1rem;
+    padding: 0.3rem;
+    cursor: pointer;
+  }
+
+.word-select-btn {
+  float: right;
+  background-color: white;
+  color: #3F3F3F;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+/*Mobile Styles*/
+@media only screen and (max-width: 800px) {
+
+  .container-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* background-color: purple; */
+  }
+
+  .menu-container {
+    position: absolute;
+    height: 5rem;
+    width: 100%;
+    /* background-color: blue; */
+    margin-top: 1rem;
+  }
+
+  .menu-icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+  }
+
+  .template-container {
+    position: absolute;
+    top: 5rem;
+
+    /* background-color: red; */
+    height: 20rem;
+    width: 100%;
+    overflow-y: scroll;
+    border-bottom: 1px solid grey;
+  }
+
+  .assist-container {
+    /* background-color: pink; */
+    position: absolute;
+    top: 25rem;
+    width: 100%;
+    height: 20rem;
+    overflow-y: scroll;
+  }
+
+  .assist-name,
+  .assist-description {
+    display: none;
+  }
+/*
+  .assist-list {
+    width: 50%;
+  } */
+
+}

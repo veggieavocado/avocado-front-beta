@@ -12639,6 +12639,7 @@ const cardWrapHTML = `
 const getCategories = async () => {
   const response = await axios.get(pptCategoriesURL);
   const categoriesArray = response.data['카테고리'];
+  console.log(categoriesArray);
 
   let contentBody = '';
   let contentBodyHTML = '';
@@ -12664,6 +12665,7 @@ const getCategories = async () => {
     }
     // 루프의 시작이나 새로운 카드줄을 만들지 않으면...
     if (totalCardNums === cardNums) {
+      console.log('DONE!!!');
       // 더 이상의 카드가 없다면 마무리한다
       contentBody = formatString(cardWrapHTML, [cardRow]);
       contentBodyHTML += contentBody;
@@ -12673,7 +12675,9 @@ const getCategories = async () => {
     } else {
       // 1단계!!! 루프 시작은 여기로 온다.
       // 2단계, 3단계 모두 여기로 온다.
+      console.log(cardNums);
       cardRow += categoryCard;
+      console.log(cardRow);
       cardNums += 1;
     }
   }
