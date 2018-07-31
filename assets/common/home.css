@@ -137,6 +137,12 @@
 
 /* Content-4 CSS ends here */
 
+
+.chart-area {
+  width: 50rem;
+  height: 50rem;
+}
+
 /*Mobile Styles*/
 @media only screen and (max-width: 900px) {
 
