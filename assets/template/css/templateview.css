@@ -153,6 +153,16 @@ body {
       width: 80%;
     }
 
+    .underlinable-sent {
+      cursor: pointer;
+      -webkit-transition: all 0.1s ease-in-out 0s;
+      transition: all 0.1s ease-in-out 0s;
+    }
+
+    .underlinable-sent:hover {
+      border-bottom: solid 3.5px #F95759;
+    }
+
 
 .assist-container {
   width: 45%;
