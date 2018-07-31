@@ -80,3 +80,8 @@ app.get('/introduction', (req, res) => {
 app.get('/customer', (req, res) => {
   res.render('customer.html')
 });
+
+//유저가 템플릿 관리하는 페이지: https://www.veggieavocado.com/mydoc/
+app.get('/mydoc', (req, res) => {
+  res.render('mydoc.html')
+});

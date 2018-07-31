@@ -2,6 +2,7 @@
     outline: none;
 }
 
+
 /* width */
 ::-webkit-scrollbar {
     width: 2.5px;
@@ -213,14 +214,14 @@ body {
     overflow-y: auto;
   }
 
-  ul {
-    list-style: none;
-  }
 
-  ul li:after {
-    content: '✓';
-    color: var(--btn-green);
-  }
+    .abc {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+    }
+
 
     .assist-list li {
       margin-left: -4%;
