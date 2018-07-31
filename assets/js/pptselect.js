@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -12585,127 +12585,123 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./src/cookie.js":
-/*!***********************!*\
-  !*** ./src/cookie.js ***!
-  \***********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-const setCookie = (key, value) => {
-  console.log(key);
-  console.log(value);
-  document.cookie += `${key}=${value}`;
-};
-
-const getCookie = key => {
-  const name = `${key}=`;
-  const ca = document.cookie.split(';');
-  for (let i = 0; i < ca.length; i += 1) {
-    let c = ca[i];
-    while (c.charAt(0) === ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) === 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return '';
-};
-
-module.exports = {
-  setCookie,
-  getCookie
-};
-
-/***/ }),
-
-/***/ "./src/register.js":
-/*!*************************!*\
-  !*** ./src/register.js ***!
-  \*************************/
+/***/ "./src/pptselect.js":
+/*!**************************!*\
+  !*** ./src/pptselect.js ***!
+  \**************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 const axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-const { setCookie, getCookie } = __webpack_require__(/*! ./cookie.js */ "./src/cookie.js");
 
-const userURL = 'http://45.77.179.168:3000/api/v1/accounts/user/';
-const profileURL = 'http://45.77.179.168:3000/api/v1/accounts/profile/';
-const jwtURL = 'http://45.77.179.168:3000/api/v1/accounts/api-token-auth/';
+// URL 정의 장소
+const pptCategoriesURL = 'http://45.77.179.168:3000/api/v1/services/ppt_categories/';
 
-// register.html의 폼에서 입력받은 값을 API POST용청을 보내어 회원가입시켜준다
-const registerUser = async (username, email, password, address, phone) => {
-  const userData = {
-    username,
-    email,
-    password
-  };
-  const profileData = {
-    user: username,
-    name: '',
-    address,
-    phone
-  };
-  const jwtData = {
-    username,
-    password
-  };
-
-  const userResponse = await axios.post(userURL, userData);
-
-  if (userResponse.status === 201) {
-    const jwtToken = await axios.post(jwtURL, jwtData); // API 서버에 요청을 다시 보내기 위해 JWT 토큰 발급
-    const token = jwtToken.data.token;
-    // 위에서 받은 토큰을 브라우저 쿠키에 저장한다
-    document.cookie = setCookie('VA-TOKEN', token);
-    // 쿠키를 가져와서 토큰을 사용한다
-    const vaToken = getCookie('VA-TOKEN');
-    const headerData = {
-      Authorization: `JWT ${vaToken}`
-    };
-    await axios.put(`${profileURL + username}`.concat('/'), profileData, { headers: headerData });
-  } else {
-    // const registerAlert = document.getElementsByClassName('password-alert')[0];
-    console.log('유저 저장 실패');
+const formatString = (stringValue, replacementsArray) => {
+  let formatted = stringValue;
+  for (let i = 0; i < replacementsArray.length; i += 1) {
+    const regexp = new RegExp(`\\{${i}\\}`, 'gi');
+    formatted = formatted.replace(regexp, replacementsArray[i]);
   }
+  return formatted;
 };
 
-document.addEventListener('click', async e => {
-  if (e.target.id === 'register-btn') {
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('pw').value;
-    const passwordCheck = document.getElementById('check-pw').value;
-    const address = document.getElementById('address').value;
-    const phone = document.getElementById('phone').value;
+// category page: /pptselect
 
-    if (password !== passwordCheck) {
-      const passwordAlert = document.getElementsByClassName('password-alert')[0];
-      passwordAlert.innerText = '비밀번호가 일치하지 않습니다.';
-    } else {
-      await registerUser(username, email, password, address, phone);
-      // 회원가입이 되었다면 로그인창으로 보낸다
-      window.location.href = '/login';
+// cardHTML:
+// 0: 템플릿 갯수
+// 1: 문장 갯수
+// 2: 단어 수
+// 3: 카테고리 이름
+const cardHTML = `
+<div class='card-wrapper'>
+  <div class='card-info'>
+    <div class="tmp-stats">템플릿 {0}</div>
+    <div class="tmp-stats">문장 {1}</div>
+    <div class="tmp-stats">단어 수 {2} &#9662;</div>
+  </div>
+  <div class="card">
+    <div class="card-img img-{3}"></div>
+    <div class="container-head">
+      <a href="/template"><br><h3><b>{4}</b></h3><br></a></div>
+  </div>
+</div>
+`;
+
+// cardWrapHTML:
+// 0: cardHTML
+const cardWrapHTML = `
+<div class="ppt-select-box">
+  {0}
+</div>
+`;
+
+const getCategories = async () => {
+  const response = await axios.get(pptCategoriesURL);
+  const categoriesArray = response.data['카테고리'];
+
+  let contentBody = '';
+  let contentBodyHTML = '';
+  let cardNums = 0;
+  let cardRow = '';
+  const totalCardNums = categoriesArray.length;
+  for (const category of categoriesArray) {
+    const imageNum = String(cardNums + 1); // CSS에서 img-1, 2, 3... 이런식으로
+    // 이미지를 지정해준다. 초기에 카테고리카드 HTML을 만들기 때문에 cardNums에서 1을 더한다
+    const replacements = ['0', '0', '0', imageNum, category];
+    const categoryCard = formatString(cardHTML, replacements);
+    if (cardNums !== 0 && cardNums % 3 === 0) {
+      // 3개의 카테고리를 받아서 HTML 엘레먼트로 만들었다면 이 단계로 온다.
+      // 4단계라고 보면 된다
+
+      // 한 줄을 3개의 카드로 채웠다면, cardWrapHTML로 감싸준다
+      contentBody = formatString(cardWrapHTML, [cardRow]);
+      contentBodyHTML += contentBody;
+
+      // 루프를 시작하면서 받아온 데이터를 카드줄에 붙여준다
+      cardRow = categoryCard;
+      cardNums += 1;
     }
-    console.log(username, email, password, passwordCheck, address, phone);
+    // 루프의 시작이나 새로운 카드줄을 만들지 않으면...
+    if (totalCardNums === cardNums) {
+      // 더 이상의 카드가 없다면 마무리한다
+      contentBody = formatString(cardWrapHTML, [cardRow]);
+      contentBodyHTML += contentBody;
+
+      cardRow += categoryCard;
+      cardNums += 1;
+    } else {
+      // 1단계!!! 루프 시작은 여기로 온다.
+      // 2단계, 3단계 모두 여기로 온다.
+      cardRow += categoryCard;
+      cardNums += 1;
+    }
   }
+
+  return contentBodyHTML;
+};
+
+// /// document related event listeners here /// //
+document.addEventListener('DOMContentLoaded', async () => {
+  const titleContainer = document.getElementsByClassName('title-container')[0];
+  const contentBodyHTML = await getCategories();
+  titleContainer.innerHTML = contentBodyHTML;
 });
 
 /***/ }),
 
-/***/ 1:
-/*!**********************************************!*\
-  !*** multi babel-polyfill ./src/register.js ***!
-  \**********************************************/
+/***/ 2:
+/*!***********************************************!*\
+  !*** multi babel-polyfill ./src/pptselect.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! babel-polyfill */"./node_modules/babel-polyfill/lib/index.js");
-module.exports = __webpack_require__(/*! /Users/abc/Desktop/PROJECTS/docker/minimum-frontend/src/register.js */"./src/register.js");
+module.exports = __webpack_require__(/*! /Users/abc/Desktop/PROJECTS/docker/minimum-frontend/src/pptselect.js */"./src/pptselect.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=register.map
+//# sourceMappingURL=pptselect.map

@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -12592,7 +12592,68 @@ module.exports = g;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var _this = this,
+    _arguments = arguments;
+
 const axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
+// URL 정의 장소
+const pptCategoriesURL = 'http://45.77.179.168:3000/api/v1/services/ppt_categories/';
+
+String.prototype.format = () => {
+  let formatted = _this;
+  for (let i = 0; i < _arguments.length; i++) {
+    var regexp = new RegExp('\\{' + i + '\\}', 'gi');
+    formatted = formatted.replace(regexp, _arguments[i]);
+  }
+  return formatted;
+};
+
+// category page: /pptselect
+
+// cardHTML:
+// 0: 템플릿 갯수
+// 1: 문장 갯수
+// 2: 단어 수
+// 3: 카테고리 이름
+let cardHTML = `
+<div class='card-wrapper'>
+  <div class='card-info'>
+    <div class="tmp-stats">템플릿 {0}</div>
+    <div class="tmp-stats">문장 {1}</div>
+    <div class="tmp-stats">단어 수 {2} &#9662;</div>
+  </div>
+  <div class="card">
+    <div class="card-img two"></div>
+    <div class="container-head">
+      <a href="/template"><br><h3><b>{3}</b></h3><br></a></div>
+  </div>
+</div>
+`;
+
+// cardWrapHTML:
+// 0: cardHTML
+let cardWrapHTML = `
+<div class="ppt-select-box">{0}</div>';
+`;
+
+const getCategories = async () => {
+  const response = await axios.get(pptCategoriesURL);
+  console.log(response);
+};
+
+// /// document related event listeners here /////
+document.addEventListener('DOMContentLoaded', async () => {
+  const assistNameElmt = document.getElementsByClassName('assist-name')[0];
+  assistNameElmt.innerHTML = `<h1>${tagName}</h1>`;
+
+  const assistListElmt = document.getElementsByClassName('assist-list')[0];
+
+  const newHTML = await showSentences();
+  assistListElmt.innerHTML = newHTML;
+});
+
+// template page: /template
 
 const tagName = '인사하기';
 const sentenceURL = `http://45.77.179.168:8000/api/v1/services/sentence/?role=${tagName}`;
@@ -12600,7 +12661,7 @@ const sentenceURL = `http://45.77.179.168:8000/api/v1/services/sentence/?role=${
 const showSentences = async () => {
   let assistListHTML = '';
   const response = await axios.get(sentenceURL);
-  for (sentenceJSON of response.data.results) {
+  for (const sentenceJSON of response.data.results) {
     console.log(sentenceJSON.sentence);
     const sentenceTxt = sentenceJSON.sentence;
     const listItem = `<li>${sentenceTxt}</li>`;
@@ -12624,7 +12685,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!*****************************************!*\
   !*** multi babel-polyfill ./src/ppt.js ***!
   \*****************************************/

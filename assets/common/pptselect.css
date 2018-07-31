@@ -103,27 +103,27 @@ a.hover {
       background: rgba(33, 33, 33, 0.5);
     }
 /* 카드 이미지는 하나씩 */
-    .card-img.one {
+    .card-img.img-1 {
       background-image: url(../img/conference.jpg);
     }
 
-    .card-img.two {
+    .card-img.img-2 {
       background-image: url(../img/chart.jpg);
     }
 
-    .card-img.three {
+    .card-img.img-3 {
       background-image: url(../img/innovation.jpg);
     }
 
-    .card-img.four {
+    .card-img.img-4 {
       background-image: url(../img/mindmap.jpg);
     }
 
-    .card-img.five {
+    .card-img.img-5 {
       background-image: url(../img/workplace.jpg);
     }
 
-    .card-img.six {
+    .card-img.img-6 {
       background-image: url(../img/singapore.jpg);
     }
 
