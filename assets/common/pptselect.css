@@ -17,57 +17,60 @@ a.hover {
 }
 
 
-  .ppt-select-title {
+/* 템플릿 타입 소개 섹션 */
+.ppt-select-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+  margin-bottom: 15px;
+  /* background-color: var(--light-gray); */
+  color: var(--pretty-black);
+}
+
+
+/* 카테고리 모임 카드 */
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: blue; */
+}
+
+  /* 카테고리 모임에서 행 - 한 행에 3개의 카드가 들어감 */
+  .ppt-select-box {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    width: 80%;
     height: 20rem;
-    margin-bottom: 15px;
+    margin: 10px 0;
     /* background-color: var(--light-gray); */
-    color: var(--pretty-black);
   }
 
-  .title-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background-color: blue; */
-  }
-
-    .ppt-select-box {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-
-      width: 80%;
-      height: 20rem;
-      margin: 10px 0;
-      /* background-color: var(--light-gray); */
-    }
-
+      /* 카테고리 행 안의 한 카드 */
       .card-wrapper {
         width: 30%;
         height: 90%;
         display: flex;
         flex-direction: column;
-
         margin: 0 1.67%;
       }
 
-      .card-wrapper > .card-info {
-        display: flex;
-        justify-content: flex-end;
-        color: var(--gray);
-        margin-bottom: 3%;
-        font-size: 0.8em;
+        .card-wrapper > .card-info {
+          display: flex;
+          justify-content: flex-end;
+          color: var(--gray);
+          margin-bottom: 3%;
+          font-size: 0.8em;
+          cursor: pointer;
+        }
 
-        cursor: pointer;
-      }
-
-      .card-info > .tmp-stats {
-        margin-right: 5px;
-      }
+          .card-info > .tmp-stats {
+            margin-right: 5px;
+          }
 
       .card-wrapper > .card {
         height: inherit;
@@ -75,138 +78,135 @@ a.hover {
         flex-direction: column;
         background-color: #536D7A;
         color: white;
-
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition: 0.3s;
-
         position: relative;
       }
 
-      .card:hover {
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-      }
+        .card:hover {
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
 
-      .card > .card-img {
-        background-position: center;
-        background-size: cover;
-        height: 100%;
-        width: 100%;
-      }
+          .card > .card-img {
+            background-position: center;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+          }
 
-    .card > .card-img:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(33, 33, 33, 0.5);
-    }
+          .card > .card-img:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(33, 33, 33, 0.5);
+          }
+
 /* 카드 이미지는 하나씩 */
-    .card-img.img-1 {
-      background-image: url(../img/conference.jpg);
-    }
+.card-img.img-1 {
+  background-image: url(../img/conference.jpg);
+}
 
-    .card-img.img-2 {
-      background-image: url(../img/chart.jpg);
-    }
+.card-img.img-2 {
+  background-image: url(../img/chart.jpg);
+}
 
-    .card-img.img-3 {
-      background-image: url(../img/innovation.jpg);
-    }
+.card-img.img-3 {
+  background-image: url(../img/innovation.jpg);
+}
 
-    .card-img.img-4 {
-      background-image: url(../img/mindmap.jpg);
-    }
+.card-img.img-4 {
+  background-image: url(../img/mindmap.jpg);
+}
 
-    .card-img.img-5 {
-      background-image: url(../img/workplace.jpg);
-    }
+.card-img.img-5 {
+  background-image: url(../img/workplace.jpg);
+}
 
-    .card-img.img-6 {
-      background-image: url(../img/singapore.jpg);
-    }
+.card-img.img-6 {
+  background-image: url(../img/singapore.jpg);
+}
 
-    .container-head  {
-       position: absolute;
-       left: 50%;
-       top: 50%;
-       transform: translate(-50%, -50%);
-       transform: translate3d(-50%, -50%, 0);
-      /* margin: 5px; */
-      padding: 5px 20px 0px 20px;
-    }
+.container-head  {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   transform: translate3d(-50%, -50%, 0);
+  /* margin: 5px; */
+  padding: 5px 20px 0px 20px;
+}
 
-    .card > .container-head {
-      cursor: pointer;
-      color: orange;
-    }
+.card > .container-head {
+  cursor: pointer;
+  color: orange;
+}
 
-    /*Mobile Styles*/
-    @media only screen and (max-width: 400px) {
+/*Mobile Styles*/
+@media only screen and (max-width: 400px) {
 
-      .ppt-select-title-wrapper {
-        display: flex;
-        justify-content: center;
+.ppt-select-title-wrapper {
+  display: flex;
+  justify-content: center;
+}
 
-      }
+.ppt-select-title {
+  width: 80%;
+}
 
-      .ppt-select-title {
-        width: 80%;
-      }
+.ppt-select-box {
+  display: flex;
+  flex-direction: column;
+  height: 45rem;
+  width: 100%;
+  margin-bottom: none;
+}
 
+  .card-wrapper {
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
 
-      .ppt-select-box {
-        display: flex;
-        flex-direction: column;
-        height: 45rem;
-        width: 100%;
-        margin-bottom: none;
-      }
-        .card-wrapper {
-          width: 100%;
-          height: 15rem;
-          display: flex;
-          flex-direction: column;
+  }
 
-        }
+  .card-wrapper > :last-of-type {
+    margin-bottom: 30px;
+  }
 
-        .card-wrapper > :last-of-type {
-          margin-bottom: 30px;
-        }
+}
 
-    }
+/* Tables Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
 
-    /* Tables Styles */
-    @media only screen and (min-width: 401px) and (max-width: 960px) {
+.ppt-select-title-wrapper {
+  display: flex;
+  justify-content: center;
+}
 
-      .ppt-select-title-wrapper {
-        display: flex;
-        justify-content: center;
+.ppt-select-title {
+  width: 80%;
+}
 
-      }
+.ppt-select-box {
+  display: flex;
+  flex-direction: column;
+  height: 70rem;
+  width: 100%;
+  margin-bottom: none;
+}
 
-      .ppt-select-title {
-        width: 80%;
-      }
+  .card-wrapper {
+    width: 100%;
+    height: 23.33rem;
+    display: flex;
+    flex-direction: column;
+  }
 
+  .card-wrapper > :last-of-type {
+    margin-bottom: 30px;
+  }
 
-      .ppt-select-box {
-        display: flex;
-        flex-direction: column;
-        height: 70rem;
-        width: 100%;
-        margin-bottom: none;
-      }
-        .card-wrapper {
-          width: 100%;
-          height: 23.33rem;
-          display: flex;
-          flex-direction: column;
-        }
-
-        .card-wrapper > :last-of-type {
-          margin-bottom: 30px;
-        }
-
-    }
+}

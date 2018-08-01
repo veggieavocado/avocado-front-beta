@@ -81,11 +81,15 @@ const getCategories = async () => {
     } else {
       // 1단계!!! 루프 시작은 여기로 온다.
       // 2단계, 3단계 모두 여기로 온다.
-      console.log(cardNums);
       cardRow += categoryCard;
-      console.log(cardRow);
       cardNums += 1;
     }
+  }
+  // 카테고리가 3개 미만인 경우, 새로운 row가 생성되지 않는다
+  // 그럴 경우 ''의 값을 가진 contentBodyHTML에 cardRow값을 부여한다
+  if (contentBodyHTML === '') {
+    contentBody = formatString(cardWrapHTML, [cardRow]);
+    contentBodyHTML += contentBody;
   }
 
   return contentBodyHTML;
