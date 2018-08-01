@@ -83,7 +83,7 @@ app.get('/customer', (req, res) => {
 
 // 관리자 데브 페이지: https://www.veggieavocado.com/admin
 app.get('/admin', (req, res) => {
-  res.render('admin.html');
+  res.render('admin2.html');
 });
 
 // 관리자 옵스 페이지: https://www.veggieavocado.com/devops

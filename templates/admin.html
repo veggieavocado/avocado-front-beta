@@ -18,6 +18,7 @@
     </head>
 
     <body>
+
       <div class="admin-header">
         <div class="devops-btn">
           <div class="dev-btn">Dev</div>
@@ -26,17 +27,18 @@
         <div class="logo-img">
           <img src="../img/avocado-manager.png" class="avocado-img">
         </div>
-        <div class="admin-header-title">
+        <div class="admin-header-title one">
           VeggieAvocado &nbsp; 관리자 페이지
         </div>
+        <div class="admin-header-title two">
+          VA &nbsp; 관리자 페이지
+        </div>
       </div>
-      <div class="admin-content">
 
+      <div class="admin-content">
           <div class="admin-title">1. 템플릿</div>
           <div class="alert alert-success" role="alert">
             <h4 class="alert-heading">템플릿 입력하기</h4>
-            <br>
-            <p>템플릿의 카테고리 (이메일, 프레젠테이션 등)을 입력하신 후 그 템플릿의 주제와 내용만 저장하여 주세요.</p>
           </div>
 
           <div class="admin-template">
@@ -71,44 +73,9 @@
                       <div class="table-col table-col-30">인사할때</div>
                       <div class="table-col table-col-20">2018-08-01 2:50</div>
                       <div class="table-col table-col-10">
-                        <div class="modal-container">
-                          <!-- Trigger/Open the Modal -->
-                          <i id="myBtn" class="far fa-edit"></i>
-                          <!-- The Modal -->
-                          <div id="myModal" class="modal">
-                          <!-- Modal content -->
-                          <div class="modal-content">
-                            <span class="close">&times;</span>
-
-                            <div class="modal-source">
-                              <p>source</p>
-                              <form class="source" action="index.html" method="post">
-                                <input type="text" name="title" value="">
-                              </form>
-                            </div>
-
-                            <div class="modal-role">
-                              <p>role</p>
-                              <form class="source" action="index.html" method="post">
-                                <input type="text" name="title" value="">
-                              </form>
-                            </div>
-
-                            <div class="modal-template">
-                              <p>템플릿</p>
-                              <form class="template" action="index.html" method="post">
-                                <textarea name="name" rows="8" cols="80"></textarea>
-                              </form>
-                            </div>
-
-                            <button type="button" name="button">close</button>
-
-                          </div>
-                          </div>
-                        </div>
-
+                        <i class="far fa-edit"></i>
                         <i class="far fa-trash-alt"></i>
-
+                      </div>
                     </div>
                     <div class="table-data-row">
                       <div class="table-col table-col-40">10분 투자로 끝내는 영어 프레젠테이션</div>
@@ -233,36 +200,6 @@
           </div>
         </div>
       </div>
-
-      <!-- modal javascript -->
-      <script type="text/javascript">
-      // Get the modal
-      var modal = document.getElementById('myModal');
-
-      // Get the button that opens the modal
-      var btn = document.getElementById("myBtn");
-
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-
-      // When the user clicks on the button, open the modal
-      btn.onclick = function() {
-        modal.style.display = "block";
-      }
-
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function() {
-        modal.style.display = "none";
-      }
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-      }
-      </script>
-
 
 
     </body>
