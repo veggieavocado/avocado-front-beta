@@ -36,21 +36,18 @@
       </div>
 
       <div class="admin-header">
+        <div class="devops-btn">
+          <button type="button" name="button">Dev</button>
+          <button type="button" name="button">Ops</button>
+        </div>
         <div class="logo-img">
           <img src="../img/avocado-manager.png" class="avocado-img">
         </div>
         <div class="admin-header-title one">VeggieAvocado&nbsp; 관리자 페이지</div>
         <div class="admin-header-title two">VA&nbsp; 관리자 페이지</div>
-        <div class="devops-btn">
-          <button type="button" name="button">Dev</button>
-          <button type="button" name="button">Ops</button>
-        </div>
       </div>
 
       <div class="admin-content">
-          <div class="alert alert-success" role="alert">
-            <h4 class="alert-heading">1.템플릿 입력하기</h4>
-        </div>
         <div class="template-number">
           <div class="template-stats">
             <div class="number_template number">
@@ -67,7 +64,6 @@
             </div>
           </div>
         </div>
-      </div>
 
         <div class="admin-template">
           <div class="admin-side-bar">
@@ -87,8 +83,11 @@
             </ul>
           </div>
         </div>
+        <div class="alert alert-success" role="alert">
+          <h4 class="alert-heading one">1.템플릿 입력하기</h4></br>
+        </div>
 
-        <div class="admin-table">
+        <div class="admin-table one">
           <div class="table">
             <div class="table-content">
               <div class="table-header">
@@ -160,39 +159,408 @@
             </div>
           </div>
         </div>
+      </div>
 
         <div class="waiting-for-approval">
           <div class="wfa-title-div">
             <div class="wfa-title">
-              <i class="fas fa-tag">승인대기</i>
-              <div class="approval-all">
-                모두 승인
-              </div>
+              <i class="fas fa-tag wait-icon">승인대기</i>
             </div>
-
+          </div>
+          <div class="wfa-approval-div">
+            <div class="approval-all">
+              모두 승인
+            </div>
           </div>
 
           <div class="wfa-table">
             <div class="table">
               <div class="table-content">
                 <div class="table-header">
-                  <div class="table-col table-col-30">개발자</div>
-                  <div class="table-col table-col-30">부서</div>
-                  <div class="table-col table-col-40">태스크 관리</div>
+                  <div class="table-col table-col-40">Source</div>
+                  <div class="table-col table-col-30">role</div>
+                  <div class="table-col table-col-30">템플릿 관리</div>
                 </div>
                 <div class="table-data">
                   <div class="table-data-row">
-                    <div class="table-col table-col-30">피피</div>
-                    <div class="table-col table-col-30">데브옵스</div>
-                    <div class="table-col table-col-40">
-                      <button class="table-btn" type="button" name="button">승인</button>
+                    <div class="table-col table-col-40">10분 투자로 끝내는 영어 프레젠테이션</div>
+                    <div class="table-col table-col-30">인사할때</div>
+                    <div class="table-col table-col-30">
+                      <i class="fas fa-check icon"></i>
+                      <i class="far fa-edit icon"></i>
+                      <i class="far fa-trash-alt"></i>
                     </div>
                   </div>
                   <div class="table-data-row">
-                    <div class="table-col table-col-30">할리</div>
-                    <div class="table-col table-col-30">데브옵스</div>
-                    <div class="table-col table-col-40">
-                      <button class="table-btn" type="button" name="button">승인</button>
+                    <div class="table-col table-col-40">10분 투자로 끝내는 영어 프레젠테이션</div>
+                    <div class="table-col table-col-30">인사할때</div>
+                    <div class="table-col table-col-30">
+                      <i class="fas fa-check icon"></i>
+                      <i class="far fa-edit icon"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                  <div class="table-data-row">
+                    <div class="table-col table-col-40">10분 투자로 끝내는 영어 프레젠테이션</div>
+                    <div class="table-col table-col-30">인사할때</div>
+                    <div class="table-col table-col-30">
+                      <i class="fas fa-check icon"></i>
+                      <i class="far fa-edit icon"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                  <div class="table-data-row">
+                    <div class="table-col table-col-40">10분 투자로 끝내는 영어 프레젠테이션</div>
+                    <div class="table-col table-col-30">인사할때</div>
+                    <div class="table-col table-col-30">
+                      <i class="fas fa-check icon"></i>
+                      <i class="far fa-edit icon"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                  <div class="table-data-row">
+                    <div class="table-col table-col-40">10분 투자로 끝내는 영어 프레젠테이션</div>
+                    <div class="table-col table-col-30">인사할때</div>
+                    <div class="table-col table-col-30">
+                      <i class="fas fa-check icon"></i>
+                      <i class="far fa-edit icon"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="paginator">
+                <div class="paginator-btns">
+                  <div class="arrow-btn"><i class="fas fa-angle-double-left"></i></div>
+                  <div class="arrow-btn"><i class="fas fa-angle-left"></i></div>
+                  <div class="page-btn">1</div>
+                  <div class="page-btn">2</div>
+                  <div class="active page-btn">3</div>
+                  <div class="page-btn">4</div>
+                  <div class="page-btn">5</div>
+                  <div class="arrow-btn"><i class="fas fa-angle-right"></i></div>
+                  <div class="arrow-btn"><i class="fas fa-angle-double-right"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sent-template">
+          <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">2.영어문장 수정하기</h4></br>
+          </div>
+
+        <div class="admin-table">
+          <div class="table">
+            <div class="table-content">
+              <div class="table-header">
+                <div class="table-col table-col-40">Sentence</div>
+                <div class="table-col table-col-30">translation</div>
+                <div class="table-col table-col-20 nm">작성일자</div>
+                <div class="table-col table-col-10">관리</div>
+              </div>
+              <div class="table-data">
+                <div class="table-data-row">
+                  <div class="table-col table-col-40">Hello, everyone.</div>
+                  <div class="table-col table-col-30">안녕하세요, 여러분.</div>
+                  <div class="table-col table-col-20 nm">2018-08-01 2:50</div>
+                  <div class="table-col table-col-10">
+                    <i id="edit-modal-btn" class="far fa-edit icon"></i>
+                    <i id="del-modal-btn" class="far fa-trash-alt"></i>
+                  </div>
+                </div>
+                <div class="table-data-row">
+                  <div class="table-col table-col-40">Morning, everyone.</div>
+                  <div class="table-col table-col-30">안녕하세요, 여러분.</div>
+                  <div class="table-col table-col-20 nm">2018-08-01 2:50</div>
+                  <div class="table-col table-col-10">
+                    <i class="far fa-edit icon"></i>
+                    <i class="far fa-trash-alt"></i>
+                  </div>
+                </div>
+                <div class="table-data-row">
+                  <div class="table-col table-col-40">Hi, everyone.</div>
+                  <div class="table-col table-col-30">안녕하세요.</div>
+                  <div class="table-col table-col-20 nm">2018-08-01 2:50</div>
+                  <div class="table-col table-col-10">
+                    <i class="far fa-edit icon"></i>
+                    <i class="far fa-trash-alt"></i>
+                  </div>
+                </div>
+                <div class="table-data-row">
+                  <div class="table-col table-col-40">Good morning.</div>
+                  <div class="table-col table-col-30">안녕하세요.</div>
+                  <div class="table-col table-col-20 nm">2018-08-01 2:50</div>
+                  <div class="table-col table-col-10">
+                    <i class="far fa-edit icon"></i>
+                    <i class="far fa-trash-alt"></i>
+                  </div>
+                </div>
+                <div class="table-data-row">
+                  <div class="table-col table-col-40">How are you?</div>
+                  <div class="table-col table-col-30">안녕하십니까?</div>
+                  <div class="table-col table-col-20 nm">2018-08-01 2:50</div>
+                  <div class="table-col table-col-10">
+                    <i class="far fa-edit icon"></i>
+                    <i class="far fa-trash-alt"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="paginator">
+              <div class="paginator-btns">
+                <div class="arrow-btn"><i class="fas fa-angle-double-left"></i></div>
+                <div class="arrow-btn"><i class="fas fa-angle-left"></i></div>
+                <div class="page-btn">1</div>
+                <div class="page-btn">2</div>
+                <div class="active page-btn">3</div>
+                <div class="page-btn">4</div>
+                <div class="page-btn">5</div>
+                <div class="arrow-btn"><i class="fas fa-angle-right"></i></div>
+                <div class="arrow-btn"><i class="fas fa-angle-double-right"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="waiting-for-approval">
+          <div class="wfa-title-div">
+            <div class="wfa-title">
+              <i class="fas fa-tag wait-icon">승인대기</i>
+            </div>
+          </div>
+          <div class="wfa-approval-div">
+            <div class="approval-all">
+              모두 승인
+            </div>
+          </div>
+
+          <div class="wfa-table">
+            <div class="table">
+              <div class="table-content">
+                <div class="table-header">
+                  <div class="table-col table-col-40">Sentence</div>
+                  <div class="table-col table-col-30">translation</div>
+                  <div class="table-col table-col-30">템플릿 관리</div>
+                </div>
+                <div class="table-data">
+                  <div class="table-data-row">
+                    <div class="table-col table-col-40">Hello, everyone.</div>
+                    <div class="table-col table-col-30">안녕하세요, 여러분.</div>
+                    <div class="table-col table-col-30">
+                      <i class="fas fa-check icon"></i>
+                      <i class="far fa-edit icon"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                  <div class="table-data-row">
+                    <div class="table-col table-col-40">Morning, everyone.</div>
+                    <div class="table-col table-col-30">안녕하세요, 여러분.</div>
+                    <div class="table-col table-col-30">
+                      <i class="fas fa-check icon"></i>
+                      <i class="far fa-edit icon"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                  <div class="table-data-row">
+                    <div class="table-col table-col-40">Hi, everyone.</div>
+                    <div class="table-col table-col-30">안녕하세요.</div>
+                    <div class="table-col table-col-30">
+                      <i class="fas fa-check icon"></i>
+                      <i class="far fa-edit icon"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                  <div class="table-data-row">
+                    <div class="table-col table-col-40">Good morning.</div>
+                    <div class="table-col table-col-30">안녕하세요.</div>
+                    <div class="table-col table-col-30">
+                      <i class="fas fa-check icon"></i>
+                      <i class="far fa-edit icon"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                  <div class="table-data-row">
+                    <div class="table-col table-col-40">How are you?</div>
+                    <div class="table-col table-col-30">안녕하십니까?</div>
+                    <div class="table-col table-col-30">
+                      <i class="fas fa-check icon"></i>
+                      <i class="far fa-edit icon"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="paginator">
+                <div class="paginator-btns">
+                  <div class="arrow-btn"><i class="fas fa-angle-double-left"></i></div>
+                  <div class="arrow-btn"><i class="fas fa-angle-left"></i></div>
+                  <div class="page-btn">1</div>
+                  <div class="page-btn">2</div>
+                  <div class="active page-btn">3</div>
+                  <div class="page-btn">4</div>
+                  <div class="page-btn">5</div>
+                  <div class="arrow-btn"><i class="fas fa-angle-right"></i></div>
+                  <div class="arrow-btn"><i class="fas fa-angle-double-right"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="trans-template">
+          <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">3.템플릿 번역하기</h4></br>
+          </div>
+          <div class="approval-btn">
+            <div class="approval-all">모두 번역 </div>
+          </div>
+
+        <div class="admin-table">
+          <div class="table">
+            <div class="table-content">
+              <div class="table-header">
+                <div class="table-col table-col-40">Sentence</div>
+                <div class="table-col table-col-30">translation</div>
+                <div class="table-col table-col-20 nm">작성일자</div>
+                <div class="table-col table-col-10">관리</div>
+              </div>
+              <div class="table-data">
+                <div class="table-data-row">
+                  <div class="table-col table-col-40">Hello, everyone.</div>
+                  <div class="table-col table-col-30">안녕하세요, 여러분.</div>
+                  <div class="table-col table-col-20 nm">2018-08-01 2:50</div>
+                  <div class="table-col table-col-10">
+                    <i class="fas fa-exchange-alt icon"></i>
+                    <i id="edit-modal-btn" class="far fa-edit icon"></i>
+                    <i id="del-modal-btn" class="far fa-trash-alt"></i>
+                  </div>
+                </div>
+                <div class="table-data-row">
+                  <div class="table-col table-col-40">Morning, everyone.</div>
+                  <div class="table-col table-col-30">안녕하세요, 여러분.</div>
+                  <div class="table-col table-col-20 nm">2018-08-01 2:50</div>
+                  <div class="table-col table-col-10">
+                    <i class="fas fa-exchange-alt icon"></i>
+                    <i class="far fa-edit icon"></i>
+                    <i class="far fa-trash-alt"></i>
+                  </div>
+                </div>
+                <div class="table-data-row">
+                  <div class="table-col table-col-40">Hi, everyone.</div>
+                  <div class="table-col table-col-30">안녕하세요.</div>
+                  <div class="table-col table-col-20 nm">2018-08-01 2:50</div>
+                  <div class="table-col table-col-10">
+                    <i class="fas fa-exchange-alt icon"></i>
+                    <i class="far fa-edit icon"></i>
+                    <i class="far fa-trash-alt"></i>
+                  </div>
+                </div>
+                <div class="table-data-row">
+                  <div class="table-col table-col-40">Good morning.</div>
+                  <div class="table-col table-col-30">안녕하세요.</div>
+                  <div class="table-col table-col-20 nm">2018-08-01 2:50</div>
+                  <div class="table-col table-col-10">
+                    <i class="fas fa-exchange-alt icon"></i>
+                    <i class="far fa-edit icon"></i>
+                    <i class="far fa-trash-alt"></i>
+                  </div>
+                </div>
+                <div class="table-data-row">
+                  <div class="table-col table-col-40">How are you?</div>
+                  <div class="table-col table-col-30">안녕하십니까?</div>
+                  <div class="table-col table-col-20 nm">2018-08-01 2:50</div>
+                  <div class="table-col table-col-10">
+                    <i class="fas fa-exchange-alt icon"></i>
+                    <i class="far fa-edit icon"></i>
+                    <i class="far fa-trash-alt"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="paginator">
+              <div class="paginator-btns">
+                <div class="arrow-btn"><i class="fas fa-angle-double-left"></i></div>
+                <div class="arrow-btn"><i class="fas fa-angle-left"></i></div>
+                <div class="page-btn">1</div>
+                <div class="page-btn">2</div>
+                <div class="active page-btn">3</div>
+                <div class="page-btn">4</div>
+                <div class="page-btn">5</div>
+                <div class="arrow-btn"><i class="fas fa-angle-right"></i></div>
+                <div class="arrow-btn"><i class="fas fa-angle-double-right"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="waiting-for-approval">
+          <div class="wfa-title-div">
+            <div class="wfa-title">
+              <i class="fas fa-tag wait-icon">승인대기</i>
+            </div>
+          </div>
+          <div class="wfa-approval-div">
+            <div class="approval-all">
+              모두 승인
+            </div>
+          </div>
+
+          <div class="wfa-table">
+            <div class="table">
+              <div class="table-content">
+                <div class="table-header">
+                  <div class="table-col table-col-40">Sentence</div>
+                  <div class="table-col table-col-30">translation</div>
+                  <div class="table-col table-col-30">템플릿 관리</div>
+                </div>
+                <div class="table-data">
+                  <div class="table-data-row">
+                    <div class="table-col table-col-40">Hello, everyone.</div>
+                    <div class="table-col table-col-30">안녕하세요, 여러분.</div>
+                    <div class="table-col table-col-30">
+                      <i class="fas fa-check icon"></i>
+                      <i class="far fa-edit icon"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                  <div class="table-data-row">
+                    <div class="table-col table-col-40">Morning, everyone.</div>
+                    <div class="table-col table-col-30">안녕하세요, 여러분.</div>
+                    <div class="table-col table-col-30">
+                      <i class="fas fa-check icon"></i>
+                      <i class="far fa-edit icon"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                  <div class="table-data-row">
+                    <div class="table-col table-col-40">Hi, everyone.</div>
+                    <div class="table-col table-col-30">안녕하세요.</div>
+                    <div class="table-col table-col-30">
+                      <i class="fas fa-check icon"></i>
+                      <i class="far fa-edit icon"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                  <div class="table-data-row">
+                    <div class="table-col table-col-40">Good morning.</div>
+                    <div class="table-col table-col-30">안녕하세요.</div>
+                    <div class="table-col table-col-30">
+                      <i class="fas fa-check icon"></i>
+                      <i class="far fa-edit icon"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                  <div class="table-data-row">
+                    <div class="table-col table-col-40">How are you?</div>
+                    <div class="table-col table-col-30">안녕하십니까?</div>
+                    <div class="table-col table-col-30">
+                      <i class="fas fa-check icon"></i>
+                      <i class="far fa-edit icon"></i>
+                      <i class="far fa-trash-alt"></i>
                     </div>
                   </div>
                 </div>
