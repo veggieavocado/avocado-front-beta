@@ -7,8 +7,8 @@
       <title>VeggieAvocado devops</title>
       <link rel="icon" href="./assets/img/avocado.ico" type="image/x-icon" />
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-      <link rel="stylesheet" href="./assets/css/table.css" type="text/css" media="all">
-      <link rel="stylesheet" href="./assets/css/admin/admin.css" type="text/css" media="all">
+      <link rel="stylesheet" href="./common/table.css" type="text/css" media="all">
+      <link rel="stylesheet" href="./common/admin/admin.css" type="text/css" media="all">
       <link href="https://fonts.googleapis.com/css?family=Jua|Nanum+Gothic|Gothic+A1|Ubuntu" rel="stylesheet">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
@@ -24,7 +24,7 @@
           <div class="ops-btn">Ops</div>
         </div>
         <div class="logo-img">
-          <img src="../static/img/avocado.png" class="avocado-img">
+          <img src="../img/avocado-manager.png" class="avocado-img">
         </div>
         <div class="admin-header-title">
           VeggieAvocado &nbsp; 관리자 페이지
@@ -60,25 +60,90 @@
               <div class="table">
                 <div class="table-content">
                   <div class="table-header">
-                    <div class="table-col table-col-30">개발자</div>
-                    <div class="table-col table-col-30">부서</div>
-                    <div class="table-col table-col-40">태스크 관리</div>
+                    <div class="table-col table-col-40">Source</div>
+                    <div class="table-col table-col-30">role</div>
+                    <div class="table-col table-col-20">작성일자</div>
+                    <div class="table-col table-col-10">관리</div>
                   </div>
                   <div class="table-data">
                     <div class="table-data-row">
-                      <div class="table-col table-col-30">피피</div>
-                      <div class="table-col table-col-30">데브옵스</div>
-                      <div class="table-col table-col-40">
-                        <button class="table-btn" type="button" name="button">태스크 확인</button>
-                        <button class="table-btn" type="button" name="button">태스크 부여</button>
+                      <div class="table-col table-col-40">10분 투자로 끝내는 영어 프레젠테이션</div>
+                      <div class="table-col table-col-30">인사할때</div>
+                      <div class="table-col table-col-20">2018-08-01 2:50</div>
+                      <div class="table-col table-col-10">
+                        <div class="modal-container">
+                          <!-- Trigger/Open the Modal -->
+                          <i id="myBtn" class="far fa-edit"></i>
+                          <!-- The Modal -->
+                          <div id="myModal" class="modal">
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+
+                            <div class="modal-source">
+                              <p>source</p>
+                              <form class="source" action="index.html" method="post">
+                                <input type="text" name="title" value="">
+                              </form>
+                            </div>
+
+                            <div class="modal-role">
+                              <p>role</p>
+                              <form class="source" action="index.html" method="post">
+                                <input type="text" name="title" value="">
+                              </form>
+                            </div>
+
+                            <div class="modal-template">
+                              <p>템플릿</p>
+                              <form class="template" action="index.html" method="post">
+                                <textarea name="name" rows="8" cols="80"></textarea>
+                              </form>
+                            </div>
+
+                            <button type="button" name="button">close</button>
+
+                          </div>
+                          </div>
+                        </div>
+
+                        <i class="far fa-trash-alt"></i>
+
+                    </div>
+                    <div class="table-data-row">
+                      <div class="table-col table-col-40">10분 투자로 끝내는 영어 프레젠테이션</div>
+                      <div class="table-col table-col-30">인사할때</div>
+                      <div class="table-col table-col-20">2018-08-01 2:50</div>
+                      <div class="table-col table-col-10">
+                        <i class="far fa-edit"></i>
+                        <i class="far fa-trash-alt"></i>
                       </div>
                     </div>
                     <div class="table-data-row">
-                      <div class="table-col table-col-30">할리</div>
-                      <div class="table-col table-col-30">데브옵스</div>
-                      <div class="table-col table-col-40">
-                        <button class="table-btn" type="button" name="button">태스크 확인</button>
-                        <button class="table-btn" type="button" name="button">태스크 부여</button>
+                      <div class="table-col table-col-40">10분 투자로 끝내는 영어 프레젠테이션</div>
+                      <div class="table-col table-col-30">인사할때</div>
+                      <div class="table-col table-col-20">2018-08-01 2:50</div>
+                      <div class="table-col table-col-10">
+                        <i class="far fa-edit"></i>
+                        <i class="far fa-trash-alt"></i>
+                      </div>
+                    </div>
+                    <div class="table-data-row">
+                      <div class="table-col table-col-40">10분 투자로 끝내는 영어 프레젠테이션</div>
+                      <div class="table-col table-col-30">인사할때</div>
+                      <div class="table-col table-col-20">2018-08-01 2:50</div>
+                      <div class="table-col table-col-10">
+                        <i class="far fa-edit"></i>
+                        <i class="far fa-trash-alt"></i>
+                      </div>
+                    </div>
+                    <div class="table-data-row">
+                      <div class="table-col table-col-40">10분 투자로 끝내는 영어 프레젠테이션</div>
+                      <div class="table-col table-col-30">인사할때</div>
+                      <div class="table-col table-col-20">2018-08-01 2:50</div>
+                      <div class="table-col table-col-10">
+                        <i class="far fa-edit"></i>
+                        <i class="far fa-trash-alt"></i>
                       </div>
                     </div>
                   </div>
@@ -113,9 +178,7 @@
                 <div class="stats_txt">Done</div>
               </div>
             </div>
-
           </div>
-
       </div>
 
       <div class="waiting-for-approval">
@@ -169,8 +232,38 @@
             </div>
           </div>
         </div>
-
       </div>
+
+      <!-- modal javascript -->
+      <script type="text/javascript">
+      // Get the modal
+      var modal = document.getElementById('myModal');
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on the button, open the modal
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+      }
+      </script>
+
+
 
     </body>
 

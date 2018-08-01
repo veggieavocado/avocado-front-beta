@@ -56,32 +56,37 @@ app.get('/maketemplate', (req, res) => {
   res.render('maketemplate.html');
 });
 
-// ppt선택 페이지: https://www.veggieavocado.com/pptselect/
+// ppt선택 페이지: https://www.veggieavocado.com/pptselect
 app.get('/pptselect', (req, res) => {
   res.render('pptselect.html');
 });
 
-// 이메일선택 페이지: https://www.veggieavocado.com/emailselect/
+// 이메일선택 페이지: https://www.veggieavocado.com/emailselect
 app.get('/emailselect', (req, res) => {
   res.render('emailselect.html');
 });
 
-// ppt선택 페이지: https://www.veggieavocado.com/pptselect/
+//유저가 템플릿 관리하는 페이지: https://www.veggieavocado.com/mydoc
 app.get('/mydoc', (req, res) => {
-  res.render('mydoc.html');
+  res.render('mydoc.html')
 });
 
-// 소개 페이지: https://www.veggieavocado.com/introduction/
+// 소개 페이지: https://www.veggieavocado.com/introduction
 app.get('/introduction', (req, res) => {
   res.render('introduction.html');
 });
 
-// 문의 페이지: https://www.veggieavocado.com/customer/
+// 문의 페이지: https://www.veggieavocado.com/customer
 app.get('/customer', (req, res) => {
   res.render('customer.html');
 });
 
-//유저가 템플릿 관리하는 페이지: https://www.veggieavocado.com/mydoc/
-app.get('/mydoc', (req, res) => {
-  res.render('mydoc.html')
+// 관리자 데브 페이지: https://www.veggieavocado.com/admin
+app.get('/admin', (req, res) => {
+  res.render('admin.html');
+});
+
+// 관리자 옵스 페이지: https://www.veggieavocado.com/devops
+app.get('/devops', (req, res) => {
+  res.render('devops.html');
 });
