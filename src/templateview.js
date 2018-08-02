@@ -16,7 +16,7 @@ const formatString = (stringValue, replacementsArray) => {
 // 0: 영어 문장
 // 1: 문장 한글 뜻
 // 2: 문장 HTML (대체 가능 부분 포함)
-// 3: 
+// 3: 대체 단어 옵 - <div class="word-example-tag">단어</div> 형태
 const sentCollapsibleHTML = `
 <li class="sent collapsible"><p>{0}<br>
   <small>{1}</small></p>
@@ -29,6 +29,12 @@ const sentCollapsibleHTML = `
   </div>
   <div class="word-select-btn">문장대체</div>
 </div>
+`
+
+// 스트링 포맷방법:
+// 0: 대체 단어 예시
+const wordExampleTagHTML = `
+<div class="word-example-tag">{0}</div>
 `
 
 // template page: /template
