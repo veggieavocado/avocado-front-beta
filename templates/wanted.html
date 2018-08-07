@@ -67,95 +67,21 @@
           <div class="description-sec">
             이 기술들을 어떤 스타트업에서 사용할까요?
           </div>
-          <div class="data-table">
-            <div class="data-row">
-              <div class="skill">
-                AWS
-                <div class="skill-count">
-                  503
-                </div>
-              </div>
-              <div class="companies">
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-              </div>
-              <button type="button" name="button">다 보기</button>
-            </div>
-            <div class="data-row">
-              <div class="skill">
-                AWS
-                <div class="skill-count">
-                  503
-                </div>
-              </div>
-              <div class="companies">
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-              </div>
-              <button type="button" name="button">다 보기</button>
-            </div>
-            <div class="data-row">
-              <div class="skill">
-                AWS
-                <div class="skill-count">
-                  503
-                </div>
-              </div>
-              <div class="companies">
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-                <div class="comp">테라(Terra)</div>
-                <div class="comp">매스프레소(Mathpresso)</div>
-              </div>
-              <button type="button" name="button">다 보기</button>
-            </div>
-          </div>
+          <div id="data-table" class="data-table"></div>
+          <div id="load-more-btn" class="load-more-btn">더 보기</div>
         </div>
+
+        <button onclick="topFunction()" id="topBtn" title="위로가기"><i class="fas fa-arrow-up"></i></button>
 
       </div>
 
       <script type="text/javascript" src="js/wanted.js"></script>
       <script type="text/javascript">
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+
       // 단계 타일 차트
       Highcharts.chart('process-tile-map', {
         chart: {
