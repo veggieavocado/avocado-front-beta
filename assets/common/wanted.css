@@ -222,7 +222,8 @@
   outline: none;
 }
 
-@media only screen and (min-width: 401px) and (max-width: 1200px) {
+/* 반응현 코드 */
+@media only screen and (max-width: 1200px) {
   .description {
     width: 90%;
   }
@@ -241,22 +242,128 @@
     border-radius: 0 0 0 0;
   }
 
-  #process-tile-map {
-    width: 30rem;
-    height: 30rem;
-    background-color: #3F3F3F;
-  }
-
   .data-processing-step > .description-sec {
     width: 100%;
     margin: 1rem 0;
   }
 }
 
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  #process-tile-map {
+    width: 30rem;
+    height: 30rem;
+    background-color: #3F3F3F;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .data-processing-step {
+    height: 45rem;
+  }
+
+  .data-processing-step > .description-sec {
+    width: 90%;
+  }
+
+  .main-chart > .description-sec {
+    width: 90%;
+  }
+
+  #process-tile-map {
+    width: 25rem;
+    height: 25rem;
+    background-color: #3F3F3F;
+  }
+
+  #most-freq-chart {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  .data-processing-step {
+    height: 40rem;
+  }
+
+  .data-processing-step > .description-sec {
+    width: 90%;
+  }
+
+  .main-chart {
+    width: 100%;
+  }
+
+  .main-chart > .description-sec {
+    width: 90%;
+  }
+
+  #process-tile-map {
+    width: 20rem;
+    height: 20rem;
+    background-color: #3F3F3F;
+  }
+
+  #most-freq-chart {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
 /* Small Size Styles */
-@media only screen and (max-width:401px) {
+@media only screen and (max-width: 401px) {
   .description {
     margin-top: 1rem;
     width: 80%;
+  }
+
+  .data-processing-step {
+    width: 95%;
+    height: 40rem;
+  }
+
+  .data-processing-step > .description-sec {
+    width: 90%;
+  }
+
+  .main-chart {
+    width: 110%;
+    overflow-x: hidden;
+  }
+
+  .main-chart > .description-sec {
+    width: 80%;
+  }
+
+  .full-data-table {
+    width: 95%;
+  }
+
+  .full-data-table > .description-sec {
+    width: 90%;
+  }
+
+  #process-tile-map {
+    width: 20rem;
+    height: 20rem;
+    background-color: #3F3F3F;
+  }
+
+  #most-freq-chart {
+    width: 25rem;
+    height: 25rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  #process-tile-map {
+    width: 15rem;
+    height: 15rem;
+    background-color: #3F3F3F;
+  }
+
+  #most-freq-chart {
+    width: 20rem;
+    height: 20rem;
   }
 }
