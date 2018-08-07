@@ -149,6 +149,8 @@ body {
     }
 
     .underlinable-sent {
+      background-color: #ffe2e2;
+      border-radius: 7px;
       cursor: pointer;
       -webkit-transition: all 0.1s ease-in-out 0s;
       transition: all 0.1s ease-in-out 0s;
@@ -156,8 +158,14 @@ body {
 
     .underlinable-sent:hover {
       border-bottom: solid 3.5px #F95759;
+      border-radius: 7px 7px 0 0;
     }
 
+    .underlinable-sent.active {
+      border-bottom: solid 3.5px #F95759;
+      border-radius: 7px 7px 0 0;
+    }
+    
 
   .assist-container {
     width: 45%;
@@ -305,6 +313,7 @@ body {
       cursor: pointer;
       margin-bottom: 1.5rem;
     }
+
 
 /*Mobile Styles*/
 @media only screen and (max-width: 800px) {

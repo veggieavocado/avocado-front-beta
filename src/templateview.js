@@ -12,11 +12,19 @@ const formatString = (stringValue, replacementsArray) => {
   return formatted;
 };
 
+const templateTextHTML = `
+<div contenteditable="true" placeholder="내용을 입력하세요">
+  <span class="underlinable-sent">I am honoured to be with you today at your commencement from one of the finest universities in the world.</span>
+  <span class="underlinable-sent">I never graduated from college.</span>
+  <span class="underlinable-sent">Truth be told, this is the closest I've ever gotten to a college graduation.</span>
+</div>
+`;
+
 // 스트링 포맷방법:
 // 0: 영어 문장
 // 1: 문장 한글 뜻
 // 2: 문장 HTML (대체 가능 부분 포함)
-// 3: 
+// 3: 대체 단어 옵 - <div class="word-example-tag">단어</div> 형태
 const sentCollapsibleHTML = `
 <li class="sent collapsible"><p>{0}<br>
   <small>{1}</small></p>
@@ -29,7 +37,13 @@ const sentCollapsibleHTML = `
   </div>
   <div class="word-select-btn">문장대체</div>
 </div>
-`
+`;
+
+// 스트링 포맷방법:
+// 0: 대체 단어 예시
+const wordExampleTagHTML = `
+<div class="word-example-tag">{0}</div>
+`;
 
 // template page: /template
 
@@ -40,12 +54,9 @@ const showSentences = async () => {
   let assistListHTML = '';
   const response = await axios.get(sentenceURL);
   for (const sentenceJSON of response.data.results) {
-    console.log(sentenceJSON.sentence);
     const sentenceTxt = sentenceJSON.sentence;
     const listItem = `<li>${sentenceTxt}</li>`;
-    console.log(listItem);
     assistListHTML += listItem;
-    console.log(assistListHTML);
   }
   return assistListHTML;
 };
@@ -60,3 +71,16 @@ document.addEventListener('DOMContentLoaded', async () => {
   const newHTML = await showSentences();
   assistListElmt.innerHTML = newHTML;
 });
+
+const sentencesInText = document.getElementsByClassName('underlinable-sent');
+
+for (let i = 0; i < sentencesInText.length; i += 1) {
+  sentencesInText[i].addEventListener('click', (e) => {
+    e.target.classList.toggle('active');
+    for (let j = 0; j < sentencesInText.length; j += 1) {
+      if (i !== j) {
+        sentencesInText[j].classList.remove('active');
+      }
+    }
+  });
+}

@@ -1,43 +1,226 @@
-nav {
-  height: 3.5rem;
-  width: 100%;
-  background-color: #000000;
-  border-bottom: 1px solid #545856;
+/* default css settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+/* default css settings end here */
+
+body{
+  background-color: f7f7f7;
 }
 
-.navbar {
+header {
+  background-image: url(../img/Background_img.png);
+  width: 100%;
+  height: 450px;
+}
+
+nav {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+/* navbar starts here */
+.navbar {
+  display: none;
 }
 
 .nav-logo {
-  width: 50%;
-  margin: 0 0 0 5rem;
-  font-family: var(--logo-font), sans-serif;
-  font-size: 1.2rem;
-  color: #2BDE73;
+  background-image: url(../img/logo_veggie.png);
+  position: relative;
+  left: 20px;
+  top: 30px;
+  width: 150px;
+  height:55px;
+  background-position: center;
+  background-size: contain;
+}
+
+.dropdown-wrapper {
+  font-size: 2em;
+  position: fixed;
+  right: 40px;
+  top: 40px;
   cursor: pointer;
 }
 
-.nav-menu {
-  width: 30%;
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 150px;
+    right: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.logo-txt {
+  font-size: 2em;
+  margin-top: 30%;
+  text-align: center;
+}
+
+.nav-button {
   display: flex;
-  font-size: 13px;
-  color:#fff;
+  justify-content: center;
+  margin-top: 5rem;
 }
 
-.nav-menu > .action-btn {
-  padding: 0 20px;
+
+  .nav-button > button  {
+  padding: 10px 30px;
+  background-color: #808080;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
-.nav-login {
+/* navbar ends here */
+
+/* content-1 starts here */
+.content-1  {
+  background-color: f7f7f7;
+}
+
+.content-1 > p {
+  margin: 2rem 0;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.content-1-wrapper {
   display: flex;
-  font-size: 13px;
-  color:#fff;
+  justify-content: center;
 }
 
-.nav-login> .login-btn {
-  margin-right: 1.5rem;
-  border: 1px solid #fff;
-  padding: 10px 15px;
+.content-1-wrapper > textarea  {
+  width: 80%;
+}
+
+.txt-btn  {
+  width: 90%;
+    text-align: right;
+}
+
+.txt-btn  > button{
+  margin: 2rem 0;
+  padding: 5px 20px;
+  background-color: #b9d784;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.content-2  {
+  margin-bottom: 2rem;
+}
+
+.content-2 > p  {
+  margin: 2rem 0;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.accuracy {
+  display: flex;
+}
+
+.accuracy-img {
+  background-image: url(../img/accuracy.png);
+  width: 50%;
+  height:55px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.insight  {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.insight-img {
+  background-image: url(../img/insight.png);
+  width: 50%;
+  height:55px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+
+  .footer {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-btns > .footer-btn {
+    width: inherit;
+    font-size: 0.8em;
+  }
+
+
+  .footer > .comp-info {
+    width: 100%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media  only screen and (min-width: 460px)  {
+
+  .narrow-navbar{
+    display: none;
+  }
+
 }

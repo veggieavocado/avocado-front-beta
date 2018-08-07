@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+      <title>베지아보카도 | 스타트업 기술 사용 트렌드</title>
+      <link rel="icon" href="img/avocado.ico" type="image/x-icon" />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+      <link rel="stylesheet" href="common/style.css" type="text/css" media="all">
+      <link rel="stylesheet" href="common/wanted.css" type="text/css" media="all">
+      <link href="https://fonts.googleapis.com/css?family=Jua|Nanum+Gothic|Gothic+A1|Ubuntu" rel="stylesheet">
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+      <!-- Highchart TileMap Chart import -->
+      <script src="http://code.highcharts.com/highcharts.js"></script>
+      <script src="http://code.highcharts.com/maps/modules/map.js"></script>
+      <script src="https://code.highcharts.com/modules/tilemap.js"></script>
+      <script src="https://code.highcharts.com/modules/exporting.js"></script>
+      <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+    </head>
+
+    <body>
+
+      <div class="body">
+
+        <div class="header">
+          <div class="title">
+            원티드(Wanted) 기술 스택 사용 트렌드
+          </div>
+          <div class="description">
+            원티드의 채용 공고를 분석하여 요즘 회사들이 많이 사용하는 기술 스택의 트렌드를 파악하고자 했습니다.
+          </div>
+        </div>
+
+        <div class="data-processing-step">
+          <div class="chart-sec">
+            <div id="process-tile-map"></div>
+          </div>
+          <div class="description-sec">
+            <div class="desc">
+              <strong style="font-size: 1.7rem;">원티드</strong>는 많은 스타트업들이 채용 공고를 올리는 장소입니다.
+            </div>
+            <div class="desc" style="color: #9C9C9C;">
+              그렇다면...
+            </div>
+            <div class="desc" >
+              원티드를 통해서 최신 기술 사용의 트렌드를 읽는게 가능하지 않을까요?
+            </div>
+          </div>
+        </div>
+
+        <div class="main-chart">
+          <div class="description-sec">
+            물론 가능합니다! 아래에는 1000개가 넘는 채용 공고 중에서 TOP 기술들입니다.
+          </div>
+          <div class="chart-sec">
+            <div id="most-freq-chart"></div>
+          </div>
+        </div>
+
+        <div class="full-data-table">
+          <div class="description-sec">
+            이 기술들을 어떤 스타트업에서 사용할까요?
+          </div>
+          <div class="data-table">
+            <div class="data-row">
+              <div class="skill">
+                AWS
+                <div class="skill-count">
+                  503
+                </div>
+              </div>
+              <div class="companies">
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+              </div>
+              <button type="button" name="button">다 보기</button>
+            </div>
+            <div class="data-row">
+              <div class="skill">
+                AWS
+                <div class="skill-count">
+                  503
+                </div>
+              </div>
+              <div class="companies">
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+              </div>
+              <button type="button" name="button">다 보기</button>
+            </div>
+            <div class="data-row">
+              <div class="skill">
+                AWS
+                <div class="skill-count">
+                  503
+                </div>
+              </div>
+              <div class="companies">
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+                <div class="comp">테라(Terra)</div>
+                <div class="comp">매스프레소(Mathpresso)</div>
+              </div>
+              <button type="button" name="button">다 보기</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <script type="text/javascript" src="js/wanted.js"></script>
+      <script type="text/javascript">
+      // 단계 타일 차트
+      Highcharts.chart('process-tile-map', {
+        chart: {
+            type: 'tilemap',
+            backgroundColor: '#3F3F3F',
+            plotBackgroundColor: '#3F3F3F'
+        },
+
+        title: {
+            text: 'Idea Map',
+            style: {
+              color: 'white',
+              fontWeight: 'bold',
+              fontSize: '20px'
+            }
+        },
+
+        subtitle: {
+            text: '요즘 스타트업들은 어떤 기술을 가진 개발자를 찾을까요?',
+            style: {
+              color: '#9C9C9C'
+            }
+        },
+
+        exporting: {
+          enabled: false,
+        },
+
+        credits: {
+          enabled: false,
+        },
+
+        colors: [
+            '#fed',
+            '#ffddc0',
+            '#ecb',
+            '#dba',
+            '#c99',
+            '#b88',
+            '#aa7577',
+            '#9f6a66'
+        ],
+
+        xAxis: {
+            visible: false
+        },
+
+        yAxis: {
+            visible: false
+        },
+
+        legend: {
+            enabled: false
+        },
+
+        tooltip: {
+            headerFormat: '',
+            backgroundColor: 'rgba(247,247,247,0.95)',
+            pointFormat: '<span style="color: {point.color}">●</span>' +
+                '<span style="font-size: 13px; font-weight: bold"> {point.name}' +
+                '</span><br>{point.desc}',
+            style: {
+                width: 170
+            },
+            padding: 10,
+            hideDelay: 1000000
+        },
+
+        plotOptions: {
+            series: {
+                keys: ['x', 'y', 'name', 'desc'],
+                tileShape: 'diamond',
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}',
+                    color: '#000000',
+                    style: {
+                        textOutline: false
+                    }
+                }
+            }
+        },
+
+        series: [{
+            name: '최신 기술 동향',
+            pointPadding: 10,
+            data: [
+                [5, 3, '최신 기술 동향',
+                    '원티드(Wanted, wanted.co.kr)에 올라오는 채용 공고를 모두 분석하여 최신 기술 트렌드를 읽습니다.']
+            ],
+            color: '#7eb'
+        }, {
+            name: 'Steps',
+            colorByPoint: true, // Pick new color for each point from colors array
+            data: [
+                [3, 3, '1단계',
+                    '원티드에 올라오는 채용 공고를 확인합니다.'],
+                [4, 3, '2단계',
+                    '개발쪽 채용 공고를 확인합니다. 서버 개발자, 웹 개발자, 데이터 엔지니어 등 다양한 직무가 보입니다.'],
+                [5, 4, '3단계',
+                    '모든 직무 채용 공고 텍스트를 수집합니다.'],
+                [6, 3, '4단계',
+                    '공고 전체에서 가장 많이 사용된 기술들을 뽑아냅니다.'],
+                [7, 3, '5단계',
+                    '모든 기술의 언급 빈도수를 계산합니다. 요즘 트렌드를 파악해봅니다.'],
+                [6, 2, '6단계',
+                    '각 회사가 사용하는 기술 스택에 대한 이해도를 높입니다.'],
+                [5, 2, '7단계',
+                    '요즘 가장 잘나가는 개발자는 어떤 개발자인지 한 눈에 파악합니다.'],
+                [4, 2, '8단계',
+                    '트렌드 파악에 도움이 되는 가치있는 데이터를 만들어냅니다.']
+            ]
+        }]
+      }, function (chart) {
+        chart.tooltip.refresh(chart.series[0].points[0]); // Show tooltip of the first point on load
+      });
+
+      Highcharts.chart('most-freq-chart', {
+        chart: {
+          backgroundColor: '#3F3F3F',
+          plotBackgroundColor: '#3F3F3F',
+          plotBorderWidth: null,
+          plotShadow: false,
+          type: 'pie',
+        },
+        title: {
+          text: '',
+          style: {
+            display: 'none',
+          },
+        },
+        subtitle: {
+          text: '',
+          style: {
+            display: 'none',
+          },
+        },
+        exporting: {
+          enabled: false,
+        },
+        credits: {
+          enabled: false,
+        },
+        tooltip: {
+          // pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
+          pointFormat: '{series.name}: <b>{point.y}</b>',
+        },
+        plotOptions: {
+          pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            innerSize: '60%',
+            borderWidth: 0,
+            dataLabels: {
+              enabled: true,
+              format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+              style: {
+                color: '#ececec',
+                textOutline: false
+              },
+            },
+          },
+        },
+        series: [{
+          name: '기술 언급수',
+          colorByPoint: true,
+          data: [
+            { name: 'AWS', y: 503, sliced: true, selected: true },
+            { name: 'API', y: 461 },
+            { name: 'iOS', y: 333 },
+            { name: 'C', y: 333 },
+            { name: 'Python', y: 305 },
+            { name: 'Java', y: 264 },
+            { name: 'Android', y: 263 },
+            { name: 'Web', y: 257 },
+            { name: 'React.js', y: 239 },
+            { name: 'Linux', y: 200 },
+            { name: 'UI', y: 190 },
+            { name: 'MySQL', y: 182 },
+            { name: 'DB', y: 175 },
+            { name: 'CSS', y: 169 },
+            { name: 'HTML', y: 168 },
+            { name: 'Git', y: 156 },
+            { name: 'SQL', y: 156 },
+            { name: 'MS', y: 142 },
+            { name: 'PHP', y: 140 },
+            { name: 'Node.js', y: 125 },
+            { name: 'Javascript', y: 118 },
+            { name: 'R', y: 108 },
+            { name: 'Ruby', y: 105 }
+         ]
+        }],
+        // using
+        function() { // on complete
+          const xpos = '50%';
+          const ypos = '53%';
+          const circleradius = 102;
+          // Render the circle
+          chart.renderer.circle(xpos, ypos, circleradius).attr({
+            fill: '#3F3F3F',
+          }).add();
+        },
+      });
+      </script>
+    </body>
+
+</html>
