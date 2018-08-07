@@ -223,7 +223,13 @@
 }
 
 /* 반응현 코드 */
+
+/* 공통된 반응현 코드 */
 @media only screen and (max-width: 1200px) {
+  .body {
+    overflow-x: hidden;
+  }
+
   .description {
     width: 90%;
   }
@@ -237,7 +243,6 @@
   }
 
   .data-processing-step > .chart-sec {
-    top: 0;
     width: 100%;
     border-radius: 0 0 0 0;
   }
@@ -245,14 +250,6 @@
   .data-processing-step > .description-sec {
     width: 100%;
     margin: 1rem 0;
-  }
-}
-
-@media only screen and (min-width: 800px) and (max-width: 1200px) {
-  #process-tile-map {
-    width: 30rem;
-    height: 30rem;
-    background-color: #3F3F3F;
   }
 }
 
@@ -267,17 +264,6 @@
 
   .main-chart > .description-sec {
     width: 90%;
-  }
-
-  #process-tile-map {
-    width: 25rem;
-    height: 25rem;
-    background-color: #3F3F3F;
-  }
-
-  #most-freq-chart {
-    width: 30rem;
-    height: 30rem;
   }
 }
 
@@ -297,20 +283,8 @@
   .main-chart > .description-sec {
     width: 90%;
   }
-
-  #process-tile-map {
-    width: 20rem;
-    height: 20rem;
-    background-color: #3F3F3F;
-  }
-
-  #most-freq-chart {
-    width: 30rem;
-    height: 30rem;
-  }
 }
 
-/* Small Size Styles */
 @media only screen and (max-width: 401px) {
   .description {
     margin-top: 1rem;
@@ -342,11 +316,45 @@
   .full-data-table > .description-sec {
     width: 90%;
   }
+}
 
+/* 반응형 차트 코드 */
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  #process-tile-map {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  #process-tile-map {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  #most-freq-chart {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 600px) {
   #process-tile-map {
     width: 20rem;
     height: 20rem;
-    background-color: #3F3F3F;
+  }
+
+  #most-freq-chart {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
+/* Small Size Styles */
+@media only screen and (max-width: 401px) {
+  #process-tile-map {
+    width: 20rem;
+    height: 20rem;
   }
 
   #most-freq-chart {
@@ -359,7 +367,6 @@
   #process-tile-map {
     width: 15rem;
     height: 15rem;
-    background-color: #3F3F3F;
   }
 
   #most-freq-chart {
