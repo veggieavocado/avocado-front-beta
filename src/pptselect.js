@@ -71,7 +71,7 @@ const getCategories = async () => {
     }
     // 루프의 시작이나 새로운 카드줄을 만들지 않으면...
     if (totalCardNums === cardNums) {
-      console.log('DONE!!!')
+      console.log('DONE!!!');
       // 더 이상의 카드가 없다면 마무리한다
       contentBody = formatString(cardWrapHTML, [cardRow]);
       contentBodyHTML += contentBody;

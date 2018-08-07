@@ -1,0 +1,150 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1px var(--gray);
+}
+
+  .header > .title {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .header > .description {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+  }
+
+/* section #1 */
+.data-processing-step {
+  margin-top: 2.5rem;
+  width: 80%;
+  height: 30rem;
+  border: solid 1px var(--gray);
+  border-radius: 5px;
+  display: flex;
+}
+
+  .data-processing-step > .chart-sec {
+    width: 50%;
+    background-color: #3F3F3F;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #process-tile-map {
+    width: 27rem;
+    height: 27rem;
+    background-color: #3F3F3F;
+  }
+
+  .data-processing-step > .description-sec {
+    width: 50%;
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+    .description-sec > .desc {
+      margin: 1rem 0;
+    }
+
+/* section #2 */
+.main-chart {
+  margin-top: 2.5rem;
+  width: 80%;
+  height: 40rem;
+  border: solid 1px var(--gray);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+  .main-chart > .description-sec {
+    height: 5rem;
+    font-size: 1.2rem;
+    color: #a8935e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-chart > .chart-sec {
+    height: 35rem;
+    width: 100%;
+    background-color: #3F3F3F;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #most-freq-chart {
+    width: 34.5rem;
+    height: 34.5rem;
+  }
+
+/* section #3 */
+.full-data-table {
+  margin-top: 2.5rem;
+  width: 80%;
+  border: solid 1px var(--gray);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+  .full-data-table > .description-sec {
+    height: 5rem;
+    font-size: 1.2rem;
+    color: var(--pretty-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .data-table {
+    width: 100%;
+    font-family: var(--logo-font), sans-serif;
+  }
+
+    .data-table > .data-row {
+      border-bottom: solid 1px black;
+    }
+
+      .data-row > .skill {
+        color: var(--pretty-black);
+        font-size:
+      }
+
+
+/* Tables Styles */
+@media only screen and (min-width: 401px) and (max-width: 900px) {
+  .description {
+    width: 90%;
+  }
+}
+
+/* Small Size Styles */
+@media only screen and (max-width:401px) {
+  .description {
+    margin-top: 1rem;
+    width: 80%;
+  }
+}

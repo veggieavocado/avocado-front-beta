@@ -18,7 +18,7 @@ const templateTextHTML = `
   <span class="underlinable-sent">I never graduated from college.</span>
   <span class="underlinable-sent">Truth be told, this is the closest I've ever gotten to a college graduation.</span>
 </div>
-`
+`;
 
 // 스트링 포맷방법:
 // 0: 영어 문장
@@ -37,13 +37,13 @@ const sentCollapsibleHTML = `
   </div>
   <div class="word-select-btn">문장대체</div>
 </div>
-`
+`;
 
 // 스트링 포맷방법:
 // 0: 대체 단어 예시
 const wordExampleTagHTML = `
 <div class="word-example-tag">{0}</div>
-`
+`;
 
 // template page: /template
 

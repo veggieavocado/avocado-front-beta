@@ -90,3 +90,8 @@ app.get('/admin', (req, res) => {
 app.get('/devops', (req, res) => {
   res.render('devops.html');
 });
+
+// 원티드 컨텐츠 페이지: https://www.veggieavocado.com/wanted
+app.get('/wanted', (req, res) => {
+  res.render('wanted.html');
+});
