@@ -90,3 +90,8 @@ app.get('/admin', (req, res) => {
 app.get('/devops', (req, res) => {
   res.render('devops.html');
 });
+
+//(임시)navbar 페이지:https://www.veggieavocado.com/navbar
+app.get('/navbar', (req, res) => {
+  res.render('navbar.html');
+});

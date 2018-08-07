@@ -119,7 +119,7 @@ input {
     display: none;
   }
 
-  .admin-content > .alert.alert-success {
+  .admin-content > .alert-success {
     margin-top: 1rem;
   }
 

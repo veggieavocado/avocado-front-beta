@@ -12,7 +12,7 @@
   --gray: #BDBDBD;
   --light-gray: #EFEFEF;
   --very-light-gray: #F9F9F9;
-  --navbar-height: 5rem;
+  --navbar-height: 4rem;
   --logo-font: 'Ubuntu';
   --font: 'Gothic A1';
   --btn-radius: 5px;
@@ -44,19 +44,18 @@ a:hover {
 
 /* Navbar CSS starts here */
 .navbar {
-  background-color: white;
   height: var(--navbar-height);
   display: flex;
-  border-bottom: solid 1.5px var(--light-gray);
-  box-shadow: 2px 2px 3px 2px var(--very-light-gray);
+  border-bottom: solid 1px #545856;
 }
 
 /* Navbar-logo CSS starts here */
   .navbar > .navbar-logo {
+    margin-left: 8rem;
     width: 20%;
     font-family: var(--logo-font), sans-serif;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--main-green);
     cursor: pointer;
   }
@@ -66,7 +65,8 @@ a:hover {
   /* Navbar-action CSS starts here */
 
   .navbar > .navbar-action {
-    width: 60%;
+    margin-left: 20rem;
+    width: 30%;
     display: flex;
     justify-content: flex-start;
     align-content: center;
@@ -79,14 +79,13 @@ a:hover {
   }
 
     .navbar-action > .action-btn {
-      width: 9rem;
-      margin: 0 1rem;
+      width: 7rem;
+      margin: 0 0.5rem;
       cursor: pointer;
       position: relative;
-      background-color:white;
       text-align: center;
-      font-size: 18px;
-      color: var(--pretty-black);
+      font-size: 13px;
+      color:#fff;
 
       /* background-color: var(--main-purple); */
     }
@@ -140,17 +139,19 @@ a:hover {
 
   .navbar > .navbar-login {
     width: 20%;
-    display: flex;
-    justify-content: flex-end;
   }
 
-    .login-btn {
+   .navbar-login > .wide-button {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+  }
+
+    .login-btn > button {
       margin-right: 1rem;
-      border: solid 1.5px var(--black);
-      border-radius: var(--btn-radius);
-      background-color: white;
-      color: var(--black);
-      padding: 0.3rem;
+      border: solid 1px #fff;
+      color: white;
+      padding: 10px 20px;
       cursor: pointer;
       -webkit-transition: all 0.1s ease-in-out 0s;
       transition: all 0.1s ease-in-out 0s;
