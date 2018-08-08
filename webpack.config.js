@@ -12,6 +12,7 @@ module.exports = {
     login: ['babel-polyfill', `${__dirname}/src/login.js`],
     templateview: ['babel-polyfill', `${__dirname}/src/templateview.js`],
     wanted: ['babel-polyfill', `${__dirname}/src/wanted.js`],
+    navbar: ['babel-polyfill', `${__dirname}/src/navbar.js`],
   },
 
   output: {

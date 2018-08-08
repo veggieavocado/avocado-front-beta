@@ -10660,9 +10660,9 @@ module.exports = __webpack_require__(/*! ./modules/_core */ "./node_modules/core
 /***/ }),
 
 /***/ "./node_modules/webpack/buildin/global.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
+/*!************************************************!*\
+  !*** ./node_modules/webpack/buildin/global.js ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -10901,7 +10901,7 @@ module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! babel-polyfill */"./node_modules/babel-polyfill/lib/index.js");
-module.exports = __webpack_require__(/*! /Users/abc/Desktop/PROJECTS/docker/minimum-frontend/src/wanted.js */"./src/wanted.js");
+module.exports = __webpack_require__(/*! C:\Users\hyemin\desktop\veggieavocado\betafrontend/src/wanted.js */"./src/wanted.js");
 
 
 /***/ })

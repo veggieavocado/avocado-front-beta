@@ -9,7 +9,7 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
       <link rel="stylesheet" href="css/production/navbar.css">
-      <link href="https://fonts.googleapis.com/css?family=Jua|Nanum+Gothic|Gothic+A1|Ubuntu" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Jua|Nanum+Gothic|Gothic+A1|Ubuntu" rel="stylesheet">
 
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -18,7 +18,7 @@
 
   <body>
 
-    <header>
+    <header id="particles-js">
 
       <nav>
         <div class="narrow-navbar">
@@ -34,7 +34,7 @@
               </div>
             </div>
           </div>
-          <div class="logo-txt"><p>텍스트분석으로</br> 나만의 컨텐츠를!</p></div>
+          <div class="narrow-logo-txt"><p>텍스트분석으로</br> 나만의 컨텐츠를!</p></div>
           <div class="nav-button">
             <button type="nav-button" name="button">둘러보기</button>
           </div>
@@ -53,7 +53,12 @@
             <div class="login-btn">회원가입</div>
           </div>
         </div>
+        <div class="wide-logo-txt"><p>텍스트 분석으로</br>나만의 컨텐츠를 만들어보세요</p></div>
+        <div class="wide-nav-button">
+          <div class="nav-button">둘러보기</div>
+        </div>
       </nav>
+      <div class="scroll-down-anchor"><i class="fas fa-angle-double-down"></i></div>
     </header>
 
     <div class="content-1 ">
@@ -84,10 +89,7 @@
             <p>데이터에 대한</br>인사이트를 제공합니다</p>
           </div>
         </div>
-
-
       </div>
-
     </div>
 
     <div class="footer">
@@ -114,5 +116,7 @@
       </div>
     </div>
 
+    <script src="js/particles.js"></script>
+    <script src="js/navbar.js"></script>
   </body>
 </html>
