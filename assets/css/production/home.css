@@ -18,7 +18,7 @@
 
   .content-1 > .content-img {
     height: inherit;
-    background-image: url(../img/home.jpg);
+    background-image: url(../../img/home.jpg);
     background-position: center;
     background-size: cover;
   }

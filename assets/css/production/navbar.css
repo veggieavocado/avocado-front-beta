@@ -12,7 +12,7 @@ body{
 }
 
 header {
-  background-image: url(../img/Background_img.png);
+  background-image: url(../../img/Background_img.png);
   width: 100%;
   height: 450px;
 }
@@ -29,7 +29,7 @@ nav {
 }
 
 .nav-logo {
-  background-image: url(../img/logo_veggie.png);
+  background-image: url(../../img/logo_veggie.png);
   position: relative;
   left: 20px;
   top: 30px;
@@ -147,7 +147,7 @@ nav {
 }
 
 .accuracy-img {
-  background-image: url(../img/accuracy.png);
+  background-image: url(../../img/accuracy.png);
   width: 50%;
   height:55px;
   background-position: center;
@@ -161,7 +161,7 @@ nav {
 }
 
 .insight-img {
-  background-image: url(../img/insight.png);
+  background-image: url(../../img/insight.png);
   width: 50%;
   height:55px;
   background-position: center;
