@@ -126,14 +126,14 @@ nav {
 
 .txt-btn  {
   width: 90%;
-    text-align: right;
+  display: flex;
+  justify-content: center;
 }
 
-.txt-btn  > button{
-  margin: 2rem 0;
-  padding: 5px 20px;
+.txt-btn  > .txt-analysis-btn{
+  margin: 3rem 0;
+  padding: 10px 30px;
   background-color: #b9d784;
-  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -153,7 +153,7 @@ nav {
 
 .accuracy-img {
   background-image: url(../../img/accuracy.png);
-  width: 50%;
+  width: 33.3%;
   height:55px;
   background-position: center;
   background-size: contain;
@@ -161,13 +161,25 @@ nav {
 }
 
 .insight  {
-  margin-top: 2rem;
   display: flex;
 }
 
 .insight-img {
   background-image: url(../../img/insight.png);
-  width: 50%;
+  width: 33.3%;
+  height:55px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.easy  {
+  display: flex;
+}
+
+.easy-img {
+  background-image: url(../../img/easy.png);
+  width: 33.3%;
   height:55px;
   background-position: center;
   background-size: contain;
@@ -227,6 +239,10 @@ nav {
 /* display: none */
 
   .narrow-navbar {
+    display: none;
+  }
+
+  .content-2  {
     display: none;
   }
 
@@ -296,6 +312,15 @@ nav {
   cursor: pointer;
 }
 
+/* The animation code */
+@keyframes anchor-animation {
+    0%   {top: 94%;}
+    25%  {top: 93%;}
+    50%  {top: 92%;}
+    75%  {top: 93%;}
+    100% {top: 94%;}
+}
+
 .scroll-down-anchor {
   position: absolute;
   font-size: 2rem;
@@ -304,7 +329,96 @@ nav {
   color: white;
   transform: translate(-50%, -50%);
   transform: translate3d(-50%, -50%, 0);
+  animation: anchor-animation 1.5s linear 1s infinite alternate;
 }
 
+.content-1  {
+  height: 750px;
+  background-image: url(../../img/text.svg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #EDEFEE;
+}
+
+.content-1-txt > p {
+  font-family: 'Nanum Gothic', sans-serif;
+  padding: 8rem 0 1rem 0;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.content-1 > .content-1-wrapper {
+  margin-top: 2rem;
+  width: 80%;
+}
+
+.content-1-wrapper > textarea {
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.content-2-wide {
+  height: 750px;
+  background-color: #F7F7F7;
+  background-image: url(../../img/content-2.svg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.content-2-wide > p {
+  padding: 8rem 0 2rem 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.content-2-wide > .content-2-txt {
+  width: 50%;
+  height: 70%;
+  /* border: solid 3px black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.content-2-txt > .text-box-1 {
+  width: 80%;
+  /* border: 3px solid pink */
+}
+
+.content-2-txt > .text-box-2 {
+  width: 80%;
+  /* border: 3px solid pink */
+}
+
+ .text-box-1 > p {
+  width: 80%;
+  font-family: 'Nanum Gothic', sans-serif;
+  padding: 2rem 0 1rem 0;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.text-box-2 > p {
+ width: 80%;
+ font-family: 'Nanum Gothic', sans-serif;
+ padding: 2rem 0 1rem 0;
+ font-size: 1em;
+ font-weight: bold;
+}
 
 }
