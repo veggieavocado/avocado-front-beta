@@ -1,5 +1,6 @@
 /* default css settings */
 * {
+  top: -1px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,7 +19,30 @@ a:hover {
 /* default css settings end here */
 
 body{
-  background-color: f7f7f7;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 홈페이지 구성 (오더 정리) */
+header {
+  order: 1;
+}
+
+.content-1 {
+  order: 3;
+}
+
+.content-2 {
+  order: 2;
+}
+
+.content-2-wide {
+  order: 4;
+}
+
+.footer {
+  order: 5;
 }
 
 header {
@@ -60,6 +84,14 @@ nav {
   height:55px;
   background-position: center;
   background-size: contain;
+}
+
+.wide-logo-txt {
+  display: none;
+}
+
+.wide-nav-button {
+  display: none;
 }
 
 .dropdown-wrapper {
@@ -124,7 +156,7 @@ nav {
 
 /* content-1 starts here */
 .content-1  {
-  background-color: f7f7f7;
+  background-color: #f7f7f7;
 }
 
 .content-1 > p {
@@ -143,7 +175,7 @@ nav {
 }
 
 .txt-btn  {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -252,7 +284,7 @@ nav {
 
 
 
-@media  only screen and (min-width: 460px)  {
+@media  only screen and (min-width: 400px)  {
 
 /* display: none */
 
@@ -262,6 +294,14 @@ nav {
 
   .content-2  {
     display: none;
+  }
+
+  .wide-logo-txt {
+    display: block;
+  }
+
+  .wide-nav-button {
+    display: block;
   }
 
   header {
@@ -299,6 +339,7 @@ nav {
   }
 
   .wide-logo-txt  {
+    width: 100%;
     font-size: 3.3rem;
     text-align: center;
     position: absolute;
@@ -429,6 +470,14 @@ nav {
     color: white;
   }
 
+  .sec > .sec-txt {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .sec.sec-1:hover {
     background: rgb(198, 126, 160, 0.8);
   }
@@ -448,6 +497,10 @@ nav {
     .sec > .sec-txt h2 {
       font-weight: bold;
       font-size: 1.4rem;
+    }
+
+    .sec > .sec-txt p {
+      font-size: 0.8rem;
     }
 
     .sec > .sec-btn {
@@ -501,6 +554,7 @@ nav {
 
 
 .footer {
+  margin-top: -1px;
   width: 100%;
   background-color: #616161;
   color: white;
@@ -539,50 +593,175 @@ nav {
 }
 
 /* 반응형 프레임 코드 */
-@media only screen and (min-width: 1200px) {
-  .frame-sensor {
-    width: 100%;
-    height: 2rem;
-    background-color: blue;
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .wide-logo-txt  {
+    font-size: 3.3rem;
   }
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1200px) {
-  .frame-sensor {
-    width: 100%;
-    height: 2rem;
-    background-color: red;
+  .wide-logo-txt  {
+    font-size: 3rem;
   }
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1000px) {
-  .frame-sensor {
-    width: 100%;
-    height: 2rem;
-    background-color: purple;
+  .wide-logo-txt  {
+    font-size: 2.7rem;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 900px) {
+  .content-2-txt {
+    flex-wrap: wrap;
+  }
+
+  .content-2-txt > .sec {
+    border-bottom: dashed 1px #EFEFEF;
+    border-right: dashed 1px #EFEFEF;
+  }
+
+  .sec.sec-1 {
+    width: 50%;
+  }
+
+  .sec.sec-2 {
+    width: 50%;
+    border-right: none;
+  }
+
+  .sec.sec-3 {
+    width: 50%;
+    border-bottom: none;
+  }
+
+  .sec.sec-4 {
+    width: 50%;
+    border-right: none;
+    border-bottom: none;
   }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 800px) {
-  .frame-sensor {
-    width: 100%;
-    height: 2rem;
-    background-color: green;
+  .wide-logo-txt  {
+    font-size: 2.4rem;
   }
 }
 
 @media only screen and (min-width: 400px) and (max-width: 600px) {
-  .frame-sensor {
-    width: 100%;
-    height: 2rem;
-    background-color: black;
+  .wide-logo-txt  {
+    font-size: 2.1rem;
   }
 }
 
 @media only screen and (max-width: 400px) {
-  .frame-sensor {
+  .content-2-wide {
+    height: 750px;
+    background-color: #F7F7F7;
     width: 100%;
-    height: 2rem;
-    background-color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
   }
+
+  /* 컨텐츠 2 백그라운드 이미지 */
+  .content-2-wide > .content-2-bg {
+    width: 100%;
+    height: inherit;
+    background-image: url(../../img/content-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .content-2-wide > .content-2-bg:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 33, 33, 0.5);
+  }
+
+  .content-2-wide > .content-2-txt {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+  }
+
+    .content-2-txt > .sec {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Nanum Gothic', sans-serif;
+      color: white;
+    }
+
+    .sec > .sec-txt {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sec.sec-1,
+    .sec.sec-2,
+    .sec.sec-3,
+    .sec.sec-4 {
+      width: 100%;
+      border-bottom: dashed 1px #EFEFEF;
+      border-right: none;
+    }
+
+    .sec.sec-4 {
+      border-bottom: none;
+    }
+
+    .sec.sec-1:hover {
+      background: rgb(198, 126, 160, 0.8);
+    }
+
+    .sec.sec-2:hover {
+      background: rgb(150, 173, 105, 0.8);
+    }
+
+    .sec.sec-3:hover {
+      background: rgb(103, 171, 158, 0.8);
+    }
+
+    .sec.sec-4:hover {
+      background: rgb(232, 140, 85, 0.8);
+    }
+
+      .sec > .sec-txt h2 {
+        font-weight: bold;
+        font-size: 1.4rem;
+      }
+
+      .sec > .sec-txt p {
+        font-size: 0.8rem;
+      }
+
+      .sec > .sec-btn {
+        padding: 0.2rem 0.5rem;
+        margin-top: 1.5rem;
+        border: solid 2px #9C9C9C;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .sec > .sec-btn:hover {
+        background-color: white;
+        border: solid 2px white;
+        color: #3F3F3F;
+      }
+
+        .sec-btn > i {
+          margin-right: 1rem;
+        }
 }
