@@ -378,18 +378,36 @@ nav {
 .content-2-wide {
   height: 750px;
   background-color: #F7F7F7;
-  background-image: url(../../img/content-2.jpg);
   width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* 컨텐츠 2 백그라운드 이미지 */
+.content-2-wide > .content-2-bg {
+  width: 100%;
+  height: inherit;
+  background-image: url(../../img/content-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
+}
+
+.content-2-wide > .content-2-bg:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.5);
 }
 
 .content-2-wide > .content-2-txt {
   width: 100%;
   height: 100%;
+  position: absolute;
   display: flex;
 }
 
@@ -427,8 +445,15 @@ nav {
     .sec > .sec-btn {
       padding: 0.2rem 0.5rem;
       margin-top: 1.5rem;
-      border: solid 1px #9C9C9C;
+      border: solid 2px #9C9C9C;
       border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .sec > .sec-btn:hover {
+      background-color: white;
+      border: solid 2px white;
+      color: #3F3F3F;
     }
 
       .sec-btn > i {
@@ -465,12 +490,91 @@ nav {
  text-align: center;
 }
 
+
+
 .footer {
+  width: 100%;
   background-color: #616161;
+  color: white;
+  z-index: 1
 }
 
-.footer-menu {
-  display: flex;
+  .footer > .footer-menu {
+    padding: 2rem 2.5rem 1rem 2.5rem;
+    font-size: 1rem;
+    display: flex;
+  }
+
+    .footer-menu > .menu-btns {
+      width: 60%;
+      display: flex;
+      margin: 1rem 1rem;
+    }
+
+      .menu-btns > .footer-btn {
+        margin: 0 2rem;
+        cursor: pointer;
+      }
+
+    .comp-info > .logo {
+      font-family: var(--logo-font), sans-serif;
+      font-weight: bold;
+      color: #B9D784;
+      margin-bottom: 1rem;
+    }
+
+    .comp-info > .info {
+      font-size: 0.8rem;
+      margin-bottom: 2rem;
+    }
+
 }
 
+/* 반응형 프레임 코드 */
+@media only screen and (min-width: 1200px) {
+  .frame-sensor {
+    width: 100%;
+    height: 2rem;
+    background-color: blue;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+  .frame-sensor {
+    width: 100%;
+    height: 2rem;
+    background-color: red;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+  .frame-sensor {
+    width: 100%;
+    height: 2rem;
+    background-color: purple;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .frame-sensor {
+    width: 100%;
+    height: 2rem;
+    background-color: green;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  .frame-sensor {
+    width: 100%;
+    height: 2rem;
+    background-color: black;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .frame-sensor {
+    width: 100%;
+    height: 2rem;
+    background-color: white;
+  }
 }

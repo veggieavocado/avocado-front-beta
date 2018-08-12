@@ -37,7 +37,7 @@ const appendRankData = (rank, skill, count, companies) => {
   const dataArray = [rank, skill, count, allCompanyTagsHTML];
   const dataRow = formatString(dataRowHTML, dataArray);
   return dataRow;
-}
+};
 
 const loadRankData = (initialRank) => {
   let loopNum = 1;
@@ -62,7 +62,7 @@ const loadRankData = (initialRank) => {
     rank += 1;
     loopNum += 1;
   }
-}
+};
 
 var rank = 1;
 
