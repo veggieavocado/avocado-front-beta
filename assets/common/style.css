@@ -2,7 +2,7 @@
 /* 색상은 대문자 사용 */
 :root {
   --main-green: #2BDE73;
-  --btn-green: #2FC66C;
+  --btn-green: #B9D784;
   --main-red: #F95759;
   --main-purple: #C986FC;
   --main-brown: #C4B07B;
@@ -40,186 +40,6 @@ a:hover {
 }
 /* default css settings end here */
 
-/* navbar CSS ends here */
-
-/* Navbar CSS starts here */
-.navbar {
-  height: var(--navbar-height);
-  display: flex;
-  border-bottom: solid 1px #545856;
-}
-
-/* Navbar-logo CSS starts here */
-  .navbar > .navbar-logo {
-    margin-left: 8rem;
-    width: 20%;
-    font-family: var(--logo-font), sans-serif;
-    font-weight: bold;
-    font-size: 1rem;
-    color: var(--main-green);
-    cursor: pointer;
-  }
-
-  /* navbar-logo CSS ends here */
-
-  /* Navbar-action CSS starts here */
-
-  .navbar > .navbar-action {
-    margin-left: 20rem;
-    width: 30%;
-    display: flex;
-    justify-content: flex-start;
-    align-content: center;
-    z-index: 3;
-    /* background-color: var(--main-red); */
-  }
-
-  .navbar-login > .narrow-button {
-    display: none;
-  }
-
-    .navbar-action > .action-btn {
-      width: 7rem;
-      margin: 0 0.5rem;
-      cursor: pointer;
-      position: relative;
-      text-align: center;
-      font-size: 13px;
-      color:#fff;
-
-      /* background-color: var(--main-purple); */
-    }
-
-      .action-btn > .action-btn-text:hover{
-        font-weight: bold;
-      }
-
-/* navbar-action CSS ends here */
-
-/* Navbar-dropdown CSS starts here */
-
-      .account-btn {
-        z-index: 2;
-      }
-
-      .action-btn > .template-dropdown {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        z-index: 2;
-        align-items: center;
-        justify-content: center;
-        background-color: white;
-        border-radius: 3px;
-        font-size: 0.9rem;
-      }
-
-        .template-dropdown > li {
-          width: 90%;
-          list-style: none;
-          margin-top: 0.8rem;
-          padding: 0.3rem 0;
-          border-bottom: 1px solid var(--dark-gray);
-        }
-          .template-dropdown > li:hover {
-            font-weight: bold;
-          }
-
-        .template-dropdown > li:last-child {
-          width: 90%;
-          list-style: none;
-          margin-top: 0.6rem;
-          border-bottom: 1px solid white;
-        }
-
-/* Navbar-dropdown CSS ends here */
-
-/* Navbar-login CSS starts here */
-
-  .navbar > .navbar-login {
-    width: 20%;
-  }
-
-   .navbar-login > .wide-button {
-    width: 20%;
-    display: flex;
-    flex-direction: row;
-  }
-
-    .login-btn > button {
-      margin-right: 1rem;
-      border: solid 1px #fff;
-      color: white;
-      padding: 10px 20px;
-      cursor: pointer;
-      -webkit-transition: all 0.1s ease-in-out 0s;
-      transition: all 0.1s ease-in-out 0s;
-    }
-
-    /* .navbar-login > .login-btn:hover {
-      padding: 0.4rem;
-    } */
-
-/* Navbar-login CSS ends here */
-
-/* Navbar-account-dropdown CSS starts here */
-
-  .navbar-login > .account-btn {
-    /* border: 1px solid black; */
-    position: relative;
-    margin-right: 1.2rem;
-    margin-top: 0.5rem;
-    border-radius: var(--btn-radius);
-    justify-content: center;
-    align-content: content;
-    background-color: white;
-    color: var(--black);
-    padding: 0.4rem 3rem;
-    cursor: pointer;
-    -webkit-transition: all 0.1s ease-in-out 0s;
-    transition: all 0.1s ease-in-out 0s;
-    font-size: 18px;
-  }
-
-
-    .account-btn > .account-dropdown {
-      width: 100%;
-      position: absolute;
-      right: 0rem;
-      margin-top: 1.2rem;
-      background-color: white;
-      border: 1px solid var(--light-gray);
-      border-radius: 0 0 2px 2px;
-      border-top : 1px solid white;
-      text-align: center;
-      /* box shadow only right and bottom */
-      -moz-box-shadow: 5px 5px 5px var(--gray);
-      -webkit-box-shadow: 10px 10px 5px var(--gray);
-      box-shadow: 5px 5px 5px var(--gray);
-    }
-
-    .account-dropdown > li {
-      margin: auto;
-      width: 90%;
-      list-style: none;
-      padding: 0.4rem 0;
-      border-bottom: 1px solid var(--dark-gray);
-    }
-      .account-dropdown > li:hover {
-        font-weight: bold;
-      }
-
-    .account-dropdown > li:last-child {
-      list-style: none;
-      border-bottom: 1px solid white;
-    }
-
-/* Navbar-account-dropdown CSS ends here */
-
-
-
-/* navbar CSS ends here */
 
 /* Avocado-btn CSS starts */
 .avocado-btn {
@@ -244,21 +64,21 @@ a:hover {
 
 /* avocado-input */
 ::placeholder {
-  color: var(--main-green);
+  color: var(--pretty-black);
   opacity: 0.4;
 }
 
 .avocado-input {
   background-color: white;
   padding: 0.3rem;
-  border: solid 1px var(--main-green);
+  border: solid 1px var(--pretty-black);
   border-radius: var(--input-radius);
 }
 
 .avocado-input:focus {
   outline: none !important;
-  border-color: var(--main-green);
-  box-shadow: 0 0 5px var(--main-green);
+  border-color: var(--pretty-black);
+  box-shadow: 0 0 5px var(--pretty-black);
 }
 /* avocado-input */
 
@@ -290,84 +110,6 @@ a:hover {
 /* template CSS ends here */
 
 
-
-/* Footer CSS starts here */
-.footer {
-  width: 100%;
-  background-color: var(--light-gray);
-  color: var(--black);
-  display: flex;
-  z-index: 1
-}
-
-  .footer > .footer-menu {
-    margin: 2rem 2.5rem;
-    width: 60%;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-    .footer-menu > .menu-btns {
-      width: 100%;
-      display: flex;
-    }
-
-      .menu-btns > .footer-btn {
-        margin: 0 2rem;
-        cursor: pointer;
-      }
-
-    .footer-menu > .menu-sns {
-      margin-top: 1.5rem;
-      width: 100%;
-      display: flex;
-    }
-
-      .menu-sns > .sns-btn {
-        margin-left: 2rem;
-        width: 1.8rem;
-        height: 1.8rem;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      .naver-btn {
-        background-image: url(../img/naver.jpg);
-        background-position: center;
-        background-size: contain;
-      }
-
-      .brunch-btn {
-        background-image: url(../img/brunch.png);
-        background-position: center;
-        background-size: contain;
-      }
-
-      .github-btn {
-        background-image: url(../img/github.png);
-        background-position: center;
-        background-size: contain;
-        background-color: white;
-      }
-
-  .footer > .comp-info {
-    margin: 2rem 2.5rem;
-    width: 40%;
-  }
-
-    .comp-info > .logo {
-      font-family: var(--logo-font), sans-serif;
-      font-weight: bold;
-      color: var(--main-green);
-      margin-bottom: 1rem;
-    }
-
-    .comp-info > .info {
-      font-size: 0.8rem;
-      margin-bottom: 2rem;
-    }
-/* Footer CSS ends here */
 
 
 /*Mobile Styles*/
