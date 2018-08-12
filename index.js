@@ -27,7 +27,7 @@ console.log(`서버가 http://${HOST}:${PORT} 에서 작동하고 있습니다.`
 
 // 홈 페이지: https://www.veggieavocado.com/
 app.get('/', (req, res) => {
-  res.render('production/home.html');
+  res.render('production/navbar.html');
 });
 
 // 로그인 페이지: https://www.veggieavocado.com/login/
@@ -66,6 +66,6 @@ app.get('/wanted', (req, res) => {
 });
 
 // 임시 : https://www.veggieavocado.com/navbar
-app.get('/navbar', (req, res) => {
-  res.render('production/navbar.html');
+app.get('/home', (req, res) => {
+  res.render('production/home.html');
 });

@@ -19,10 +19,14 @@ textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 15rem;
+    height: 14rem;
     margin-bottom: 5px;
-    /* background-color: var(--light-gray); */
     color: var(--pretty-black);
+  }
+
+  .customer-title > h1 {
+    border-bottom: 3px solid #B9D784;
+    border-bottom-style: dotted;
   }
 
   .nav-introduction {
@@ -37,21 +41,27 @@ textarea {
      width: 100%;
      padding: 5px 20px 10px 10px;
      font-size: 1.3em;
-     font-weight: bold;
+     font-family: 'Ubuntu', sans-serif
      margin-bottom: 2rem;
     }
 
     .nav-introduction > .navbar-logo {
-      margin-top: 10px;
-      margin-left: 10px;
-      font-family: var(--logo-font), sans-serif;
-      font-weight: bold;
-      font-size: 1.5rem;
-      color: var(--main-green);
-    }
+        background-image: url(../../img/logo_veggie.png);
+        position: relative;
+        left: 20px;
+        width: 150px;
+        height:55px;
+        background-position: center;
+        background-size: contain;
+      }
 
   /* content-1 css starts here */
 
+  i {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 5px;
+  }
 
 .content-1 {
   display: flex;
@@ -62,24 +72,24 @@ textarea {
 .content-1 > .text-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  width: 100%;
+  padding: 20px 100px;
+  margin-top: -2rem;
 }
 
 .submit-btn  {
     display: flex;
     justify-content: flex-end;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-bottom: 5rem;
 }
 
-.submit-btn > button {
+.submit-btn > .submit-button {
       color: white;
       font-weight: bold;
-      border: solid 1.5px var(--btn-green);
-      border-radius: var(--btn-radius);
-      background-color: var(--btn-green);
       cursor: pointer;
+      margin: 1rem 0;
+      padding: 10px 30px;
+      background-color: #b9d784;
 
       padding: 8px;
 }
