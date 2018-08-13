@@ -13,11 +13,11 @@ a:hover {
 /* navbar starts here */
 
 .nav-logo {
-  background-image: url(../../img/logo_veggie.png);
   position: relative;
   left: 10px;
   width: 150px;
   height:55px;
+  background-image: url(../../img/logo_veggie.png);
   background-position: center;
   background-size: contain;
   cursor: pointer;
@@ -41,9 +41,9 @@ a:hover {
 }
 
 .menu-btns {
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
   text-align: left
 }
 
@@ -63,11 +63,11 @@ a:hover {
   /* navbar starts here */
 
   .nav-logo {
-    background-image: url(../../img/logo_veggie.png);
     position: relative;
     left: 10px;
     width: 150px;
     height:55px;
+    background-image: url(../../img/logo_veggie.png);
     background-position: center;
     background-size: contain;
     cursor: pointer;
@@ -91,9 +91,10 @@ a:hover {
   }
 
   .menu-btns {
+    margin-bottom: 1rem;
+
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
     text-align: left
   }
 
@@ -120,12 +121,12 @@ a:hover {
 }
 
 .nav-logo {
-  background-image: url(../../img/logo_veggie.png);
   position: static;
   left: 20px;
   top: 30px;
   width: 150px;
   height:55px;
+  background-image: url(../../img/logo_veggie.png);
   background-position: center;
   background-size: contain;
   cursor: pointer;
@@ -133,12 +134,13 @@ a:hover {
 
 .navbar {
   width: 100%;
-  display: block;
-  display: flex;
-  align-items: center;
   padding: 10px 60px;
   border-bottom: solid 1.5px var(--light-gray);
   box-shadow: 2px 2px 3px 2px var(--very-light-gray);
+  display: flex;
+  display: block;
+  align-items: center;
+
 }
 
 .nav-menu {
@@ -187,15 +189,15 @@ a:hover {
       }
 
     .comp-info > .logo {
+      margin-bottom: 1rem;
       font-family: var(--logo-font), sans-serif;
       font-weight: bold;
       color: #B9D784;
-      margin-bottom: 1rem;
     }
 
     .comp-info > .info {
+      margin-bottom: 2rem
       font-size: 0.8rem;
-      margin-bottom: 2rem;
     }
 
 /* footer ends here */
