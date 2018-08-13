@@ -174,34 +174,6 @@ nav {
 /* content-1 ends here */
 
 /* content-2 starts here  */
-.content-1 > p {
-  margin: 2rem 0;
-  font-size: 1.5em;
-  text-align: center;
-}
-
-.content-1-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.content-1-wrapper > textarea  {
-  width: 80%;
-}
-
-.txt-btn  {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.txt-btn  > .txt-analysis-btn{
-  margin: 3rem 0;
-  padding: 10px 30px;
-  background-color: #b9d784;
-  cursor: pointer;
-}
-
 .content-2  {
   margin-bottom: 2rem;
 }
@@ -237,54 +209,8 @@ nav {
     }
 
 
-.content-2 > p  {
-  margin: 2rem 0;
-  font-size: 1.5em;
-  text-align: center;
-}
-
-.accuracy {
-  display: flex;
-}
-
-.accuracy-img {
-  background-image: url(../../img/accuracy.png);
-  width: 33.3%;
-  height:55px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.insight  {
-  display: flex;
-}
-
-.insight-img {
-  background-image: url(../../img/insight.png);
-  width: 33.3%;
-  height:55px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.easy  {
-  display: flex;
-}
-
-.easy-img {
-  background-image: url(../../img/easy.png);
-  width: 33.3%;
-  height:55px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-
 /* 반응형 코드 시작 */
-@media only screen and (min-width: 400px)  {
+@media only screen and (min-width: 460px)  {
 
 /* display: none */
 
@@ -651,7 +577,7 @@ nav {
 
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 460px) {
   .wide-logo-txt  {
     font-size: 1.8rem;
   }
