@@ -15,6 +15,7 @@ body{
 
 /* 홈페이지 구성 (오더 정리) */
 header {
+  background-color: #29363D;
   order: 1;
 }
 
