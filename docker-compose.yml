@@ -16,7 +16,7 @@ services:
     container_name: va-app
     build: .
     ports:
-      - 8080:8080
+      - 7777:7777
     environment:
       - ENVIRONMENT=docker
     restart: unless-stopped
