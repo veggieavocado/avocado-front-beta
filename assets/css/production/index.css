@@ -174,7 +174,6 @@ nav {
 /* content-1 ends here */
 
 /* content-2 starts here  */
-=======
 .content-1 > p {
   margin: 2rem 0;
   font-size: 1.5em;
@@ -206,7 +205,7 @@ nav {
 .content-2  {
   margin-bottom: 2rem;
 }
- 
+
   .content-2 > p  {
     margin: 2rem 0;
     font-size: 1.5em;
@@ -238,7 +237,6 @@ nav {
     }
 
 
-=======
 .content-2 > p  {
   margin: 2rem 0;
   font-size: 1.5em;
