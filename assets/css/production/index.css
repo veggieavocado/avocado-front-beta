@@ -655,6 +655,16 @@ nav {
 }
 
 @media only screen and (max-width: 400px) {
+  .narrow-navbar {
+    display: block;
+  }
+
+  .navbar.home,
+  .wide-logo-txt,
+  .wide-nav-button {
+    display: none;
+  }
+
   .content-2-wide {
     height: 750px;
     background-color: #F7F7F7;
@@ -764,4 +774,40 @@ nav {
         .sec-btn > i {
           margin-right: 1rem;
         }
+}
+/* footer */
+
+@media only screen and (max-width: 1000px) {
+
+
+    /* footer starts here */
+
+    .footer {
+      width: 100%;
+      background-color: #616161;
+      font-size: 0.8rem;
+      color: white;
+    }
+
+    .footer-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .menu-btns {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      text-align: left
+    }
+
+    .menu-btns > .footer-btn {
+      width: inherit;
+    }
+
+    .footer-menu > .comp-info {
+      width: 100%;
+    }
+
 }
