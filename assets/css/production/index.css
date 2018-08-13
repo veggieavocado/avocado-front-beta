@@ -435,7 +435,7 @@ nav {
       color: #3F3F3F;
     }
 
-      .sec-btn > i {
+      .sec-btn > a > i {
         margin-right: 1rem;
       }
 
@@ -702,7 +702,7 @@ nav {
         color: #3F3F3F;
       }
 
-        .sec-btn > i {
+        .sec-btn > a > i {
           margin-right: 1rem;
         }
 }
