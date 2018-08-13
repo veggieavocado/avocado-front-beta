@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  nginx:
+    container_name: va-nginx
+    build: ./nginx
+    links:
+      - va:va
+    ports:
+      - 3000:3000
+    depends_on:
+      - va
+    restart: unless-stopped
+
+  va:
+    container_name: va-app
+    build: .
+    ports:
+      - 8080:8080
+    environment:
+      - ENVIRONMENT=docker
+    restart: unless-stopped
