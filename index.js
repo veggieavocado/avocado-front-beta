@@ -1,7 +1,7 @@
 const express = require('express'); // express앱 임포트하기
 
 // 서버 포트 & 호스트 정의내려주기
-const PORT = 8080;
+const PORT = 7777;
 const HOST = '0.0.0.0';
 
 const app = express(); // 앱 시작
