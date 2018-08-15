@@ -20,8 +20,8 @@
   <body>
 
     <div class="nav-introduction">
-      <div class="navbar-logo"><a href="/home"></a></div>
-      <div class="home"><a href="http://127.0.0.1:8080">Home</a></div>
+      <a href="/"><div class="navbar-logo"></div></a>
+      <div class="home"><a href="/">Home</a></div>
     </div>
     <div class="customer-title">
       <i class="fas fa-home"></i>
@@ -33,15 +33,11 @@
       <div class="text-wrapper">
         <div class="txt email">
           <p>이메일</p>
-          <form class="customer" action="index.html" method="post">
-            <input type="text" name="title" value="">
-          </form>
+          <input type="text" name="title" value="">
         </div>
         <div class="txt title">
           <p>제목</p>
-          <form class="customer" action="index.html" method="post">
-            <input type="text" name="title" value="">
-          </form>
+          <input type="text" name="title" value="">
         </div>
         <div class="txt content">
           <p>내용</p>
@@ -51,9 +47,18 @@
           <div class="submit-button">전송하기</div>
         </div>
       </div>
-
     </div>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- ga_tracking_id: UA-122243187-1 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122243187-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-
+      gtag('config', 'UA-122243187-1');
+    </script>
   </body>
+
+</html>

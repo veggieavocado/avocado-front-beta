@@ -40,20 +40,20 @@ textarea {
   .nav-introduction {
      width: 100%;
      padding: 5px 20px 10px 10px;
-     font-size: 1.3em;
-     font-family: 'Ubuntu', sans-serif
+     font-size: 1em;
+     font-family: 'Nanum Gothic', sans-serif;
      margin-bottom: 2rem;
     }
 
-    .nav-introduction > .navbar-logo {
-        background-image: url(../../img/logo_veggie.png);
-        position: relative;
-        left: 20px;
-        width: 150px;
-        height:55px;
-        background-position: center;
-        background-size: contain;
-      }
+    .nav-introduction > a .navbar-logo {
+      background-image: url(../../img/logo_veggie.png);
+      position: relative;
+      left: 20px;
+      width: 150px;
+      height: 55px;
+      background-position: center;
+      background-size: contain;
+    }
 
   /* content-1 css starts here */
 
@@ -100,5 +100,40 @@ textarea {
   .content-1 > .text-wrapper {
     width: 50%;
   }
+}
 
+@media only screen and (max-width: 500px) {
+  .content-1 > .text-wrapper {
+    width: 100%;
+    padding: 5px 100px;
+  }
+
+  .text-wrapper > .txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .txt > p {
+    font-size: 0.9rem;
+  }
+
+  .text-wrapper > .txt > input {
+    width: 20rem;
+  }
+
+  .text-wrapper > .txt > textarea {
+    width: 20rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  .submit-btn > .submit-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }

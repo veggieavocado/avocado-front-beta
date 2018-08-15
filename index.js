@@ -8,7 +8,6 @@ const app = express(); // 앱 시작
 app.set('views', `${__dirname}/templates`); // HTML 파일 연결
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
-
 app.use(express.static(`${__dirname}/assets`)); // CSS 파일 연결
 
 // 앱을 포트와 호스트와 연결하여 작동 시작하기
@@ -26,7 +25,7 @@ console.log(`서버가 http://${HOST}:${PORT} 에서 작동하고 있습니다.`
 // html을 보내고 싶으면, res.render함수를 사용합니다.
 
 // 홈 페이지: https://www.veggieavocado.com/
-app.get('/', (req, res) => {
+app.get('/', (req, res, next) => {
   res.render('production/index.html');
 });
 
