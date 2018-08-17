@@ -17,8 +17,8 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
       <!-- Highchart TileMap Chart import -->
-      <script src="http://code.highcharts.com/highcharts.js"></script>
-      <script src="http://code.highcharts.com/maps/modules/map.js"></script>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+      <script src="https://code.highcharts.com/maps/modules/map.js"></script>
       <script src="https://code.highcharts.com/modules/tilemap.js"></script>
       <script src="https://code.highcharts.com/modules/exporting.js"></script>
       <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
@@ -27,6 +27,8 @@
     <body>
 
       <div class="body">
+
+        <div class="back-btn"><a href="/"><i class="fas fa-arrow-left"></i></a></div>
 
         <div class="header">
           <div class="title">
@@ -249,7 +251,8 @@
           name: '기술 언급수',
           colorByPoint: true,
           data: [
-            { name: 'AWS', y: 503, sliced: true, selected: true },
+            { name: 'Javascript', y: 539, sliced: true, selected: true },
+            { name: 'AWS', y: 503 },
             { name: 'API', y: 461 },
             { name: 'iOS', y: 333 },
             { name: 'C', y: 333 },
@@ -269,7 +272,6 @@
             { name: 'MS', y: 142 },
             { name: 'PHP', y: 140 },
             { name: 'Node.js', y: 125 },
-            { name: 'Javascript', y: 118 },
             { name: 'R', y: 108 },
             { name: 'Ruby', y: 105 }
          ]
@@ -285,6 +287,16 @@
           }).add();
         },
       });
+      </script>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <!-- ga_tracking_id: UA-122243187-1 -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122243187-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-122243187-1');
       </script>
     </body>
 

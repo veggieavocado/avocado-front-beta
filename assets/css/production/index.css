@@ -15,6 +15,7 @@ body{
 
 /* 홈페이지 구성 (오더 정리) */
 header {
+  background-color: #29363D;
   order: 1;
 }
 
@@ -72,7 +73,7 @@ nav {
   top: 35px;
   width: 150px;
   height:55px;
-  background-image: url(../../img/logo_veggie.png);
+  background-image: url(../../img/logo_veggie-min.png);
   background-position: center;
   background-size: contain;
 }
@@ -190,7 +191,7 @@ nav {
     .accuracy-img {
       width: 33.3%;
       height:55px;
-      background-image: url(../../img/accuracy.png);
+      background-image: url(../../img/accuracy-min.png);
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
@@ -202,7 +203,7 @@ nav {
     .insight-img {
       width: 33.3%;
       height:55px;
-      background-image: url(../../img/insight.png);
+      background-image: url(../../img/insight-min.png);
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
@@ -355,7 +356,7 @@ nav {
 .content-2-wide > .content-2-bg {
   width: 100%;
   height: inherit;
-  background-image: url(../../img/content-2.jpg);
+  background-image: url(../../img/content-2-min.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -435,7 +436,7 @@ nav {
       color: #3F3F3F;
     }
 
-      .sec-btn > i {
+      .sec-btn > a > i {
         margin-right: 1rem;
       }
 
@@ -607,7 +608,7 @@ nav {
   .content-2-wide > .content-2-bg {
     width: 100%;
     height: inherit;
-    background-image: url(../../img/content-2.jpg);
+    background-image: url(../../img/content-2-min.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -702,7 +703,7 @@ nav {
         color: #3F3F3F;
       }
 
-        .sec-btn > i {
+        .sec-btn > a > i {
           margin-right: 1rem;
         }
 }

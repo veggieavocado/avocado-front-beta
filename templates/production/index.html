@@ -27,26 +27,26 @@
             <div class="dropdown" style="float:right;">
               <i class="fas fa-bars"></i>
               <div class="dropdown-content">
-                <a href="/index">HOME</a>
-                <a href="#">CONTENTS</a>
-                <a href="#">TEMPLATE</a>
+                <a href="/">HOME</a>
+                <a href="/wanted">CONTENTS</a>
+                <a href="/warning">TEMPLATE</a>
                 <a href="/customer">CONTACT</a>
               </div>
             </div>
           </div>
           <div class="narrow-logo-txt"><p>텍스트분석으로</br> 나만의 컨텐츠를!</p></div>
           <div class="nav-button">
-            <button type="nav-button" name="button">둘러보기</button>
+            <button type="nav-button" name="button"><a href="/wanted">둘러보기</a></button>
           </div>
         </div>
 
         <div class="navbar home">
-          <div class="nav-logo"></div>
+          <div class="nav-logo"><a href="/"></a></div>
           <div class="nav-menu">
-            <div class="action-btn home"><a href="#">HOME</a></div>
-            <div class="action-btn home"><a href="#">CONTENTS</a></div>
+            <div class="action-btn home"><a href="/">HOME</a></div>
+            <div class="action-btn home"><a href="/wanted">CONTENTS</a></div>
             <div class="action-btn home"><a href="/customer">CONTACT</a></div>
-            <div class="action-btn home"><a href="#">TEMPLATE</a></div>
+            <div class="action-btn home"><a href="/warning">TEMPLATE</a></div>
           </div>
           <div class="nav-login">
             <div class="login-btn"><a href="/login">로그인</a></div>
@@ -55,7 +55,7 @@
         </div>
         <div class="wide-logo-txt"><p>텍스트 분석으로</br>나만의 컨텐츠를 만들어보세요</p></div>
         <div class="wide-nav-button">
-          <div class="nav-button">둘러보기</div>
+          <div class="nav-button"><a href="/wanted">둘러보기</a></div>
         </div>
       </div>
       </nav>
@@ -104,28 +104,28 @@
             <h2>텍스트 분석</h2>
             <p>여러분의 텍스트도 소중한 데이터입니다.</p>
           </div>
-          <div class="sec-btn"><i class="fas fa-arrow-right"></i> 바로가기</div>
+          <div class="sec-btn"><a href="#"><i class="fas fa-arrow-right"></i> 바로가기</a></div>
         </div>
         <div class="sec sec-2">
           <div class="sec-txt">
             <h2>스타트업 기술 트렌드</h2>
             <p>최근 스타트업들의 기술 사용 트렌드를 확인하세요.</p>
           </div>
-          <div class="sec-btn"><i class="fas fa-arrow-right"></i> 바로가기</div>
+          <div class="sec-btn"><a href="/wanted"><i class="fas fa-arrow-right"></i> 바로가기</a></div>
         </div>
         <div class="sec sec-3">
           <div class="sec-txt">
             <h2>영어 템플릿 제작</h2>
             <p>비즈니스 이메일, 프레젠테이션 템플릿을 제작해보세요.</p>
           </div>
-          <div class="sec-btn"><i class="fas fa-arrow-right"></i> 바로가기</div>
+          <div class="sec-btn"><a href="#"><i class="fas fa-arrow-right"></i> 바로가기</a></div>
         </div>
         <div class="sec sec-4">
           <div class="sec-txt">
             <h2>실시간 증권 뉴스 분석</h2>
             <p>요즘 뜨는 증권 뉴스를 분석해보세요.</p>
           </div>
-          <div class="sec-btn"><i class="fas fa-arrow-right"></i> 바로가기</div>
+          <div class="sec-btn"><a href="#"><i class="fas fa-arrow-right"></i> 바로가기</a></div>
         </div>
       </div>
     </div>
@@ -152,5 +152,15 @@
 
     <script src="js/particles.js"></script>
     <script src="js/navbar.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- ga_tracking_id: UA-122243187-1 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122243187-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-122243187-1');
+    </script>
   </body>
 </html>
