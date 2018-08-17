@@ -117,8 +117,9 @@ body {
     margin-top: 70px;
     width: 60%;
     height: 423px;
-    border: 3px solid #78BFEE;
-    background-color: #F1F9FF;
+    color: #2699FB;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif
   }
 
 /* section #2 */
@@ -127,6 +128,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.mainchart.txt {
+  margin-top: 70px;
+  width: 60%;
+  height: 423px;
+  color: #2699FB;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif
 }
 
   .main-chart > .chart-sec {
@@ -142,6 +152,17 @@ body {
   #most-freq-chart {
     width: 34.5rem;
     height: 34.5rem;
+  }
+
+  .main-chart.box {
+    width: 65%;
+    height: 140px;
+    border: 3px solid #78BFEE;
+    background-color: #F1F9FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 89px;
   }
 
   .main-chart.txt {
@@ -287,4 +308,14 @@ body {
 
   #topBtn:focus {
     outline: none;
+  }
+
+  .content-3.box {
+    width: 65%;
+    height: 140px;
+    border: 3px solid #78BFEE;
+    background-color: #F1F9FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
