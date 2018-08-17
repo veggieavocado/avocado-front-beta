@@ -73,3 +73,8 @@ app.get('/warning', (req, res) => {
 app.get('/contents', (req, res) => {
   res.render('production/contents.html');
 });
+
+// startup(원티드가 될) 페이지: https://www.veggieavocado.com/startup
+app.get('/startup', (req, res) => {
+  res.render('production/startup.html');
+});

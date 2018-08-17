@@ -16,16 +16,16 @@ header {
 
 .move-icon > .fas.fa-chevron-left {
   position: absolute;
-  top: 70%;
-  left: 2rem;
-  font-size: 2rem;
+  top: 75%;
+  left: 4rem;
+  font-size: 3rem;
 }
 
 .move-icon > .fas.fa-chevron-right {
   position: absolute;
-  top: 70%;
-  right: 2rem;
-  font-size: 2rem;
+  top: 75%;
+  right: 4rem;
+  font-size: 3rem;
 }
 
 .contents-txt > p {
