@@ -69,3 +69,8 @@ app.get('/wanted', (req, res) => {
 app.get('/warning', (req, res) => {
   res.render('production/warning.html');
 });
+
+// contents 페이지: https://www.veggieavocado.com/contents
+app.get('/contents', (req, res) => {
+  res.render('production/contents.html');
+});
