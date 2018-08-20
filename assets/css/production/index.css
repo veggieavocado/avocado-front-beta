@@ -112,7 +112,9 @@ nav {
       display: block;
   }
 
-  .dropdown-content a:hover {background-color: #f1f1f1;}
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
 
   .dropdown:hover .dropdown-content {
       display: block;
@@ -132,10 +134,10 @@ nav {
 }
 
   .nav-button > button  {
-  padding: 10px 30px;
-  background-color: #808080;
-  border-radius: 20px;
-  cursor: pointer;
+    padding: 10px 30px;
+    background-color: #808080;
+    border-radius: 20px;
+    cursor: pointer;
   }
 
 /* navbar ends here */

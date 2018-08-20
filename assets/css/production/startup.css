@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    border-bottom: 3px solid #78BFEE;
+    border-bottom: 3px solid #b9d784;
   }
 
     .title-left > .real-title {
@@ -73,7 +73,7 @@ body {
 .content-1.box {
   width: 65%;
   height: 140px;
-  border: 3px solid #78BFEE;
+  border: 3px solid #b9d784;
   background-color: #F1F9FF;
   display: flex;
   justify-content: center;
@@ -117,7 +117,7 @@ body {
     margin-top: 70px;
     width: 60%;
     height: 423px;
-    color: #2699FB;
+    color: #b9d784;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif
   }
@@ -134,7 +134,7 @@ body {
   margin-top: 70px;
   width: 60%;
   height: 423px;
-  color: #2699FB;
+  color: #b9d784;
   font-size: 20px;
   font-family: Georgia, 'Times New Roman', Times, serif
 }
@@ -157,7 +157,7 @@ body {
   .main-chart.box {
     width: 65%;
     height: 140px;
-    border: 3px solid #78BFEE;
+    border: 3px solid #b9d784;
     background-color: #F1F9FF;
     display: flex;
     justify-content: center;
@@ -313,7 +313,7 @@ body {
   .content-3.box {
     width: 65%;
     height: 140px;
-    border: 3px solid #78BFEE;
+    border: 3px solid #b9d784;
     background-color: #F1F9FF;
     display: flex;
     justify-content: center;
