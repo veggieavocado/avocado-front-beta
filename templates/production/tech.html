@@ -128,7 +128,7 @@
 
       <div class="content-header">
         <div class="top">
-          [8월 Wanted 통계] 스타트업 기술 트렌드
+        [8월 Wanted 통계] AWS (Amazon Web Server)
         </div>
         <div class="divider"></div>
         <div class="bottom">
@@ -137,103 +137,14 @@
         </div>
       </div>
 
-      <div class="rank-chart">
-        <div class="table-header">
-          <div class="first row row-10"></div>
-          <div class="row row-20 narrow">기술</div>
-          <div class="row row-10 narrow">점유율</div>
-          <div class="row row-10 narrow">공고수</div>
-          <div class="row row-20 trend">트렌드</div>
-          <div class="additional row row-30">
-            <span>관련스타트업</span>
-            <span class="more-btn">더보기 ></span>
-          </div>
-        </div>
-        <div class="table-body">
-          <div class="data-row">
-            <div class="first row row-10">1</div>
-            <div class="row row-20 narrow">AWS</div>
-            <div class="row row-10 narrow">20%</div>
-            <div class="row row-10 narrow">253개</div>
-            <div class="chart row row-20">
-              <span class="dynamicsparkline1"></span>
-            </div>
-            <div class="row row-30">
-              <span class="startup-span">아마존</span>,&nbsp;
-              <span class="startup-span">구글</span>,&nbsp;
-              <span class="startup-span">우버</span>
-            </div>
-          </div>
-        </div>
-        <div class="table-body">
-          <div class="data-row">
-            <div class="first row row-10">2</div>
-            <div class="row row-20 narrow">Javascript</div>
-            <div class="row row-10 narrow">15%</div>
-            <div class="row row-10 narrow">200개</div>
-            <div class="chart row row-20">
-              <span class="dynamicsparkline2"></span>
-            </div>
-            <div class="row row-30">
-              <span class="startup-span">페이스북</span>,&nbsp;
-              <span class="startup-span">에어비앤비</span>,&nbsp;
-              <span class="startup-span">네이버</span>,&nbsp;
-              <span class="startup-span">우버</span>
-            </div>
-          </div>
-        </div>
-        <div class="table-body">
-          <div class="data-row">
-            <div class="first row row-10">3</div>
-            <div class="row row-20 narrow">API</div>
-            <div class="row row-10 narrow">14%</div>
-            <div class="row row-10 narrow">198</div>
-            <div class="chart row row-20">
-              <span class="dynamicsparkline3"></span>
-            </div>
-            <div class="row row-30">
-              <span class="startup-span">유진증권</span>,&nbsp;
-              <span class="startup-span">원티드</span>,&nbsp;
-              <span class="startup-span">코멘토</span>,&nbsp;
-              <span class="startup-span">넥슨</span>
-            </div>
-          </div>
-        </div>
-        <div class="table-body">
-          <div class="data-row">
-            <div class="first row row-10">4</div>
-            <div class="row row-20 narrow">iOS</div>
-            <div class="row row-10 narrow">10%</div>
-            <div class="row row-10 narrow">140개</div>
-            <div class="chart row row-20">
-              <span class="dynamicsparkline4"></span>
-            </div>
-            <div class="row row-30">
-              <span class="startup-span">인스타그램</span>
-            </div>
-          </div>
-        </div>
-        <div class="table-body">
-          <div class="data-row">
-            <div class="first row row-10">5</div>
-            <div class="row row-20 narrow">C</div>
-            <div class="row row-10 narrow">6.5%</div>
-            <div class="row row-10 narrow">22개</div>
-            <div class="chart row row-20">
-              <span class="dynamicsparkline5"></span>
-            </div>
-            <div class="row row-30">
-              <span class="startup-span">키스톤</span>,&nbsp;
-              <span class="startup-span">베지아보카도</span>
-            </div>
-          </div>
-        </div>
+      <div class="companies">
+        <div class="comp"></div>
       </div>
 
       <div class="charts-collection">
         <div class="chart-sec">
           <div class="chart-header">
-            <div class="left">기술 점유율</div>
+            <div class="left">관련 산업</div>
             <!-- <div class="right">내용</div> -->
           </div>
           <div class="chart-wrapper">
@@ -242,8 +153,8 @@
         </div>
         <div class="chart-sec">
           <div class="chart-header">
-            <div class="left">제목</div>
-            <div class="right">내용</div>
+            <div class="left">서버 내 기술 점유율</div>
+            <div class="right"></div>
           </div>
           <div class="chart-wrapper">
             <div class="chart" id="bar-chart"></div>
@@ -251,8 +162,8 @@
         </div>
         <div class="chart-sec">
           <div class="chart-header">
-            <div class="left">제목</div>
-            <div class="right">내용</div>
+            <div class="left">평균 연봉</div>
+            <div class="right"></div>
           </div>
           <div class="chart-wrapper">
             <div class="chart" id="ver-bar-chart"></div>
@@ -260,7 +171,7 @@
         </div>
         <div class="chart-sec">
           <div class="chart-header">
-            <div class="left">제목</div>
+            <div class="left">관련 산업</div>
             <div class="right">내용</div>
           </div>
           <div class="chart-wrapper">
@@ -269,8 +180,8 @@
         </div>
         <div class="chart-sec">
           <div class="chart-header">
-            <div class="left">제목</div>
-            <div class="right">내용</div>
+            <div class="left">관련 기술</div>
+            <div class="right"></div>
           </div>
           <div class="chart-wrapper">
             <div class="chart" id="spiderweb"></div>
@@ -434,7 +345,7 @@
         enabled: false,
       },
       xAxis: {
-        categories: ['Django', 'Node.js', 'PHP', 'Europe', 'Oceania'],
+        categories: ['AWS', 'google cloud', 'PHP', 'Europe', 'Oceania'],
         title: {
           text: null
         }
