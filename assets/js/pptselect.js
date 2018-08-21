@@ -12555,9 +12555,9 @@ process.umask = function() { return 0; };
 /***/ }),
 
 /***/ "./node_modules/webpack/buildin/global.js":
-/*!************************************************!*\
-  !*** ./node_modules/webpack/buildin/global.js ***!
-  \************************************************/
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -12706,7 +12706,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! babel-polyfill */"./node_modules/babel-polyfill/lib/index.js");
-module.exports = __webpack_require__(/*! C:\Users\hyemin\desktop\veggieavocado\betafrontend/src/pptselect.js */"./src/pptselect.js");
+module.exports = __webpack_require__(/*! /Users/abc/Desktop/PROJECTS/docker/va-front/src/pptselect.js */"./src/pptselect.js");
 
 
 /***/ })

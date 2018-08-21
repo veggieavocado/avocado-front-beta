@@ -12555,9 +12555,9 @@ process.umask = function() { return 0; };
 /***/ }),
 
 /***/ "./node_modules/webpack/buildin/global.js":
-/*!************************************************!*\
-  !*** ./node_modules/webpack/buildin/global.js ***!
-  \************************************************/
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -12689,7 +12689,7 @@ for (let i = 0; i < sentencesInText.length; i += 1) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! babel-polyfill */"./node_modules/babel-polyfill/lib/index.js");
-module.exports = __webpack_require__(/*! C:\Users\hyemin\desktop\veggieavocado\betafrontend/src/templateview.js */"./src/templateview.js");
+module.exports = __webpack_require__(/*! /Users/abc/Desktop/PROJECTS/docker/va-front/src/templateview.js */"./src/templateview.js");
 
 
 /***/ })

@@ -13,6 +13,7 @@ module.exports = {
     templateview: ['babel-polyfill', `${__dirname}/src/templateview.js`],
     wanted: ['babel-polyfill', `${__dirname}/src/wanted.js`],
     navbar: ['babel-polyfill', `${__dirname}/src/navbar.js`],
+    data: ['babel-polyfill', `${__dirname}/src/data.js`],
   },
 
   output: {
