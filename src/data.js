@@ -1,4 +1,115 @@
 const axios = require('axios');
+window.$ = window.jQuery = require('jquery');
+const sparkline = require('./sparkline.js');
+
+const formatString = (stringValue, replacementsArray) => {
+  let formatted = stringValue;
+  for (let i = 0; i < replacementsArray.length; i += 1) {
+    const regexp = new RegExp(`\\{${i}\\}`, 'gi');
+    formatted = formatted.replace(regexp, replacementsArray[i]);
+  }
+  return formatted;
+};
+
+const contentHeaderHTML = `
+<div class="top">
+  [8월 원티드 통계] 스타트업 기술 트렌드
+</div>
+<div class="divider"></div>
+<div class="bottom">
+  <div class="data-count">
+    <b>분석 데이터 수:</b> <span class="count">{0}</span>개
+  </div>
+  <div class="data-origin">
+    <b>데이터 출처:</b> 원티드 (
+      <a href="https://www.wanted.co.kr/">wanted.co.kr</a>
+    )
+  </div>
+</div>
+`;
+
+const rankChartHTML = `
+<div class="table-header">
+  <div class="first row row-10"></div>
+  <div class="row row-20 narrow">기술</div>
+  <div class="row row-10 narrow">점유율</div>
+  <div class="row row-10 narrow">공고수</div>
+  <div class="row row-20 trend">트렌드</div>
+  <div class="additional row row-30">
+    <span>관련스타트업</span>
+    <span class="more-btn">더보기 ></span>
+  </div>
+</div>
+{0}
+`; // --> table-body가 이후에 여러개 들어갈 수 있다
+
+const tableBodyHTML = `
+<div class="table-body">
+  <div class="data-row">
+    <div class="first row row-10">{0}</div>
+    <div class="row row-20 narrow">{1}</div>
+    <div class="row row-10 narrow">{2}</div>
+    <div class="row row-10 narrow">{3}</div>
+    <div class="chart row row-20">
+      <span class="dynamicsparkline{4}"></span>
+    </div>
+    <div class="row row-30">
+      {5}
+    </div>
+  </div>
+</div>
+`;
+
+const startupTagHTML = `
+<span class="startup-span">{0}</span>
+`;
+
+const chartSecHTML = `
+<div class="chart-sec">
+  <div class="chart-header">
+    <div class="left">{0}</div>
+  </div>
+  <div class="chart-wrapper">
+    <div class="chart" id="{1}"></div>
+  </div>
+</div>
+` // 예: 기술 점유율, (donut-chart, bar-chart, ver-bar-chart, word-cloud, spiderweb, scatterplot)
+
+const createSparkline = (chartID, data) => {
+  $(chartID).sparkline(data, {
+    type: 'line',
+    // barColor: 'green',
+    width: '200px',
+    height: '40px',
+    fillColor: '#fcfcfc',
+    lineColor: '#bcbcbc',
+    spotColor: '#FF385A', // 차트 맨 마지막에 찍히는 점 색
+    spotRadius: '2',
+    minSpotColor: '#ff6813',
+    maxSpotColor: '#ff6813',
+    highlightSpotColor: '#777777', // 라인 차트 위에 있는 데이터점
+    highlightLineColor: 'white', // 마우스 호버할 때 생기는 수직선
+    // highlightLineColor: '#D1D1D1',
+    lineWidth: '1.5',
+    disableTooltips: 'true',
+  });
+};
+
+const fillRankChartWithSparklines = () => {
+  const chartIDList = ['.dynamicsparkline1', '.dynamicsparkline2', '.dynamicsparkline3', '.dynamicsparkline4', '.dynamicsparkline5']
+  const chartValuesList = [
+    [10, 8, 5, 7, 4, 4, 1, 2, 4, 3, 4, 6, 7, 4, 12, 23],
+    [34, 24, 26, 27, 25, 34, 35, 36, 19, 18, 17, 24, 25],
+    [45, 45, 45, 42, 40, 47, 49, 50, 37, 36, 35, 34, 33],
+    [34, 24, 26, 27, 25, 34, 35, 50, 37, 36, 35, 34, 33],
+    [34, 24, 26, 27, 4, 4, 1, 2, 4, 3, 4, 6, 18, 17, 24, 25]
+  ]
+
+  // Sparkline 그리기:
+  for (let i = 0; i < chartIDList.length; i += 1) {
+    createSparkline(chartIDList[i], chartValuesList[i]);
+  }
+};
 
 const createDonutChart = (data) => {
   console.log(data);
@@ -595,19 +706,175 @@ const createScatterPlot = (data) => {
 //
 // window.addEventListener("resize", fooOnResize)
 
-// document related event listeners here //
-document.addEventListener('DOMContentLoaded', () => {
-  const DATA_URL = 'http://45.76.213.33:3000/gobble/api/v1/contents/wanted_data/'
+const setUpPage = () => {
+
+  const CONTENTS_URL = 'http://45.76.213.33:3000/gobble/api/v1/contents/job_contents/';
+  const DATA_URL = 'http://45.76.213.33:3000/gobble/api/v1/contents/wanted_data/';
+
+  // content-header 부분 생성
+  const contentsData = axios.get(CONTENTS_URL)
+  .then((res) => {
+    const count = res.data.count;
+    const headerHTML = formatString(contentHeaderHTML, [count]);
+
+    const contentHeaderSection = document.getElementsByClassName('content-header')[0];
+    contentHeaderSection.innerHTML = headerHTML;
+  });
 
   const data = axios.get(DATA_URL)
   .then((res) => {
     const dataArray = res.data.results;
+
+    // 최정적으로 HTML 렌더링할 때 필요한 빈 데이터 공간 만들기
+    let topFiveSkills = [];
+
+    let tableHTML = '';
+
+    let highchartsData = [];
+
+    // API 요청으로 전송받은 데이터로 루프를 돌려 필요한 데이터를 만들어낸다
     for (const dataObj of dataArray) {
-      console.log(dataObj);
-      const dataName = dataObj.data_name;
+      const dataName = dataObj.data_name; // 데이터의 종류에는: COMPANY_URLS, TOP_SKILLS, WANTED_SKILL_COMPS, SKILL_COUNTS
       let dataJSON = dataObj.data;
       dataJSON = JSON.parse(dataJSON);
-      console.log(dataJSON);
+
+      ///// STEP 1: Rank Chart /////
+      // rank-chart 부분 생성
+      if (dataName == 'TOP_SKILLS') {
+
+        // 점유율 계산을 위해서 y의 값을 모두 더한다
+        let totalCount = 0;
+        for (let i = 0; i < 100; i += 1) {
+          const y = parseInt(dataJSON[i]['y']);
+          totalCount = totalCount + y;
+        }
+
+        // TOP 5의 점유율을 계산한다
+        for (let i = 0; i < 5; i += 1) {
+          const skillInfo = [];
+          const skill = dataJSON[i]['name'];
+          const hireCount = dataJSON[i]['y'];
+          const hirePct = ((hireCount / totalCount) * 100).toFixed(2);
+          skillInfo.push(skill);
+          skillInfo.push(hirePct + '%');
+          skillInfo.push(String(hireCount) + '개');
+          // 필요한 데이터를 만든 후 데이터를 모두 모은다
+          topFiveSkills.push(skillInfo);
+        }
+
+      } else if (dataName == 'WANTED_SKILL_COMPS') {
+        ///// STEP 2: Rank Chart Companies /////
+        // rank-chart 안에 들어가는 관련스타트업 태그를 만든다 (,&nbsp;)
+        // startupTagHTML
+        for (let i = 0; i < 5; i += 1) {
+          const topSkill = topFiveSkills[i];
+          const skillname = topSkill[0];
+          topSkill.push(dataJSON[skillname][1]);
+          topFiveSkills[i] = topSkill;
+        }
+
+      } else if (dataName == 'SKILL_COUNTS') {
+
+        // 정렬되어있지 않은 데이터이다
+        // y값을 모아 어레이를 만든 후에 최대값을 구한다
+        // 최대값의 데이터에 sliced: true, selected: true를 추가해준다
+        let yValues = [];
+
+        for (const skill in dataJSON) {
+          const dataObj = {
+            name: skill,
+            y: dataJSON[skill],
+            states: {
+              select: {
+                color: '#FF385A'
+              },
+              hover: {
+                color: '#d1d1d1'
+              },
+            },
+          };
+          yValues.push(dataJSON[skill]);
+          highchartsData.push(dataObj);
+        }
+
+        const maxY = Math.max.apply(null, yValues);
+        for (let index = 0; index < highchartsData.length; index += 1) {
+          const data = highchartsData[index];
+          if (data.y === maxY) {
+            // 데이터값이 최대값이면, sliced, selected옵션을 추가한다
+            const topData = {
+              name: data.name,
+              y: data.y,
+              sliced: true,
+              selected: true,
+            };
+            highchartsData[index] = topData;
+          }
+        }
+
+        console.log(highchartsData);
+
+      } else if (dataName == '') {
+
+        // pass
+
+      }
+
+    } // for 루프 끝: 모든 데이터 파싱 완료
+
+    // TOP 5 기술 정보의 테이블을 채워넣는다
+    for (let i = 0; i < topFiveSkills.length; i += 1) {
+      const rankNum = i + 1;
+      const companiesList = topFiveSkills[i][3]
+      // 기술 사용중인 회사 리스트를 가지고 태그를 만들어낸다
+      let tagsHTML = '';
+
+      let loopNum;
+      if (companiesList.length < 4) {
+        loopNum = companiesList.length;
+      } else {
+        loopNum = 4;
+      }
+
+      for (let j = 0; j < loopNum; j += 1) {
+        const comp = companiesList[j];
+        const krCompName = comp.split('(')[0];
+        const compTag = formatString(startupTagHTML, [krCompName]);
+        if (j === loopNum - 1) {
+          tagsHTML = tagsHTML + compTag;
+        } else {
+          tagsHTML = tagsHTML + compTag + ',&nbsp;';
+        }
+      }
+
+      const html = formatString(tableBodyHTML, [
+        rankNum,
+        topFiveSkills[i][0],
+        topFiveSkills[i][1],
+        topFiveSkills[i][2],
+        rankNum,
+        tagsHTML
+      ]);
+      tableHTML = tableHTML + html;
     }
+
+    const finalRankChartHTML = formatString(rankChartHTML, [tableHTML]);
+
+    const rankChartSection = document.getElementsByClassName('rank-chart')[0];
+    rankChartSection.innerHTML = finalRankChartHTML;
+
+    // 랭크 테이블에 스파크라인 그리기
+    fillRankChartWithSparklines();
+
+    document.getElementsByClassName("rank-chart")[0].style.border = 'solid 2px #F0F0F0';
+
+    const loadSection = document.getElementsByClassName('lds-roller')[0];
+    loadSection.style.display = "none";
   });
+
+};
+
+// document related event listeners here //
+document.addEventListener('DOMContentLoaded', () => {
+  setUpPage();
 });
