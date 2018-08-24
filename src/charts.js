@@ -121,6 +121,7 @@ const createVerticalBarChart = (chartID, chartData) => {
       }
     },
     series: [{
+      name: '공고수',
       type: 'column',
       colorByPoint: true,
       data: chartData[1],
@@ -153,7 +154,7 @@ const createVerticalBarChart = (chartID, chartData) => {
 };
 
 const createBarChart = (chartID, chartData) => {
-  const barChart = new Highcharts.Chart(chartID, {
+  let barChart = new Highcharts.Chart(chartID, {
     chart: {
       type: 'bar',
     },
@@ -217,6 +218,7 @@ const createBarChart = (chartID, chartData) => {
     },
     series: [{
       name: '백엔드',
+      showInLegend: false,
       data: [{
         y: 107,
         color: '#d1d1d1'
