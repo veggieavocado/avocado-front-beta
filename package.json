@@ -1,5 +1,5 @@
 {
-  "name": "minimum-frontend",
+  "name": "va-frontend",
   "version": "1.0.0",
   "description": "프론트엔드 코드를 쉽게 확인하기 위한 간단한 express",
   "main": "index.js",
