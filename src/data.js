@@ -223,11 +223,12 @@ const createChartsCollection = (data) => {
   // 하이차트 데이터 여기서 정의
   const donutChartData = JSON.parse(data['WANTED_TOP_SKILL_HIGHCHARTS_DATA']);
   const verticalBarChartData = JSON.parse(data['WANTED_POSITION_COUNT_HIGHCHARTS_DATA']);
+  const barChartData = JSON.parse(data['WANTED_SKILL_HIRE_COUNT_HIGHCHARTS_DATA']);
 
   let highChartsHTML = '';
 
   ///// 아래부분 차팅 완료하기 /////
-  const chartTitles = ['TOP 10 기술 점유율', '직군별 공고수', 'bar chart']
+  const chartTitles = ['TOP 10 기술 점유율', '직군별 공고수', '직군별 기술 사용량']
   const chartIDNames = ['donut-chart', 'ver-bar-chart', 'bar-chart']
 
   const filterExists = [false, false, true]
@@ -272,7 +273,7 @@ const createChartsCollection = (data) => {
   createVerticalBarChart('ver-bar-chart', verticalBarChartData);
 
   // 3. bar-chart부분 채우기
-  createBarChart('bar-chart', '');
+  createBarChart('bar-chart', barChartData[0]);
 
 };
 ///////////////////////////////////////////////
@@ -317,6 +318,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const loadSection = document.getElementsByClassName('lds-roller')[0];
   loadSection.style.display = 'none';
 });
+
+let barChartFilterNum = 1;
 
 document.addEventListener('click', async (e) => {
   if (e.target.id === 'bar-chart-filter-0') {

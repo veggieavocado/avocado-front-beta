@@ -154,6 +154,7 @@ const createVerticalBarChart = (chartID, chartData) => {
 };
 
 const createBarChart = (chartID, chartData) => {
+  console.log(chartData);
   let barChart = new Highcharts.Chart(chartID, {
     chart: {
       type: 'bar',
@@ -180,7 +181,8 @@ const createBarChart = (chartID, chartData) => {
       enabled: false,
     },
     xAxis: {
-      categories: ['Django', 'Node.js', 'PHP', 'Europe', 'Oceania'],
+      // categories: ['Django', 'Node.js', 'PHP', 'Europe', 'Oceania'],
+      categories: chartData[1],
       title: {
         text: null,
       },
@@ -188,7 +190,7 @@ const createBarChart = (chartID, chartData) => {
     yAxis: {
       min: 0,
       title: {
-        text: '공고수',
+        text: '사용 회사수',
         align: 'high',
       },
       labels: {
@@ -216,30 +218,31 @@ const createBarChart = (chartID, chartData) => {
       backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
       shadow: true,
     },
-    series: [{
-      name: '백엔드',
-      showInLegend: false,
-      data: [{
-        y: 107,
-        color: '#d1d1d1'
-      },
-      {
-        y: 31,
-        color: '#d1d1d1'
-      },
-      {
-        y: 635,
-        color: '#00c73c'
-      },
-      {
-        y: 203,
-        color: '#d1d1d1'
-      },
-      {
-        y: 2,
-        color: '#d1d1d1'
-      }],
-    }],
+    series: chartData[0],
+    // series: [{
+    //   name: '백엔드',
+    //   showInLegend: false,
+    //   data: [{
+    //     y: 107,
+    //     color: '#d1d1d1'
+    //   },
+    //   {
+    //     y: 31,
+    //     color: '#d1d1d1'
+    //   },
+    //   {
+    //     y: 635,
+    //     color: '#00c73c'
+    //   },
+    //   {
+    //     y: 203,
+    //     color: '#d1d1d1'
+    //   },
+    //   {
+    //     y: 2,
+    //     color: '#d1d1d1'
+    //   }],
+    // }],
   });
 };
 

@@ -23585,6 +23585,7 @@ const createVerticalBarChart = (chartID, chartData) => {
 };
 
 const createBarChart = (chartID, chartData) => {
+  console.log(chartData);
   let barChart = new Highcharts.Chart(chartID, {
     chart: {
       type: 'bar'
@@ -23611,7 +23612,8 @@ const createBarChart = (chartID, chartData) => {
       enabled: false
     },
     xAxis: {
-      categories: ['Django', 'Node.js', 'PHP', 'Europe', 'Oceania'],
+      // categories: ['Django', 'Node.js', 'PHP', 'Europe', 'Oceania'],
+      categories: chartData[1],
       title: {
         text: null
       }
@@ -23619,7 +23621,7 @@ const createBarChart = (chartID, chartData) => {
     yAxis: {
       min: 0,
       title: {
-        text: '공고수',
+        text: '사용 회사수',
         align: 'high'
       },
       labels: {
@@ -23647,26 +23649,31 @@ const createBarChart = (chartID, chartData) => {
       backgroundColor: Highcharts.theme && Highcharts.theme.legendBackgroundColor || '#FFFFFF',
       shadow: true
     },
-    series: [{
-      name: '백엔드',
-      showInLegend: false,
-      data: [{
-        y: 107,
-        color: '#d1d1d1'
-      }, {
-        y: 31,
-        color: '#d1d1d1'
-      }, {
-        y: 635,
-        color: '#00c73c'
-      }, {
-        y: 203,
-        color: '#d1d1d1'
-      }, {
-        y: 2,
-        color: '#d1d1d1'
-      }]
-    }]
+    series: chartData[0]
+    // series: [{
+    //   name: '백엔드',
+    //   showInLegend: false,
+    //   data: [{
+    //     y: 107,
+    //     color: '#d1d1d1'
+    //   },
+    //   {
+    //     y: 31,
+    //     color: '#d1d1d1'
+    //   },
+    //   {
+    //     y: 635,
+    //     color: '#00c73c'
+    //   },
+    //   {
+    //     y: 203,
+    //     color: '#d1d1d1'
+    //   },
+    //   {
+    //     y: 2,
+    //     color: '#d1d1d1'
+    //   }],
+    // }],
   });
 };
 
@@ -24203,11 +24210,12 @@ const createChartsCollection = data => {
   // 하이차트 데이터 여기서 정의
   const donutChartData = JSON.parse(data['WANTED_TOP_SKILL_HIGHCHARTS_DATA']);
   const verticalBarChartData = JSON.parse(data['WANTED_POSITION_COUNT_HIGHCHARTS_DATA']);
+  const barChartData = JSON.parse(data['WANTED_SKILL_HIRE_COUNT_HIGHCHARTS_DATA']);
 
   let highChartsHTML = '';
 
   ///// 아래부분 차팅 완료하기 /////
-  const chartTitles = ['TOP 10 기술 점유율', '직군별 공고수', 'bar chart'];
+  const chartTitles = ['TOP 10 기술 점유율', '직군별 공고수', '직군별 기술 사용량'];
   const chartIDNames = ['donut-chart', 'ver-bar-chart', 'bar-chart'];
 
   const filterExists = [false, false, true];
@@ -24248,7 +24256,7 @@ const createChartsCollection = data => {
   createVerticalBarChart('ver-bar-chart', verticalBarChartData);
 
   // 3. bar-chart부분 채우기
-  createBarChart('bar-chart', '');
+  createBarChart('bar-chart', barChartData[0]);
 };
 ///////////////////////////////////////////////
 ///// CHARTS COLLECTION SECTION ENDS HERE /////
@@ -24292,6 +24300,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const loadSection = document.getElementsByClassName('lds-roller')[0];
   loadSection.style.display = 'none';
 });
+
+let barChartFilterNum = 1;
 
 document.addEventListener('click', async e => {
   if (e.target.id === 'bar-chart-filter-0') {
