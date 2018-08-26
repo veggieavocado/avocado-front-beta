@@ -199,6 +199,26 @@ const chartSecHTML = `
 </div>
 ` // 예: 기술 점유율, (donut-chart, bar-chart, ver-bar-chart, word-cloud, spiderweb, scatterplot)
 
+const filterChartSecHTML = `
+<div class="chart-sec">
+  <div class="chart-header">
+    <div class="left">
+      {0}
+      <div class="chart-filter">
+        {1}
+      </div>
+    </div>
+  </div>
+  <div class="chart-wrapper">
+    <div class="chart" id="{2}"></div>
+  </div>
+</div>
+` // 필터가 적용된 차트 부분 HTML이다
+
+const chartFilterHTML = `
+<div id="{0}" class="filter">{1}</div>
+` // 차트 필터 부분에 들어가게 될 필터들이다
+
 const createChartsCollection = (data) => {
   // 하이차트 데이터 여기서 정의
   const donutChartData = JSON.parse(data['WANTED_TOP_SKILL_HIGHCHARTS_DATA']);
@@ -210,10 +230,35 @@ const createChartsCollection = (data) => {
   const chartTitles = ['TOP 10 기술 점유율', '직군별 공고수', 'bar chart']
   const chartIDNames = ['donut-chart', 'ver-bar-chart', 'bar-chart']
 
+  const filterExists = [false, false, true]
+  const chartFilters = [
+    [],
+    [],
+    ['프론트엔드', '백엔드', '서버', '데브옵스', '데이터분석'],
+  ]
+
   for (let i = 0; i < chartIDNames.length; i += 1) {
     const chartTitle = chartTitles[i];
     const chartID = chartIDNames[i];
-    const chartHTML = formatString(chartSecHTML, [chartTitle, chartID]);
+
+    // HTML 태그 정의
+    let allFiltersHTML = '';
+    let chartHTML = '';
+
+    // 필터가 있다면 따로 필터 태그들을 생성한 다음 HTML을 만든다
+    if (filterExists[i] === true) {
+      for (let j = 0; j < chartFilters[i].length; j += 1) {
+        const filter = chartFilters[i][j];
+        const filterIDName = chartID + '-filter-' + String(j);
+        // 필터 태그들 만들기
+        const filterItem = formatString(chartFilterHTML, [filterIDName, filter]);
+        allFiltersHTML = allFiltersHTML + filterItem;
+      }
+      chartHTML = formatString(filterChartSecHTML, [chartTitle, allFiltersHTML, chartID]);
+    } else {
+      // 필터가 없다면, 일반 차트 섹션을 만든다
+      chartHTML = formatString(chartSecHTML, [chartTitle, chartID]);
+    }
     highChartsHTML = highChartsHTML + chartHTML;
   }
 
@@ -271,4 +316,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const loadSection = document.getElementsByClassName('lds-roller')[0];
   loadSection.style.display = 'none';
+});
+
+document.addEventListener('click', async (e) => {
+  if (e.target.id === 'bar-chart-filter-0') {
+    console.log('1');
+  } else if (e.target.id === 'bar-chart-filter-1') {
+    console.log('2');
+  } else if (e.target.id === 'bar-chart-filter-2') {
+    console.log('3');
+  } else if (e.target.id === 'bar-chart-filter-3') {
+    console.log('4');
+  } else if (e.target.id === 'bar-chart-filter-4') {
+    console.log('5');
+  }
 });

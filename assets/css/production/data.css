@@ -303,7 +303,31 @@ a:hover {
 
     .chart-header > .left {
       padding: 20px 0;
+      display: flex;
+      align-items: center;
     }
+
+    .chart-header > .left > .chart-filter {
+      margin-left: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+      .chart-filter > .filter {
+        border: solid 1.5px var(--light-gray);
+        border-radius: 3px;
+        padding: 0.2rem;
+        font-size: 0.8rem;
+        margin: 0.1rem 0.3rem 0 0.3rem;
+        cursor: pointer;
+      }
+
+      .chart-filter > .filter:hover {
+        color: #ff6813;
+        font-weight: bold;
+      }
 
     .chart-sec > .chart-wrapper {
       width: 80%;

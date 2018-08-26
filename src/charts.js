@@ -188,7 +188,7 @@ const createBarChart = (chartID, chartData) => {
     yAxis: {
       min: 0,
       title: {
-        text: 'Population (millions)',
+        text: '공고수',
         align: 'high',
       },
       labels: {
@@ -196,7 +196,7 @@ const createBarChart = (chartID, chartData) => {
       },
     },
     tooltip: {
-      valueSuffix: ' millions',
+      valueSuffix: '개',
     },
     plotOptions: {
       bar: {
