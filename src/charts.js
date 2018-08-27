@@ -113,17 +113,19 @@ const createVerticalBarChart = (chartID, chartData) => {
       className: 'highcharts-color-0',
       title: {
         text: ''
-      }
+      },
     }],
     plotOptions: {
       column: {
-        borderRadius: 0
+        borderRadius: 0,
+        colors: ['#0F9DFC', '#2b2b2b', '#00C73C', '#FF6813', '#B811F9', '#FF385A', '#f7ff21', '#16ffa9'],
       }
     },
     series: [{
       name: '공고수',
       type: 'column',
       colorByPoint: true,
+      // color: ['#0F9DFC', '#2b2b2b', '#00C73C', '#FF6813', '#B811F9', '#FF385A', '#f7ff21', '#16ffa9'],
       data: chartData[1],
       showInLegend: false
     }]
