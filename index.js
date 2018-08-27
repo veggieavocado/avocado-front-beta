@@ -1,4 +1,12 @@
 const express = require('express'); // express앱 임포트하기
+const axios = require('axios');
+
+const redis = require('redis');
+const asyncRedis = require('async-redis');
+
+const initialRedisClient = redis.createClient(6379, '45.76.213.33');
+const RedisClient = asyncRedis.decorate(initialRedisClient);
+RedisClient.auth('molecularredispassword');
 
 // 서버 포트 & 호스트 정의내려주기
 const PORT = 8080;
@@ -89,4 +97,11 @@ app.get('/tech', (req, res) => {
 app.get('/skill/:skillname', (req, res) => {
   const skillname = req.params.skillname;
   res.render('production/skill.html', { skill: skillname });
+});
+
+// 레디스 캐시 연결 API
+app.get('/cache', async (req, res) => {
+  await RedisClient.set('TEST_VA', 'test');
+  const response = await RedisClient.get('TEST_VA');
+  res.send(response);
 });

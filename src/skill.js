@@ -148,6 +148,26 @@ const fillDataTable = (dataRowHTML) => {
   dataSelectorSelector.innerHTML = dataRowHTML;
 };
 
+const hireCardHTML = `
+<div class="hire-card">
+  <div class="hire-msg"></div>
+  <div class="company-name">
+    {0}
+  </div>
+  <div class="hires">
+    {1}
+  </div>
+</div>
+`;
+
+const hireLinkHTML = `
+<a href="{0}"><div class="hire-title">{1} <i class="fas fa-angle-right"></i></div></a>
+`;
+
+const fillHireURLSection = () => {
+
+};
+
 // document related event listeners here //
 document.addEventListener('DOMContentLoaded', async () => {
 
@@ -185,5 +205,30 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const dataRowHTML = appendCompanyTagsData(PAGE_DATA);
   fillDataTable(dataRowHTML);
+
+  // 채용 공고 연결 서비스
+  const hireData = JSON.parse(res.data['WANTED_COMPANY_HIRE_URL_DATA']);
+
+  // /skill/<skillname> 리디렉션 처리
+  // 모든 버튼에 이벤트 리스너를 추가해야한다
+  const companyNameButtons = document.querySelectorAll('.companies > .comp');
+  for (const button of companyNameButtons) {
+    button.addEventListener('click', (e) => {
+      const skillname = e.path[0].innerText;
+      let hireLinksHTML = '';
+      for (const key in hireData[skillname]) {
+        const link = hireData[skillname][key];
+        const hireLink = formatString(hireLinkHTML, [link, key]);
+        hireLinksHTML = hireLinksHTML + hireLink;
+      }
+      const hireCard = formatString(hireCardHTML, [skillname, hireLinksHTML]);
+
+      const hireURLSelector = document.getElementsByClassName('hire-url-section')[0];
+      hireURLSelector.innerHTML = hireCard;
+    });
+  }
+
+  const cacheRes = await axios.get('/cache');
+  console.log(cacheRes);
 
 });

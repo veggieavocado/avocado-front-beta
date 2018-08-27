@@ -150,3 +150,43 @@ a:hover {
   width: 70%;
   height: 60%;
 }
+
+/* 채용 공고 부분 */
+.hire-url-section {
+  width: 80%;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+  .hire-card {
+    width: 60%;
+    border: solid 1px #a3a3a3;
+    border-radius: 3px;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .company-name {
+    font-size: 1.3rem;
+    margin-bottom: 1.3rem;
+    text-align: center;
+  }
+
+  .hires > a > .hire-title {
+    cursor: pointer;
+    padding: 0.3rem 3rem;
+    margin: 0.4rem 0;
+    border: solid 1px #a3a3a3;
+    color: #353535;
+    text-align: center;
+  }
+
+  .hires > a > .hire-title:hover {
+    background-color: #353535;
+    border: solid 1px #353535;
+    color: white;
+  }
