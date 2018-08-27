@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>베지아보카도</title>
+    <link rel="icon" href="/static/img/avocado.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/static/common/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/static/common/navbar.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/static/css/production/skill.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="skillname"><%= skill %></div>
+
+    <div class="body">
+
+      <div class="navbar home">
+        <a href="/"><div class="nav-logo"></div></a>
+        <div class="action-btn-wrapper">
+          <span class="action-btn home">HOME</span>
+          <span class="action-btn contents">CONTENTS</span>
+          <span class="action-btn contact">CONTACT</span>
+          <span class="action-btn template">TEMPLATE</span>
+        </div>
+      </div>
+
+      <div class="content-header">
+        <div id="content-header-title" class="top"></div>
+        <div class="divider"></div>
+        <div class="bottom">
+          <div id="content-header-data-count" class="data-count"></div>
+          <div class="data-origin">
+            <b>데이터 출처:</b> 원티드 (<a href="https://www.wanted.co.kr/">wanted.co.kr</a>)
+          </div>
+        </div>
+      </div>
+
+      <div id="trend-chart" class="highcharts-section"></div>
+
+      <div class="data-table"></div>
+
+    </div>
+
+    <script src="/static/js/skill.js"></script>
+  </body>
+
+</html>

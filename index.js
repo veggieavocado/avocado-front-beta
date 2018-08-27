@@ -8,7 +8,8 @@ const app = express(); // 앱 시작
 app.set('views', `${__dirname}/templates`); // HTML 파일 연결
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
-app.use(express.static(`${__dirname}/assets`)); // CSS 파일 연결
+app.use(express.static(`${__dirname}/assets`));
+app.use('/static', express.static(`${__dirname}/assets`)); // CSS 파일 연결
 
 // 앱을 포트와 호스트와 연결하여 작동 시작하기
 app.listen(PORT, HOST);
@@ -82,4 +83,10 @@ app.get('/wanted', (req, res) => {
 // tech 페이지: https://www.veggieavocado.com/tech
 app.get('/tech', (req, res) => {
   res.render('production/tech.html');
+});
+
+// skill 페이지: https://www.veggieavocado.com/skill
+app.get('/skill/:skillname', (req, res) => {
+  const skillname = req.params.skillname;
+  res.render('production/skill.html', { skill: skillname });
 });

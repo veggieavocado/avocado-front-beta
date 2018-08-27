@@ -156,7 +156,6 @@ const createVerticalBarChart = (chartID, chartData) => {
 };
 
 const createBarChart = (chartID, chartData) => {
-  console.log(chartData);
   let barChart = new Highcharts.Chart(chartID, {
     chart: {
       type: 'bar',

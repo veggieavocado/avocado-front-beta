@@ -15,6 +15,7 @@ module.exports = {
     navbar: ['babel-polyfill', `${__dirname}/src/navbar.js`],
     data: ['babel-polyfill', `${__dirname}/src/data.js`],
     contents: ['babel-polyfill', `${__dirname}/src/contents.js`],
+    skill: ['babel-polyfill', `${__dirname}/src/skill.js`],
   },
 
   output: {

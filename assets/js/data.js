@@ -23587,7 +23587,6 @@ const createVerticalBarChart = (chartID, chartData) => {
 };
 
 const createBarChart = (chartID, chartData) => {
-  console.log(chartData);
   let barChart = new Highcharts.Chart(chartID, {
     chart: {
       type: 'bar'
@@ -24217,7 +24216,7 @@ const createChartsCollection = data => {
   let highChartsHTML = '';
 
   ///// 아래부분 차팅 완료하기 /////
-  const chartTitles = ['TOP 10 기술 점유율', '직군별 공고수', '직군별 기술 사용량'];
+  const chartTitles = ['TOP 20 공고 키워드', '직군별 공고수', '직군별 기술 사용량'];
   const chartIDNames = ['donut-chart', 'ver-bar-chart', 'bar-chart'];
 
   const filterExists = [false, false, true];
@@ -24252,7 +24251,7 @@ const createChartsCollection = data => {
   chartsCollectionSection.innerHTML = highChartsHTML;
 
   // 1. donut-chart부분 채우기
-  createDonutChart('donut-chart', donutChartData.slice(0, 10)); // 상위 10개만 차트 만들때 사용한다
+  createDonutChart('donut-chart', donutChartData.slice(0, 20)); // 상위 10개만 차트 만들때 사용한다
 
   // 2. ver-bar-chart부분 채우기
   createVerticalBarChart('ver-bar-chart', verticalBarChartData);
@@ -24298,6 +24297,16 @@ document.addEventListener('DOMContentLoaded', async () => {
   await createContentHeader();
   await createRankChart(data);
   await createChartsCollection(data);
+
+  // /skill/<skillname> 리디렉션 처리
+  // 모든 버튼에 이벤트 리스너를 추가해야한다
+  const skillNameButtons = document.querySelectorAll('div.data-row > div:nth-of-type(2)');
+  for (const button of skillNameButtons) {
+    button.addEventListener('click', e => {
+      const skillname = e.path[0].innerText;
+      window.location.href = '/skill/' + skillname; // 버튼 클릭시 스킬 페이지로 이동
+    });
+  }
 
   const loadSection = document.getElementsByClassName('lds-roller')[0];
   loadSection.style.display = 'none';
