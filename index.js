@@ -60,7 +60,7 @@ app.get('/customer', (req, res) => {
 });
 
 // 원티드 컨텐츠 페이지: https://www.veggieavocado.com/contents/wanted
-app.get('/wanted', (req, res) => {
+app.get('/wanted_legacy', (req, res) => {
   res.render('production/wanted.html');
 });
 
@@ -69,13 +69,13 @@ app.get('/warning', (req, res) => {
   res.render('production/warning.html');
 });
 
-// contents 페이지: https://www.veggieavocado.com/new_contents
-app.get('/new_contents', (req, res) => {
-  res.render('production/new_contents.html');
+// contents 페이지: https://www.veggieavocado.com/contents
+app.get('/contents', (req, res) => {
+  res.render('production/contents.html');
 });
 
 // data(원티드) 페이지: https://www.veggieavocado.com/data
-app.get('/data', (req, res) => {
+app.get('/wanted', (req, res) => {
   res.render('production/data.html');
 });
 

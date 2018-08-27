@@ -7,7 +7,7 @@
     <link rel="icon" href="img/avocado.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="common/style.css" type="text/css" media="all">
-    <link rel="stylesheet" href="css/production/new_contents.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/production/contents.css" type="text/css" media="all">
     <link rel="stylesheet" href="common/navbar.css" type="text/css" media="all">
     <link href="https://fonts.googleapis.com/css?family=Jua|Nanum+Gothic|Gothic+A1|Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
@@ -39,29 +39,33 @@
       <div class="content-body">
 
         <div class="content-sec">
+
           <div class="left">
-            <div class="title">[8월 Wanted 통계] 스타트업 기술 트렌드</div>
-            <div class="subtitle">2018년 7월 한달동안 주요 영화관 이용고객에 대해 설명, 연령별 고객 데이터 요청 분석 등 해보세요</div>
+            <a href="/wanted"><div class="title">[8월 Wanted 통계] 스타트업 기술 트렌드</div></a>
+            <div class="subtitle">2018년 8월 한달동안 원티드에 등록된 채용 공고를 분석하여 스타트업 기술, 연봉 트렌드를 알아보세요.</div>
             <div class="tag">
               태그:&nbsp;
-              <span class="tag-elmt">피자</span>,&nbsp;
-              <span class="tag-elmt">피자</span>,&nbsp;
-              <span class="tag-elmt">피자</span>
+              <span class="tag-elmt">원티드</span>,&nbsp;
+              <span class="tag-elmt">스타트업</span>,&nbsp;
+              <span class="tag-elmt">기술스택</span>,&nbsp;
+              <span class="tag-elmt">연봉</span>
             </div>
           </div>
-          <div class="right">
 
+          <div class="right">
             <div class="rank-table">
               <div class="table-header">
                 <div class="right">
                   기술
                 </div>
-                <div class="left">
-                  더 보기 >
-                </div>
+                <a href="/wanted">
+                  <div class="left">
+                    더 보기 >
+                  </div>
+                </a>
               </div>
-              <div class="table-body">
-                <div class="data-row">
+              <div id="wanted-content-table" class="table-body">
+                <!-- <div class="data-row">
                   <div class="right"><span>AWS</span></div>
                   <div class="left">6.5%</div>
                 </div>
@@ -80,62 +84,14 @@
                 <div class="data-row">
                   <div class="right"><span>AWS</span></div>
                   <div class="left">6.5%</div>
-                </div>
+                </div> -->
               </div>
             </div>
-
           </div>
+
         </div>
 
-        <div class="content-sec">
-          <div class="left">
-            <div class="title">[8월 Wanted 통계] 스타트업 기술 트렌드</div>
-            <div class="subtitle">2018년 7월 한달동안 주요 영화관 이용고객에 대해 설명, 연령별 고객 데이터 요청 분석 등 해보세요</div>
-            <div class="tag">
-              태그:&nbsp;
-              <span class="tag-elmt">피자</span>,&nbsp;
-              <span class="tag-elmt">피자</span>,&nbsp;
-              <span class="tag-elmt">피자</span>
-            </div>
-          </div>
-          <div class="right">
-
-            <div class="rank-table">
-              <div class="table-header">
-                <div class="right">
-                  기술
-                </div>
-                <div class="left">
-                  더 보기 >
-                </div>
-              </div>
-              <div class="table-body">
-                <div class="data-row">
-                  <div class="right"><span>AWS</span></div>
-                  <div class="left">6.5%</div>
-                </div>
-                <div class="data-row">
-                  <div class="right"><span>Javascript</span></div>
-                  <div class="left">6.5%</div>
-                </div>
-                <div class="data-row">
-                  <div class="right"><span>AWS</span></div>
-                  <div class="left">6.5%</div>
-                </div>
-                <div class="data-row">
-                  <div class="right"><span>AWS</span></div>
-                  <div class="left">6.5%</div>
-                </div>
-                <div class="data-row">
-                  <div class="right"><span>AWS</span></div>
-                  <div class="left">6.5%</div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="content-sec">
+        <!-- <div class="content-sec">
           <div class="left">
             <div class="title">[8월 Wanted 통계] 스타트업 기술 트렌드</div>
             <div class="subtitle">2018년 7월 한달동안 주요 영화관 이용고객에 대해 설명, 연령별 고객 데이터 요청 분석 등 해보세요</div>
@@ -276,6 +232,54 @@
                 </div>
               </div>
             </div>
+
+          </div>
+        </div>
+        <div class="content-sec">
+          <div class="left">
+            <div class="title">[8월 Wanted 통계] 스타트업 기술 트렌드</div>
+            <div class="subtitle">2018년 7월 한달동안 주요 영화관 이용고객에 대해 설명, 연령별 고객 데이터 요청 분석 등 해보세요</div>
+            <div class="tag">
+              태그:&nbsp;
+              <span class="tag-elmt">피자</span>,&nbsp;
+              <span class="tag-elmt">피자</span>,&nbsp;
+              <span class="tag-elmt">피자</span>
+            </div>
+          </div>
+          <div class="right">
+
+            <div class="rank-table">
+              <div class="table-header">
+                <div class="right">
+                  기술
+                </div>
+                <div class="left">
+                  더 보기 >
+                </div>
+              </div>
+              <div class="table-body">
+                <div class="data-row">
+                  <div class="right"><span>AWS</span></div>
+                  <div class="left">6.5%</div>
+                </div>
+                <div class="data-row">
+                  <div class="right"><span>Javascript</span></div>
+                  <div class="left">6.5%</div>
+                </div>
+                <div class="data-row">
+                  <div class="right"><span>AWS</span></div>
+                  <div class="left">6.5%</div>
+                </div>
+                <div class="data-row">
+                  <div class="right"><span>AWS</span></div>
+                  <div class="left">6.5%</div>
+                </div>
+                <div class="data-row">
+                  <div class="right"><span>AWS</span></div>
+                  <div class="left">6.5%</div>
+                </div>
+              </div>
+            </div> -->
 
           </div>
         </div>
@@ -300,6 +304,8 @@
         </div>
       </div>
     </div>
+
+    <script src="js/contents.js"></script>
 
   </body>
 </html>

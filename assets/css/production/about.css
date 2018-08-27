@@ -1,18 +1,18 @@
 /* 공통설정 */
 .content-img.one {
-  background-image: url(../img/typewriter.jpg);
+  background-image: url(../../img/typewriter.jpg);
 }
 
 .content-img.two {
-  background-image: url(../img/computer.jpg);
+  background-image: url(../../img/computer.jpg);
 }
 
 .content-img.three {
-  background-image: url(../img/cafe.jpg);
+  background-image: url(../../img/cafe.jpg);
 }
 
 .content-img.four {
-  background-image: url(../img/people.jpg);
+  background-image: url(../../img/people.jpg);
 }
 
 .content-img {
